@@ -106,7 +106,7 @@ Pod::Spec.new do |spec|
   #
     
     
-  spec.vendored_frameworks = "WTWifiSDK/WTWifiSDK.framework"
+  spec.vendored_frameworks = "WTWifiSDK.framework"
   spec.ios.deployment_target = "10.0"
   
   # spec.resource  = "icon.png"
