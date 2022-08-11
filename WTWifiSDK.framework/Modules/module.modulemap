@@ -1,0 +1,4 @@
+framework module WTWifiSDK {
+  header "WTWifiSDK-Swift.h"
+  requires objc
+}
