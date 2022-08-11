@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/WTWifiSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		CPE8ffDp45Gt8knaJAUalTQV/D4=
+		E3vgqE22zmVkgDzWCQlO4E8xYpY=
 		</data>
 		<key>Modules/WTWifiSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		9908ZpgvK6Q2/0HybB8TPzfUcuQ=
+		UcyGN/CxQSFHCq7BD+mRIpSvSio=
 		</data>
 		<key>Modules/WTWifiSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/WTWifiSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ynyH2y3WHxkD2BQnc8uPlBdN1Uk=
+		tRmEdeyPBQjHufQNraxXYjD7+io=
 		</data>
 		<key>Modules/WTWifiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/WTWifiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		M6A36fUmMxCCklnGUA8HTuQ9Vec=
+		TYDieXsi8b47oUxRiE/uOUYSbhE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,14 +54,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p6WnrNKCW7fX9puAPbe7CUZhl3Tfr1ROH0bTc7ljl/U=
+			BlJzW7xE+7YXI5fELFhjvLXNpGIhJG5CyoB0JMarvXI=
 			</data>
 		</dict>
 		<key>Modules/WTWifiSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8UWZLuC8BCgNpDW65G2lV9qWxjZgTEt3iJVSVe+Ijq0=
+			ky0WzhJvrMbwzdZ0vPzhmbvO5NJ7Sx84h5ES7BYyYzM=
 			</data>
 		</dict>
 		<key>Modules/WTWifiSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			edxhpkVwcn1hsG6/DmT5Gu1o142SRTNbddga7R1wULs=
+			crZOo84qLDhvDAOeh+NG9mhqO6T86xJkaIS/lb0qDMc=
 			</data>
 		</dict>
 		<key>Modules/WTWifiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EucmEcaFUbfhXoIxoX078NIQT9iUqSD20P+fFSta628=
+			2JClFwNvRdbI9fJ7Q7DvpC1QXGsNuH72/0uf6Mqt3Rs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
