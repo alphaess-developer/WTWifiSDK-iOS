@@ -198,10 +198,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import Foundation;
+@import GCDAsyncSocket;
 @import ObjectiveC;
 #endif
-
-#import "/Users/cavan/Desktop/projects/Native/公库源码-WTWifiSDK/WTWifiSDK/WTWifiSDK/WTWifiSDK.h"
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -509,10 +508,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import Foundation;
+@import GCDAsyncSocket;
 @import ObjectiveC;
 #endif
-
-#import "/Users/cavan/Desktop/projects/Native/公库源码-WTWifiSDK/WTWifiSDK/WTWifiSDK/WTWifiSDK.h"
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
