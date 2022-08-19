@@ -1,4 +1,6 @@
 framework module WTWifiSDK {
-  header "WTWifiSDK-Swift.h"
-  requires objc
+  umbrella header "WTWifiSDK-umbrella.h"
+
+  export *
+  module * { export * }
 }
