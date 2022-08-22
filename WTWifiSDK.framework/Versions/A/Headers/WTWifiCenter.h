@@ -67,6 +67,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 通过 WTWifiCenterDelegate 中的 [didReceiveEMSSafetyInfo] 回调数据
 - (void)sendSafetyInfoCommand;
 
+/// 更新EMS配置参数
+- (void)updateEMSConfigurationWith:(nonnull NSDictionary *)data;
+
 @end
 
 NS_ASSUME_NONNULL_END
