@@ -123,8 +123,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.framework  = "CoreData"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  # spec.framework  = "CoreData"
+  spec.frameworks = "SystemConfiguration", "CoreData"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
