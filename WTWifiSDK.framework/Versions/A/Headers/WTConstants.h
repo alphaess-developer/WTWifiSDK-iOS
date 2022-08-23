@@ -17,6 +17,14 @@ FOUNDATION_EXPORT CGFloat const PING_TIME;
 FOUNDATION_EXPORT CGFloat const EMS_CMD_RESEND_TIME;
 // ZLG Socket 重连时间
 FOUNDATION_EXPORT CGFloat const SOCKET_RECONNECT_TIME;
+
+// ZLG Socket 发送系统信息对应的TAG值
+FOUNDATION_EXPORT long const SOCKET_SYSTEM_TAG;
+// ZLG Socket 发送运行信息对应的TAG值
+FOUNDATION_EXPORT long const SOCKET_RUNNING_TAG;
+// ZLG Socket 发送安规信息对应的TAG值
+FOUNDATION_EXPORT long const SOCKET_SAFETY_TAG;
+
 // EMS 系统信息获取指令
 FOUNDATION_EXPORT NSString * const EMS_SYSTEM_CMD;
 // EMS 运行信息获取指令
@@ -54,6 +62,15 @@ FOUNDATION_EXPORT NSString * const ZLG_AUTHORIZATION;
 FOUNDATION_EXPORT NSString * const ZLG_SOCKET_IP;
 // 周立功 SOCKET 端口号
 FOUNDATION_EXPORT NSInteger const ZLG_SOCKET_PORT;
+
+typedef NS_ENUM(NSUInteger, WTEMSCommand) {
+    // EMS系统信息指令
+    WTEMSCommandSystem,
+    // EMS运行信息指令
+    WTEMSCommandRuning,
+    // EMS安规信息指令
+    WTEMSCommandSafety,
+};
 
 @interface WTConstants : NSObject
 
