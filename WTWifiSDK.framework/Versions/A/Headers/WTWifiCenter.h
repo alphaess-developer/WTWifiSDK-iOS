@@ -29,6 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 接收到EMS回传的安规信息
 - (void)didReceiveEMSSafetyInfo:(WTSafetyModel *)info;
+
+// 更新EMS配置成功
+- (void)didUpdateEMSParametersSuccess;
+
 @end
 
 

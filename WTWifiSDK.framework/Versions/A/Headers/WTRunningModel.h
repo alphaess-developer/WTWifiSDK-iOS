@@ -11,12 +11,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WTRunningModel : NSObject
 @property (nonatomic , copy) NSString              * Status;
-@property (nonatomic , copy) NSString              * Time;
 @property (nonatomic , copy) NSString              * SN;
+@property (nonatomic , copy) NSString              * Time;
 @property (nonatomic , copy) NSString              * Ppv1;
 @property (nonatomic , copy) NSString              * Ppv2;
+@property (nonatomic , copy) NSString              * Ppv3;
+@property (nonatomic , copy) NSString              * Ppv4;
+@property (nonatomic , copy) NSString              * Ppv5;
+@property (nonatomic , copy) NSString              * Ppv6;
 @property (nonatomic , copy) NSString              * Upv1;
 @property (nonatomic , copy) NSString              * Upv2;
+@property (nonatomic , copy) NSString              * Upv3;
+@property (nonatomic , copy) NSString              * Upv4;
+@property (nonatomic , copy) NSString              * Upv5;
+@property (nonatomic , copy) NSString              * Upv6;
 @property (nonatomic , copy) NSString              * Ua;
 @property (nonatomic , copy) NSString              * Ub;
 @property (nonatomic , copy) NSString              * Uc;
@@ -98,15 +106,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * MeterDCUa;
 @property (nonatomic , copy) NSString              * MeterDCUb;
 @property (nonatomic , copy) NSString              * MeterDCUc;
-@property (nonatomic , copy) NSString              * OVP1Threshold;
-@property (nonatomic , copy) NSString              * OVP1TripValue;
-@property (nonatomic , copy) NSString              * OVP1L1TripTime;
-@property (nonatomic , copy) NSString              * OVP2Threshold;
-@property (nonatomic , copy) NSString              * OVP2TripValue;
-@property (nonatomic , copy) NSString              * OVP2L1TripTime;
-@property (nonatomic , copy) NSString              * UVP1Threshold;
-@property (nonatomic , copy) NSString              * UVP1TripValue;
-@property (nonatomic , copy) NSString              * UVP1L1TripTime;
 @property (nonatomic , copy) NSString              * DCI;
 @property (nonatomic , copy) NSString              * RCD;
 @property (nonatomic , copy) NSString              * PvISO;
@@ -115,19 +114,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * InvGV2;
 @property (nonatomic , copy) NSString              * InvGV3;
 @property (nonatomic , copy) NSString              * InvGF;
-@property (nonatomic , copy) NSString              * UVP2Threshold;
-@property (nonatomic , copy) NSString              * UVP2TripValue;
-@property (nonatomic , copy) NSString              * UVP2L1TripTime;
-@property (nonatomic , copy) NSString              * OFPThreshold;
-@property (nonatomic , copy) NSString              * OFPTripValue;
-@property (nonatomic , copy) NSString              * OFPTripTime;
-@property (nonatomic , copy) NSString              * UFPThreshold;
-@property (nonatomic , copy) NSString              * UFPTripValue;
-@property (nonatomic , copy) NSString              * UFPTripTime;
-@property (nonatomic , copy) NSString              * PowerFactor;
-@property (nonatomic , copy) NSString              * EVPowerTotal;
-@property (nonatomic , copy) NSString              * EVEnergyTotal;
-@property (nonatomic , copy) NSString              * Eirp;
+@property (nonatomic , copy) NSString              * GCPower;
+@property (nonatomic , copy) NSString              * EGCoutput;
+
 @end
 
 NS_ASSUME_NONNULL_END
