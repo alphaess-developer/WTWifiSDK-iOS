@@ -1,22 +1,16 @@
 //
-//  WTSystemModel.h
+//  WTUpdateModel.h
 //  WTWifiSDK
 //
-//  Created by cavan on 2022/8/18.
+//  Created by cavan on 2022/8/25.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WTSystemModel : NSObject
-
-@property (nonatomic , copy) NSString              * Status;
-@property (nonatomic , copy) NSString              * SN;
+@interface WTUpdateModel : NSObject
 @property (nonatomic , copy) NSString              * Time;
-@property (nonatomic , copy) NSString              * EMSVersion;
-@property (nonatomic , copy) NSString              * FirmwareVersion;
-@property (nonatomic , copy) NSString              * Popv;
 @property (nonatomic , copy) NSString              * StorageCap;
 @property (nonatomic , copy) NSString              * OnGridCap;
 @property (nonatomic , copy) NSString              * SetFeed;
@@ -24,49 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * Meter_CT_Select;
 @property (nonatomic , copy) NSString              * GridMeterCTE;
 @property (nonatomic , copy) NSString              * CTRate;
-@property (nonatomic , copy) NSString              * Mmeter;
 @property (nonatomic , copy) NSString              * PVMeterCTE;
 @property (nonatomic , copy) NSString              * PVMeterCTRate;
-@property (nonatomic , copy) NSString              * PVMeterMode;
-@property (nonatomic , copy) NSString              * SetPhase;
 @property (nonatomic , copy) NSString              * MeterDCInstallPosition;
 @property (nonatomic , copy) NSString              * SafetyType;
 @property (nonatomic , copy) NSString              * SafeSub;
-@property (nonatomic , copy) NSString              * Minv;
-@property (nonatomic , copy) NSString              * Poinv;
-@property (nonatomic , copy) NSString              * InvSN;
-@property (nonatomic , copy) NSString              * InvVersion;
-@property (nonatomic , copy) NSString              * SlaveVersion;
-@property (nonatomic , copy) NSString              * ARMVersion;
-@property (nonatomic , copy) NSString              * InvHWVersion;
 @property (nonatomic , copy) NSString              * BatReady;
-@property (nonatomic , copy) NSString              * Cobat;
-@property (nonatomic , copy) NSString              * Mbat;
-@property (nonatomic , copy) NSString              * Uscapacity;
-@property (nonatomic , copy) NSString              * BatterySN1;
-@property (nonatomic , copy) NSString              * BatterySN2;
-@property (nonatomic , copy) NSString              * BatterySN3;
-@property (nonatomic , copy) NSString              * BatterySN4;
-@property (nonatomic , copy) NSString              * BatterySN5;
-@property (nonatomic , copy) NSString              * BatterySN6;
-@property (nonatomic , copy) NSString              * BatterySN7;
-@property (nonatomic , copy) NSString              * BatterySN8;
-@property (nonatomic , copy) NSString              * BatterySN9;
-@property (nonatomic , copy) NSString              * BatterySN10;
-@property (nonatomic , copy) NSString              * BatterySN11;
-@property (nonatomic , copy) NSString              * BatterySN12;
-@property (nonatomic , copy) NSString              * BatterySN13;
-@property (nonatomic , copy) NSString              * BatterySN14;
-@property (nonatomic , copy) NSString              * BatterySN15;
-@property (nonatomic , copy) NSString              * BatterySN16;
-@property (nonatomic , copy) NSString              * BatterySN17;
-@property (nonatomic , copy) NSString              * BatterySN18;
-@property (nonatomic , copy) NSString              * BMSVersion;
-@property (nonatomic , copy) NSString              * SCBSN;
-@property (nonatomic , copy) NSString              * SCBVer;
-@property (nonatomic , copy) NSString              * BMUModel;
-@property (nonatomic , copy) NSString              * TOPBMUVer;
-@property (nonatomic , copy) NSString              * ISOVer;
 @property (nonatomic , copy) NSString              * ChargeWorkDays;
 @property (nonatomic , copy) NSString              * GridCharge;
 @property (nonatomic , copy) NSString              * CtrDis;
@@ -113,8 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * GCAvailablePercentage;
 @property (nonatomic , copy) NSString              * GCATS;
 @property (nonatomic , copy) NSString              * DG_Cap;
-@property (nonatomic , copy) NSString              * BakBoxSN;
-@property (nonatomic , copy) NSString              * BakBoxVer;
 @property (nonatomic , copy) NSString              * BackUpBox;
 @property (nonatomic , copy) NSString              * L1Priority;
 @property (nonatomic , copy) NSString              * L2Priority;
@@ -180,12 +135,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * Gateway;
 @property (nonatomic , copy) NSString              * ModbusAddress;
 @property (nonatomic , copy) NSString              * ModbusBaudrate;
-@property (nonatomic , copy) NSString              * EMSPlatform;
 @property (nonatomic , copy) NSString              * INVModel;
 @property (nonatomic , copy) NSString              * Parallel_EN;
 @property (nonatomic , copy) NSString              * Parallel_Selection;
 @property (nonatomic , copy) NSString              * Parallel_Mode;
-
 
 @end
 

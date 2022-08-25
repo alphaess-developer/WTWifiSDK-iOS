@@ -9,6 +9,7 @@
 #import "WTSystemModel.h"
 #import "WTRunningModel.h"
 #import "WTSafetyModel.h"
+#import "WTUpdateModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 更新EMS配置成功
 - (void)didUpdateEMSParametersSuccess;
+
+// 更新EMS配置异常
+- (void)didUpdateEMSParametersFailed;
 
 @end
 
@@ -72,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)sendSafetyInfoCommand;
 
 /// 更新EMS配置参数
-- (void)updateEMSConfigurationWith:(nonnull NSDictionary *)data;
+- (void)updateEMSConfigurationWith:(nonnull WTUpdateModel *)data;
 
 @end
 
