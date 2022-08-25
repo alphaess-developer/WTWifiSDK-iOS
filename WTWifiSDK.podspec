@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WTWifiSDK"
-  spec.version      = "0.2.9"
+  spec.version      = "0.2.10"
   spec.summary      = "A sdk for AlphaCloud."
 
   # This description is used to generate tags and improve search results.
