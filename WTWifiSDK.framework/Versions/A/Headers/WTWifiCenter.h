@@ -16,25 +16,32 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol WTWifiCenterDelegate <NSObject>
 
 @optional
-// WIFI模块热点连接已断开
+
+/// The wifi module of the energy storage device hotspot connection has been disconnected.
+/// @param ssid The name of the wifi module of the energy storage device.
 - (void)didDisconnectedWith:(NSString *)ssid;
 
-// WIFI模块热点已连接成功
+/// The wifi module of the energy storage device hotspot has been connected successfully.
+/// @param ssid The name of the wifi module of the energy storage device.
 - (void)didConnectedWith:(NSString *)ssid;
 
-// 接收到EMS回传的系统信息
+/// Receive system information returned by the energy storage management system.
+/// @param info The keys and values of system information.
 - (void)didReceiveEMSSystemInfo:(WTSystemModel *)info;
 
-// 接收到EMS回传的运行信息
+/// Receive running information returned by the energy storage management system.
+/// @param info The keys and values of running information.
 - (void)didReceiveEMSRunningInfo:(WTRunningModel *)info;
 
-// 接收到EMS回传的安规信息
+/// Receive safety information returned by the energy storage management system.
+/// @param info The keys and values of safety information.
 - (void)didReceiveEMSSafetyInfo:(WTSafetyModel *)info;
 
-// 更新EMS配置成功
+/// Energy management system related parameters have been successfully configured.
 - (void)didUpdateEMSParametersSuccess;
 
-// 更新EMS配置异常
+/// An exception occurs when configuring parameters related to the energy management system.
+/// At this point it is necessary to ensure that is the SSID of the energy management system connected correctly? or try calling [updateEMSConfigurationWith] multiple times.
 - (void)didUpdateEMSParametersFailed;
 
 @end
@@ -42,40 +49,54 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WTWifiCenter : NSObject
 
-
-
+/// The Wifi SDK instance initial method.
 + (instancetype)sharedInstance;
 
+/// Add a delegate to WTWifiCenter, and WTWifiCenter supports adding multiple delegates.
+/// @param delegate Must follow WTWifiCenterDelegate.
 - (void)addDelegate:(id<WTWifiCenterDelegate>)delegate;
 
+/// Remove a delegate from WTWifiCenter,
+/// @param delegate Must follow WTWifiCenterDelegate.
 - (void)removeDelegate:(id<WTWifiCenterDelegate>)delegate;
 
+/// Initialize the internal business logic of the wifi sdk, this method must be called when the SDK is initialized.
 - (void)startConfiguration;
 
-/// 获取 WiFi 热点信息列表
+/// Release the internal business logic of the wifi sdk, this method must be called when the SDK is no longer used
+- (void)releaseConfiguration;
+
+/// Get WiFi SSID list from WiFi collector device
+/// @param completionHandler Callback WiFi SSID list, the list is an array of NSString.
 - (void)fetchWifiList:(void (^)(NSArray * _Nullable list, NSError * _Nullable error))completionHandler;
 
-// 配置采集器需要连接的无线路由器信息
-/// ssid 无线网名称
-/// password 无线网密码
+/// Use the nearby wifi name and password to configure the collector so that it can access the Internet.
+/// @param ssid Name of nearby Wifi that can access internet.
+/// @param password Password of nearby Wifi that can access internet.
+/// @param completionHandler Callback the configuration result, the result will be true if configuration success.
 - (void)wifiConfigurationWith:(NSString *)ssid password:(NSString *)password completionHandler:(void (^)(bool result, NSError * _Nullable error))completionHandler;
 
-/// 获取采集器已连接的无线路由器信息
-- (void)loadWifiConfiguration: (void (^)(NSDictionary * _Nullable result, NSError * _Nullable error))completionHandler;
+/// Get collector history configuration.
+/// @param completionHandler The result contains some keys e.g. ssid/password/state, where the password keyword may be an empty string.
+- (void)loadWifiConfiguration:(void (^)(NSDictionary * _Nullable result, NSError * _Nullable error))completionHandler;
 
-/// 发送 EMS 查询系统信息指令
-/// 通过 WTWifiCenterDelegate 中的 [didReceiveEMSSystemInfo] 回调数据
+/// Send EMS commands to query the system information of energy storage devices.
+/// The result will be called back by [didReceiveEMSSystemInfo] in WTWifiCenterDelegate.
+/// But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 - (void)sendSystemInfoCommand;
 
-/// 发送 EMS 查询运行信息指令
-/// 通过 WTWifiCenterDelegate 中的 [didReceiveEMSRunningInfo] 回调数据
+/// Send EMS commands to query the running information of energy storage devices.
+/// The result will be called back by [didReceiveEMSRunningInfo] in WTWifiCenterDelegate.
+/// But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 - (void)sendRunningInfoCommand;
 
-/// 发送 EMS 查询安规信息指令
-/// 通过 WTWifiCenterDelegate 中的 [didReceiveEMSSafetyInfo] 回调数据
+/// Send EMS commands to query the safety information of energy storage devices.
+/// The result will be called back by [didReceiveEMSSafetyInfo] in WTWifiCenterDelegate.
+/// But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 - (void)sendSafetyInfoCommand;
 
-/// 更新EMS配置参数
+/// Update the related configuration parameters in the energy storage device.
+/// @param data Valid keys in energy management systems.
 - (void)updateEMSConfigurationWith:(nonnull WTUpdateModel *)data;
 
 @end
