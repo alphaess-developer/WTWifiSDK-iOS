@@ -1,0 +1,23 @@
+PODS:
+  - MJExtension (3.4.1)
+  - WTWifiSDK (1.0.0)
+
+DEPENDENCIES:
+  - MJExtension
+  - WTWifiSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - MJExtension
+
+EXTERNAL SOURCES:
+  WTWifiSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  WTWifiSDK: 86248b4ecda10e6ca89a617f4964306c1701a6ec
+
+PODFILE CHECKSUM: b111f56fc3da3a9ead2e125f13009458d5e067df
+
+COCOAPODS: 1.11.3

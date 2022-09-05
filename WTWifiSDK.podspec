@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WTWifiSDK"
-  spec.version      = "0.2.14"
-  spec.summary      = "A sdk for AlphaCloud."
+  spec.version      = "1.0.0"
+  spec.summary      = "A sdk for alphaess."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-    A swift framework for wifi configuration.
+    The wifi configuration framework for alphaess.
                    DESC
 
   spec.homepage     = "https://www.alphaess.com/"
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/cavanlee/WTWifiSDK.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/alphaess-developer/WTWifiSDK-iOS.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -1,0 +1,957 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F3BB2E5A5A019107DB6BB45DF9BAD4A1 /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = WTWifiSDK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		027F75AA90C991AFF7887F0B810C141C /* Pods-WTWifiSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0131087EB8E5D28DCC2C726B1C358CE6 /* Pods-WTWifiSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04BCB9A795A9F6FCFE32F445FF9BD723 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */; };
+		0B492FFEC27BBC3C6E2B8F0333B05FF6 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */; };
+		1339E6C9911F6C3F413CF37B1DB1207A /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33DC154CACD614244DE45A53CE08EF0D /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37F6A3BECF37C125152A3BBA232AD7DC /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5807E0632368B365308B44C5AE6973BD /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6130390A28FACC2AAB743924489049C0 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		644ED9B098E888EBC0954AFB0C8AA6D4 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */; };
+		6B22D895CE423C00B2DDAC0EA08F4D7C /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */; };
+		6E5BA38F45C9B904BAA86970852F0A9E /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86469EDD5558A59BA4109620C6724E8B /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */; };
+		886B4AC9B1FE36EFF7CD38820E10BFAD /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C403AA7D32772AB3A3D4E60F41FE066 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */; };
+		94EEDF6D32DFE12B049F9FDF67F48373 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9439ED235893B1765356769F00419D69 /* MJPropertyType.m */; };
+		964D99CA4A6D8DC74E4A75198E2F2C2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		997795BA486CFE8E8F47247BA54075F8 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */; };
+		A36B349F4F080AAA4038E80CBFCD0140 /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC437AB3F30FD2D50B2F02256A50BC22 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5118C24A6745D3E9259C20B7099A543 /* Pods-WTWifiSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AABEA095A440BD348E7B3D8C673EA5 /* Pods-WTWifiSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA1DC5783EBC5273E058F1B7A30026D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C22B5BF1438F18E67E8B3198CD203BEF /* Pods-WTWifiSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D636C4787118C51799FFE09D9C722 /* Pods-WTWifiSDK_Example-dummy.m */; };
+		CBA797C292CF129755168E042F96531E /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */; };
+		CCD4362E8522B5BC2820666098E91B93 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE9F398B1DAD84FEA79B6E830A05E852 /* MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5245783DD6091088CC902AFAB65542D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D6B9216743757D8CCF0DC1BAFAAEFBE6 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0D6C8DDEFDF0F3A615478F18522F28C /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */; };
+		F1D87801447F8DD985630C5665F159C3 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */; };
+		F4FFECE80781F3A72ACDBEAD47E07B86 /* Pods-WTWifiSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773A442BE6EABDAC9CC91FB86A54B2BE /* Pods-WTWifiSDK_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		112D1DA7981D911E29E334710C6DC1D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35B61133EF99FA71CFD1410B23B465EA;
+			remoteInfo = "Pods-WTWifiSDK_Example";
+		};
+		656125ED4AA2DA6C1BF258EB8FC29FF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A6E38C49BB2ED6899D8608BA13F84E9;
+			remoteInfo = WTWifiSDK;
+		};
+		A13054C2C9CF64704DC6EC3BFFED1AAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
+			remoteInfo = MJExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0131087EB8E5D28DCC2C726B1C358CE6 /* Pods-WTWifiSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTWifiSDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		14F4E1CEA2A9BD0C079448D6861CCFC9 /* Pods-WTWifiSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTWifiSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		152F335FF5B24F1AFE167CD9DA1ED348 /* Pods-WTWifiSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		1CD26BED495FE896BF27FA595037E281 /* Pods-WTWifiSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		21431BA7617FE049A442EC457231F0CD /* Pods-WTWifiSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTWifiSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		26285E3B8B261C510AA3CBCD94A0C5B8 /* Pods-WTWifiSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJExtension; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		421400509D446E9967B2E339041B2D4C /* Pods-WTWifiSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Tests-Info.plist"; sourceTree = "<group>"; };
+		427D8B31962DED1CE8D5D6527BFF368C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		520A3A9FD574A96B394D81B865C1E6BB /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
+		52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
+		647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
+		691905D88FA53C32438ACEDD6531FF27 /* WTWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WTWifiSDK.framework; sourceTree = "<group>"; };
+		69320C042468B66EEE715E69DB347136 /* Pods-WTWifiSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WTWifiSDK_Tests"; path = Pods_WTWifiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4F30C93D8E65E3F60762243A82A83C /* Pods-WTWifiSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Example-Info.plist"; sourceTree = "<group>"; };
+		722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		72D379C533636AF2480DDDB43C2B923C /* Pods-WTWifiSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WTWifiSDK_Example"; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		773A442BE6EABDAC9CC91FB86A54B2BE /* Pods-WTWifiSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTWifiSDK_Tests-dummy.m"; sourceTree = "<group>"; };
+		7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		87E72A013C2CC3E99DF87909B8E7C1A2 /* Pods-WTWifiSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTWifiSDK_Example.modulemap"; sourceTree = "<group>"; };
+		8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
+		9439ED235893B1765356769F00419D69 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
+		997F899BA0EEFDC5BBBAC96F919B4CEC /* Pods-WTWifiSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		A20D636C4787118C51799FFE09D9C722 /* Pods-WTWifiSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTWifiSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		A7AABEA095A440BD348E7B3D8C673EA5 /* Pods-WTWifiSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTWifiSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
+		AC271827B0377F48615CEEB67A09D784 /* Pods-WTWifiSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTWifiSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AEC65262142D02CAF44CAEDD119B871C /* Pods-WTWifiSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTWifiSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		AF48524923F0B3BA809E697F3E0E4907 /* WTWifiSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WTWifiSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B3E2896E58D70126F579F90790BB4670 /* MJExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MJExtension-Info.plist"; sourceTree = "<group>"; };
+		B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		BCF86FF0C0C31171BB6DCB8CDD7B6ABC /* Pods-WTWifiSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.debug.xcconfig; sourceTree = "<group>"; };
+		D3D3B8819C0A132316D47BC9FBF4FEBE /* WTWifiSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTWifiSDK.release.xcconfig; sourceTree = "<group>"; };
+		D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-umbrella.h"; sourceTree = "<group>"; };
+		E1CDEC88926F3ECF5A354C7F200A0A91 /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJExtension.modulemap; sourceTree = "<group>"; };
+		E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		E71ADEDDD7F254857974D28F7A3F21D3 /* WTWifiSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTWifiSDK.debug.xcconfig; sourceTree = "<group>"; };
+		EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
+		F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
+		F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.release.xcconfig; sourceTree = "<group>"; };
+		F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44FFFD805C4E8569C4409FEF612D1213 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				964D99CA4A6D8DC74E4A75198E2F2C2B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87AF06A7403625E7F72F0B1C7F93C819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5245783DD6091088CC902AFAB65542D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6AEAB760340E9E5BC9E1D613414C706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA1DC5783EBC5273E058F1B7A30026D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09CFB7B0128F70A029CD34F214B5EEA3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1CDEC88926F3ECF5A354C7F200A0A91 /* MJExtension.modulemap */,
+				EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */,
+				B3E2896E58D70126F579F90790BB4670 /* MJExtension-Info.plist */,
+				520A3A9FD574A96B394D81B865C1E6BB /* MJExtension-prefix.pch */,
+				D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */,
+				CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */,
+				F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJExtension";
+			sourceTree = "<group>";
+		};
+		109BDB13C482A7B4AA43E9214EE9AC87 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E71ADEDDD7F254857974D28F7A3F21D3 /* WTWifiSDK.debug.xcconfig */,
+				D3D3B8819C0A132316D47BC9FBF4FEBE /* WTWifiSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WTWifiSDK";
+			sourceTree = "<group>";
+		};
+		22A7AD0EB2298AE7D1EC15371F158DDE /* Pods-WTWifiSDK_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AEC65262142D02CAF44CAEDD119B871C /* Pods-WTWifiSDK_Tests.modulemap */,
+				21431BA7617FE049A442EC457231F0CD /* Pods-WTWifiSDK_Tests-acknowledgements.markdown */,
+				1CD26BED495FE896BF27FA595037E281 /* Pods-WTWifiSDK_Tests-acknowledgements.plist */,
+				773A442BE6EABDAC9CC91FB86A54B2BE /* Pods-WTWifiSDK_Tests-dummy.m */,
+				421400509D446E9967B2E339041B2D4C /* Pods-WTWifiSDK_Tests-Info.plist */,
+				A7AABEA095A440BD348E7B3D8C673EA5 /* Pods-WTWifiSDK_Tests-umbrella.h */,
+				997F899BA0EEFDC5BBBAC96F919B4CEC /* Pods-WTWifiSDK_Tests.debug.xcconfig */,
+				72D379C533636AF2480DDDB43C2B923C /* Pods-WTWifiSDK_Tests.release.xcconfig */,
+			);
+			name = "Pods-WTWifiSDK_Tests";
+			path = "Target Support Files/Pods-WTWifiSDK_Tests";
+			sourceTree = "<group>";
+		};
+		50932FD416ED565CF39BAA8A52A04A2B /* WTWifiSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6BAE8153CBB1F56B58F85E28DA40A2D8 /* Frameworks */,
+				9C9B7F898EEE8240B9EA4ADBEE114357 /* Pod */,
+				109BDB13C482A7B4AA43E9214EE9AC87 /* Support Files */,
+			);
+			name = WTWifiSDK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		606B060E57D82BECCA73921ABBBF8980 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension */,
+				765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */,
+				69320C042468B66EEE715E69DB347136 /* Pods-WTWifiSDK_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BAE8153CBB1F56B58F85E28DA40A2D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				691905D88FA53C32438ACEDD6531FF27 /* WTWifiSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		808A5CABAA06C682B29EC43B40BF875E /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */,
+				5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */,
+				8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */,
+				2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */,
+				CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */,
+				1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */,
+				B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */,
+				647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */,
+				F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */,
+				F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */,
+				9439ED235893B1765356769F00419D69 /* MJPropertyType.m */,
+				7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */,
+				A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */,
+				B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */,
+				38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */,
+				722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */,
+				15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */,
+				52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */,
+				E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */,
+				9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */,
+				CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */,
+				09CFB7B0128F70A029CD34F214B5EEA3 /* Support Files */,
+			);
+			name = MJExtension;
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		9C9B7F898EEE8240B9EA4ADBEE114357 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				427D8B31962DED1CE8D5D6527BFF368C /* LICENSE */,
+				AF48524923F0B3BA809E697F3E0E4907 /* WTWifiSDK.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		ADD5D62BAD195EB5B12AB28B0AA3A118 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50932FD416ED565CF39BAA8A52A04A2B /* WTWifiSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B126FE5814DB750E8E764CBAAC36AE87 /* Pods-WTWifiSDK_Example */ = {
+			isa = PBXGroup;
+			children = (
+				87E72A013C2CC3E99DF87909B8E7C1A2 /* Pods-WTWifiSDK_Example.modulemap */,
+				14F4E1CEA2A9BD0C079448D6861CCFC9 /* Pods-WTWifiSDK_Example-acknowledgements.markdown */,
+				BCF86FF0C0C31171BB6DCB8CDD7B6ABC /* Pods-WTWifiSDK_Example-acknowledgements.plist */,
+				A20D636C4787118C51799FFE09D9C722 /* Pods-WTWifiSDK_Example-dummy.m */,
+				AC271827B0377F48615CEEB67A09D784 /* Pods-WTWifiSDK_Example-frameworks.sh */,
+				6E4F30C93D8E65E3F60762243A82A83C /* Pods-WTWifiSDK_Example-Info.plist */,
+				0131087EB8E5D28DCC2C726B1C358CE6 /* Pods-WTWifiSDK_Example-umbrella.h */,
+				26285E3B8B261C510AA3CBCD94A0C5B8 /* Pods-WTWifiSDK_Example.debug.xcconfig */,
+				152F335FF5B24F1AFE167CD9DA1ED348 /* Pods-WTWifiSDK_Example.release.xcconfig */,
+			);
+			name = "Pods-WTWifiSDK_Example";
+			path = "Target Support Files/Pods-WTWifiSDK_Example";
+			sourceTree = "<group>";
+		};
+		B855B29ED624FD6DD5C5472B318608AC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B126FE5814DB750E8E764CBAAC36AE87 /* Pods-WTWifiSDK_Example */,
+				22A7AD0EB2298AE7D1EC15371F158DDE /* Pods-WTWifiSDK_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BBE7F25BDF6E2ECE64867498D8902AF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				808A5CABAA06C682B29EC43B40BF875E /* MJExtension */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				ADD5D62BAD195EB5B12AB28B0AA3A118 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				BBE7F25BDF6E2ECE64867498D8902AF4 /* Pods */,
+				606B060E57D82BECCA73921ABBBF8980 /* Products */,
+				B855B29ED624FD6DD5C5472B318608AC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		65698788A38D6A188CBC7939C6A94525 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33DC154CACD614244DE45A53CE08EF0D /* MJExtension.h in Headers */,
+				CE9F398B1DAD84FEA79B6E830A05E852 /* MJExtension-umbrella.h in Headers */,
+				5807E0632368B365308B44C5AE6973BD /* MJExtensionConst.h in Headers */,
+				1339E6C9911F6C3F413CF37B1DB1207A /* MJFoundation.h in Headers */,
+				6130390A28FACC2AAB743924489049C0 /* MJProperty.h in Headers */,
+				D6B9216743757D8CCF0DC1BAFAAEFBE6 /* MJPropertyKey.h in Headers */,
+				886B4AC9B1FE36EFF7CD38820E10BFAD /* MJPropertyType.h in Headers */,
+				A36B349F4F080AAA4038E80CBFCD0140 /* NSObject+MJClass.h in Headers */,
+				CCD4362E8522B5BC2820666098E91B93 /* NSObject+MJCoding.h in Headers */,
+				37F6A3BECF37C125152A3BBA232AD7DC /* NSObject+MJKeyValue.h in Headers */,
+				AC437AB3F30FD2D50B2F02256A50BC22 /* NSObject+MJProperty.h in Headers */,
+				6E5BA38F45C9B904BAA86970852F0A9E /* NSString+MJExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A798919F86879381006EADE8A592B40E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5118C24A6745D3E9259C20B7099A543 /* Pods-WTWifiSDK_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2F483FB60DC6A28FBB331E886BBF3FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027F75AA90C991AFF7887F0B810C141C /* Pods-WTWifiSDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9D326A844400EE674E60B84B2923F65 /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */;
+			buildPhases = (
+				E2F483FB60DC6A28FBB331E886BBF3FD /* Headers */,
+				BE054AFCE383FADAF99287474104E471 /* Sources */,
+				E6AEAB760340E9E5BC9E1D613414C706 /* Frameworks */,
+				BFF1852000DC4E31E3814EF4BA0BC071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3B0C8352635E6418B840B043F936111 /* PBXTargetDependency */,
+				2C0F10073E81D2590858E7F4EB9AF2A7 /* PBXTargetDependency */,
+			);
+			name = "Pods-WTWifiSDK_Example";
+			productName = Pods_WTWifiSDK_Example;
+			productReference = 765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D268A7665B36CDB9436B0809E0E3055 /* Build configuration list for PBXNativeTarget "MJExtension" */;
+			buildPhases = (
+				65698788A38D6A188CBC7939C6A94525 /* Headers */,
+				F9ACB1917E93605EE8CFF449459A3309 /* Sources */,
+				87AF06A7403625E7F72F0B1C7F93C819 /* Frameworks */,
+				B8E8D5E5D1ED0D861BF0C3F5228B5E45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJExtension;
+			productName = MJExtension;
+			productReference = 2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7E01CFECD0A146F31FA004A0A68E5E2 /* Pods-WTWifiSDK_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E187F3C2C789D5E07133C8801E33E9AC /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Tests" */;
+			buildPhases = (
+				A798919F86879381006EADE8A592B40E /* Headers */,
+				A98F7D40121063186C67424A3DB1AC30 /* Sources */,
+				44FFFD805C4E8569C4409FEF612D1213 /* Frameworks */,
+				F00E220E67B7B3E5BE0E4A8F63007F09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D3F90CFAE4F73E5854A63A955F377C9 /* PBXTargetDependency */,
+			);
+			name = "Pods-WTWifiSDK_Tests";
+			productName = Pods_WTWifiSDK_Tests;
+			productReference = 69320C042468B66EEE715E69DB347136 /* Pods-WTWifiSDK_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 606B060E57D82BECCA73921ABBBF8980 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */,
+				35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */,
+				F7E01CFECD0A146F31FA004A0A68E5E2 /* Pods-WTWifiSDK_Tests */,
+				3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8E8D5E5D1ED0D861BF0C3F5228B5E45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFF1852000DC4E31E3814EF4BA0BC071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00E220E67B7B3E5BE0E4A8F63007F09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98F7D40121063186C67424A3DB1AC30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FFECE80781F3A72ACDBEAD47E07B86 /* Pods-WTWifiSDK_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE054AFCE383FADAF99287474104E471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C22B5BF1438F18E67E8B3198CD203BEF /* Pods-WTWifiSDK_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ACB1917E93605EE8CFF449459A3309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86469EDD5558A59BA4109620C6724E8B /* MJExtension-dummy.m in Sources */,
+				8C403AA7D32772AB3A3D4E60F41FE066 /* MJExtensionConst.m in Sources */,
+				F0D6C8DDEFDF0F3A615478F18522F28C /* MJFoundation.m in Sources */,
+				04BCB9A795A9F6FCFE32F445FF9BD723 /* MJProperty.m in Sources */,
+				0B492FFEC27BBC3C6E2B8F0333B05FF6 /* MJPropertyKey.m in Sources */,
+				94EEDF6D32DFE12B049F9FDF67F48373 /* MJPropertyType.m in Sources */,
+				F1D87801447F8DD985630C5665F159C3 /* NSObject+MJClass.m in Sources */,
+				CBA797C292CF129755168E042F96531E /* NSObject+MJCoding.m in Sources */,
+				997795BA486CFE8E8F47247BA54075F8 /* NSObject+MJKeyValue.m in Sources */,
+				644ED9B098E888EBC0954AFB0C8AA6D4 /* NSObject+MJProperty.m in Sources */,
+				6B22D895CE423C00B2DDAC0EA08F4D7C /* NSString+MJExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C0F10073E81D2590858E7F4EB9AF2A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WTWifiSDK;
+			target = 3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */;
+			targetProxy = 656125ED4AA2DA6C1BF258EB8FC29FF4 /* PBXContainerItemProxy */;
+		};
+		2D3F90CFAE4F73E5854A63A955F377C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WTWifiSDK_Example";
+			target = 35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */;
+			targetProxy = 112D1DA7981D911E29E334710C6DC1D2 /* PBXContainerItemProxy */;
+		};
+		A3B0C8352635E6418B840B043F936111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJExtension;
+			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
+			targetProxy = A13054C2C9CF64704DC6EC3BFFED1AAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		31EE52BBF0901BB6001A0675B983ED79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/MJExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_MODULE_NAME = MJExtension;
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A2D5866DC1CAB9489DEC50A739376502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72D379C533636AF2480DDDB43C2B923C /* Pods-WTWifiSDK_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C294FDD0878130921362C9E5863B7432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/MJExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_MODULE_NAME = MJExtension;
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D67E23F1A44BE25DA9B39DB88EDCBF94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152F335FF5B24F1AFE167CD9DA1ED348 /* Pods-WTWifiSDK_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D971DF36BDF42FDE0D7415B7F5C2CBBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D3B8819C0A132316D47BC9FBF4FEBE /* WTWifiSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCD546CB5767D807F424F34FD9313F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 997F899BA0EEFDC5BBBAC96F919B4CEC /* Pods-WTWifiSDK_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EE3D9E4C672187DA9223E3A18B01841C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E71ADEDDD7F254857974D28F7A3F21D3 /* WTWifiSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4DFC80346BE0BF6EB0558E8096D72BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26285E3B8B261C510AA3CBCD94A0C5B8 /* Pods-WTWifiSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D268A7665B36CDB9436B0809E0E3055 /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31EE52BBF0901BB6001A0675B983ED79 /* Debug */,
+				C294FDD0878130921362C9E5863B7432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9D326A844400EE674E60B84B2923F65 /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4DFC80346BE0BF6EB0558E8096D72BD /* Debug */,
+				D67E23F1A44BE25DA9B39DB88EDCBF94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E187F3C2C789D5E07133C8801E33E9AC /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD546CB5767D807F424F34FD9313F5E /* Debug */,
+				A2D5866DC1CAB9489DEC50A739376502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BB2E5A5A019107DB6BB45DF9BAD4A1 /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3D9E4C672187DA9223E3A18B01841C /* Debug */,
+				D971DF36BDF42FDE0D7415B7F5C2CBBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
