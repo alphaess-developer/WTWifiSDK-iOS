@@ -6,10 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WTSystemModel.h"
-#import "WTRunningModel.h"
-#import "WTSafetyModel.h"
-#import "WTUpdateModel.h"
+#import <WTWifiSDK/WTUpdateModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,15 +24,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Receive system information returned by the energy storage management system.
 /// @param info The keys and values of system information.
-- (void)didReceiveEMSSystemInfo:(WTSystemModel *)info;
+- (void)didReceiveEMSSystemInfo:(NSDictionary *)info;
 
 /// Receive running information returned by the energy storage management system.
 /// @param info The keys and values of running information.
-- (void)didReceiveEMSRunningInfo:(WTRunningModel *)info;
+- (void)didReceiveEMSRunningInfo:(NSDictionary *)info;
 
 /// Receive safety information returned by the energy storage management system.
 /// @param info The keys and values of safety information.
-- (void)didReceiveEMSSafetyInfo:(WTSafetyModel *)info;
+- (void)didReceiveEMSSafetyInfo:(NSDictionary *)info;
 
 /// Energy management system related parameters have been successfully configured.
 - (void)didUpdateEMSParametersSuccess;

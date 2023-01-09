@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WTWifiSDK"
-  spec.version      = "1.0.0"
-  spec.summary      = "A sdk for alphaess."
+  spec.version      = "1.0.1"
+  spec.summary      = "A sdk for alphaess wifi connect."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -108,6 +108,7 @@ Pod::Spec.new do |spec|
     
   spec.vendored_frameworks = "WTWifiSDK.framework"
   spec.ios.deployment_target = "10.0"
+  spec.ios.vendored_frameworks = 'WTWifiSDK.xcframework'
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
