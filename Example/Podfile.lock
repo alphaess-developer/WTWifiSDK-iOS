@@ -1,23 +1,24 @@
 PODS:
-  - MJExtension (3.4.1)
-  - WTWifiSDK (1.0.0)
+  - CocoaAsyncSocket (7.6.5)
+  - JSONModel (1.8.0)
+  - WTWifiSDK (1.0.2):
+    - CocoaAsyncSocket
+    - JSONModel
 
 DEPENDENCIES:
-  - MJExtension
-  - WTWifiSDK (from `../`)
+  - WTWifiSDK
 
 SPEC REPOS:
   trunk:
-    - MJExtension
-
-EXTERNAL SOURCES:
-  WTWifiSDK:
-    :path: "../"
+    - CocoaAsyncSocket
+    - JSONModel
+    - WTWifiSDK
 
 SPEC CHECKSUMS:
-  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
-  WTWifiSDK: 86248b4ecda10e6ca89a617f4964306c1701a6ec
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  WTWifiSDK: dcd5aa75b9b446a44c14db52a5178bd34e71e68d
 
-PODFILE CHECKSUM: b111f56fc3da3a9ead2e125f13009458d5e067df
+PODFILE CHECKSUM: 076acde04c44d6108cf53830f92e209c8ec9b346
 
 COCOAPODS: 1.11.3

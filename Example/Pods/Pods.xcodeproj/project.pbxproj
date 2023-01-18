@@ -9,131 +9,177 @@
 /* Begin PBXAggregateTarget section */
 		3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F3BB2E5A5A019107DB6BB45DF9BAD4A1 /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */;
+			buildConfigurationList = 3B2D82C86783C32A38D14FDB075A119D /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */;
 			buildPhases = (
+				FAD79CAAF58BEEBDBD0D050243B0257C /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
+				426DE68C994209C81B8837A090E646F7 /* PBXTargetDependency */,
+				651B8EDAD8E3B84B6509BFCD05218286 /* PBXTargetDependency */,
 			);
 			name = WTWifiSDK;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		027F75AA90C991AFF7887F0B810C141C /* Pods-WTWifiSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0131087EB8E5D28DCC2C726B1C358CE6 /* Pods-WTWifiSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04BCB9A795A9F6FCFE32F445FF9BD723 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */; };
-		0B492FFEC27BBC3C6E2B8F0333B05FF6 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */; };
-		1339E6C9911F6C3F413CF37B1DB1207A /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33DC154CACD614244DE45A53CE08EF0D /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37F6A3BECF37C125152A3BBA232AD7DC /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5807E0632368B365308B44C5AE6973BD /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6130390A28FACC2AAB743924489049C0 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		644ED9B098E888EBC0954AFB0C8AA6D4 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */; };
-		6B22D895CE423C00B2DDAC0EA08F4D7C /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */; };
-		6E5BA38F45C9B904BAA86970852F0A9E /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86469EDD5558A59BA4109620C6724E8B /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */; };
-		886B4AC9B1FE36EFF7CD38820E10BFAD /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C403AA7D32772AB3A3D4E60F41FE066 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */; };
-		94EEDF6D32DFE12B049F9FDF67F48373 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9439ED235893B1765356769F00419D69 /* MJPropertyType.m */; };
-		964D99CA4A6D8DC74E4A75198E2F2C2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		997795BA486CFE8E8F47247BA54075F8 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */; };
-		A36B349F4F080AAA4038E80CBFCD0140 /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC437AB3F30FD2D50B2F02256A50BC22 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04C31B7D575E46A1F115E23C14CD43DC /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F041F869DA2E3040474EE7C99EBF12B /* JSONModel+networking.m */; };
+		07F8C8D8AFDF008C5A8590BFD794A980 /* JSONModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEAD5999272190A4A7DBEB160621C08 /* JSONModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E368F649402D525F23915D68112F21D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		12F482FE2022286A223FFC9BFA84F83A /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDFB317BED983D1F91283C34D5A6ED5 /* CocoaAsyncSocket-dummy.m */; };
+		26F87A3DC73299D66231DFE835E9C13D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		33A88215D5655DDBF56DEAA41CC8D8DA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */; };
+		37B0BF2484BE142772F5429AEE5CF0B1 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1ED2488AD8599FA58CE820592DD07D /* GCDAsyncUdpSocket.m */; };
+		3B83B01AE4C3DAECB65F98602C19C654 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9844E493964A0657A467DE201AFE5C7A /* JSONAPI.m */; };
+		4FC2272F4C11472C903CFCC6A101313E /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C7468F62F2CB247A7D4562D8701B3C26 /* GCDAsyncSocket.m */; };
+		67A4DC4B4DB5321811BC3D3627AE855E /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F49A115E1DDBCF82FCA3F287564D9D /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72CAD26DC86BDDD5AE05CA3C4D9A0C8C /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A77EF1C1D00FC8610558BC0DD5B2CE41 /* JSONValueTransformer.m */; };
+		7C1DD31A3A7A0FBBA1A9C88A92CAA28C /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5D6452F019E4A728881D19881BC2BC /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E74F615C738473B6C0040D0EBAA9066 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E0910C51130426F1E5540AAD5A810 /* JSONModelError.m */; };
+		80003F11C6F2225FE936BFCA89CF2717 /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6367E620AC360C525BAFAC228EB7392C /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		811D473E0DFE216172F3076A4548DA20 /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1A593B2D819FBB3FD9AD212A6BF30F /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		822A048982FB0E835ACB632563E0F489 /* Pods-WTWifiSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D636C4787118C51799FFE09D9C722 /* Pods-WTWifiSDK_Example-dummy.m */; };
+		8861DA09219E12C0A1DBA07EB1CEB94A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */; };
+		8995498E3EAB7873FC5CB4F1DB0FC7CF /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F9637A14FA39E72CC99DC4E169EE6CE3 /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		964D99CA4A6D8DC74E4A75198E2F2C2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		980CC0C3C1236D05EBBD4AEA163F872B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 740482241B1B0C7B3D3D31974BC8E145 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B19D3C79B36157522E7662E737D558EF /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EFAAF2BFF74288BAF170F4664C8522 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5118C24A6745D3E9259C20B7099A543 /* Pods-WTWifiSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AABEA095A440BD348E7B3D8C673EA5 /* Pods-WTWifiSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA1DC5783EBC5273E058F1B7A30026D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C22B5BF1438F18E67E8B3198CD203BEF /* Pods-WTWifiSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D636C4787118C51799FFE09D9C722 /* Pods-WTWifiSDK_Example-dummy.m */; };
-		CBA797C292CF129755168E042F96531E /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */; };
-		CCD4362E8522B5BC2820666098E91B93 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE9F398B1DAD84FEA79B6E830A05E852 /* MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5245783DD6091088CC902AFAB65542D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D6B9216743757D8CCF0DC1BAFAAEFBE6 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0D6C8DDEFDF0F3A615478F18522F28C /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */; };
-		F1D87801447F8DD985630C5665F159C3 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */; };
+		BCD200C62F27CDD1442CA4DFD7226B6D /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD4D42C5BBE94067728C0E51A5F909D /* JSONModelClassProperty.m */; };
+		BFD7D7F51FAE952D523C8E30E10E169B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */; };
+		C532616929A9C911A380CE85D4BE963E /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C1440E827C4815EBECD93953774CE6 /* JSONModel-dummy.m */; };
+		C892935D016AB0F0CAE15B238F7F9160 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF4506D7EE88EA55723B0771951029C /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8F9FFF00149646E979A3B4A68D49658 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA21192C0A55B071705AF6B1FBF0F1F /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF71E1ABEAD8ED2279E72B73E9A2C9F9 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB6367ED5A1737055B8DBB17403EDD /* JSONHTTPClient.m */; };
+		E215A01778A3DF5EF7B522CE5262A0DF /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FC36B978E6854BFF0A360CEDA0FD1FFD /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3A41F9538887DE8A83E5FE2110F17C3 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = A612E68DFEFFFDA442E565EA6035A419 /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3E54ABA5E9BD709238DC219D8659B9A /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 845F1F97DCF5C6EEA01017538BC5C196 /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E790E97FB101084DD279EC5169AF7518 /* Pods-WTWifiSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0131087EB8E5D28DCC2C726B1C358CE6 /* Pods-WTWifiSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F124DF686BA9DAAFCC26D537273B0495 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE16F25F7966C3B7FD966EA68035D3DB /* JSONKeyMapper.m */; };
 		F4FFECE80781F3A72ACDBEAD47E07B86 /* Pods-WTWifiSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773A442BE6EABDAC9CC91FB86A54B2BE /* Pods-WTWifiSDK_Tests-dummy.m */; };
+		F8C7DFCD2A4963368DE7E89863201D1A /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60471719E10FF43A3B1E7983089227 /* JSONModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		112D1DA7981D911E29E334710C6DC1D2 /* PBXContainerItemProxy */ = {
+		1AB05103213BB5CBE7257E0672E5CAC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
+			remoteInfo = JSONModel;
+		};
+		1CF537AF2F5D4C2BFC1D5E4A40D84C2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
+			remoteInfo = JSONModel;
+		};
+		23C01D55187FB839F4204E07196B1691 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 35B61133EF99FA71CFD1410B23B465EA;
 			remoteInfo = "Pods-WTWifiSDK_Example";
 		};
-		656125ED4AA2DA6C1BF258EB8FC29FF4 /* PBXContainerItemProxy */ = {
+		60A1D1C848A2FC5548512635D5B89104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A6E38C49BB2ED6899D8608BA13F84E9;
 			remoteInfo = WTWifiSDK;
 		};
-		A13054C2C9CF64704DC6EC3BFFED1AAF /* PBXContainerItemProxy */ = {
+		8047FF8E13DDCAE777CC0741463CF817 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
-			remoteInfo = MJExtension;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		E52962B78D44E6B95ECB268B1E4FB6EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0131087EB8E5D28DCC2C726B1C358CE6 /* Pods-WTWifiSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTWifiSDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		0CA21192C0A55B071705AF6B1FBF0F1F /* JSONValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
 		14F4E1CEA2A9BD0C079448D6861CCFC9 /* Pods-WTWifiSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTWifiSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		152F335FF5B24F1AFE167CD9DA1ED348 /* Pods-WTWifiSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		1CD26BED495FE896BF27FA595037E281 /* Pods-WTWifiSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
+		1F5D6452F019E4A728881D19881BC2BC /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
 		21431BA7617FE049A442EC457231F0CD /* Pods-WTWifiSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTWifiSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2255755EC8C46974866F98EB98EF850B /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
 		26285E3B8B261C510AA3CBCD94A0C5B8 /* Pods-WTWifiSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
-		2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJExtension; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		2F041F869DA2E3040474EE7C99EBF12B /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
+		32DC6A173448CB737FBFB541E1557569 /* WTWifiSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTWifiSDK.release.xcconfig; sourceTree = "<group>"; };
+		35EFAAF2BFF74288BAF170F4664C8522 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		372E255D93B296B20DC48A7C24E2D813 /* WTWifiSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = WTWifiSDK.xcframework; sourceTree = "<group>"; };
 		421400509D446E9967B2E339041B2D4C /* Pods-WTWifiSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		427D8B31962DED1CE8D5D6527BFF368C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
-		520A3A9FD574A96B394D81B865C1E6BB /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
-		52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
-		5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
-		647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
-		691905D88FA53C32438ACEDD6531FF27 /* WTWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WTWifiSDK.framework; sourceTree = "<group>"; };
+		4AEAD5999272190A4A7DBEB160621C08 /* JSONModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-umbrella.h"; sourceTree = "<group>"; };
+		5939A1FD0698CB2F1DC556619B52D8E0 /* JSONModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JSONModel-Info.plist"; sourceTree = "<group>"; };
+		5FF4506D7EE88EA55723B0771951029C /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		623E4CECCBFC88210ECE8963C4B27588 /* JSONModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.release.xcconfig; sourceTree = "<group>"; };
+		6367E620AC360C525BAFAC228EB7392C /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
 		69320C042468B66EEE715E69DB347136 /* Pods-WTWifiSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WTWifiSDK_Tests"; path = Pods_WTWifiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4F30C93D8E65E3F60762243A82A83C /* Pods-WTWifiSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Example-Info.plist"; sourceTree = "<group>"; };
-		722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		72D379C533636AF2480DDDB43C2B923C /* Pods-WTWifiSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		740482241B1B0C7B3D3D31974BC8E145 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
 		765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WTWifiSDK_Example"; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773A442BE6EABDAC9CC91FB86A54B2BE /* Pods-WTWifiSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTWifiSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		77C1440E827C4815EBECD93953774CE6 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
+		7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		842E0910C51130426F1E5540AAD5A810 /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		845F1F97DCF5C6EEA01017538BC5C196 /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		852B574AE08A9B284E6274C7D03AE39C /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
 		87E72A013C2CC3E99DF87909B8E7C1A2 /* Pods-WTWifiSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTWifiSDK_Example.modulemap"; sourceTree = "<group>"; };
-		8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
-		9439ED235893B1765356769F00419D69 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
+		8B60471719E10FF43A3B1E7983089227 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		90FD2267FF1DAA84801F80D6117DDDCC /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
+		914196EEB9D6870B41970A89D421F052 /* WTWifiSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "WTWifiSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		937CAD650AC267042182DC803F1ED1C3 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
+		9844E493964A0657A467DE201AFE5C7A /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
 		997F899BA0EEFDC5BBBAC96F919B4CEC /* Pods-WTWifiSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTWifiSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CDFB317BED983D1F91283C34D5A6ED5 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
+		9FFB6367ED5A1737055B8DBB17403EDD /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
 		A20D636C4787118C51799FFE09D9C722 /* Pods-WTWifiSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTWifiSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		A612E68DFEFFFDA442E565EA6035A419 /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		A77EF1C1D00FC8610558BC0DD5B2CE41 /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
 		A7AABEA095A440BD348E7B3D8C673EA5 /* Pods-WTWifiSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTWifiSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
+		A8F49A115E1DDBCF82FCA3F287564D9D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		AC271827B0377F48615CEEB67A09D784 /* Pods-WTWifiSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTWifiSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AE1A593B2D819FBB3FD9AD212A6BF30F /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
 		AEC65262142D02CAF44CAEDD119B871C /* Pods-WTWifiSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTWifiSDK_Tests.modulemap"; sourceTree = "<group>"; };
-		AF48524923F0B3BA809E697F3E0E4907 /* WTWifiSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WTWifiSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B3E2896E58D70126F579F90790BB4670 /* MJExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MJExtension-Info.plist"; sourceTree = "<group>"; };
-		B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
-		B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		B6B55ACD5768FB1AE02A54E389C445E3 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
+		BAACA1BF7AB3DD28402C4F9A7C2FD104 /* JSONModel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JSONModel; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5966CC22615E288AF61DD7B40C3ABE /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		BCF86FF0C0C31171BB6DCB8CDD7B6ABC /* Pods-WTWifiSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTWifiSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
-		CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
-		CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.debug.xcconfig; sourceTree = "<group>"; };
-		D3D3B8819C0A132316D47BC9FBF4FEBE /* WTWifiSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTWifiSDK.release.xcconfig; sourceTree = "<group>"; };
-		D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-umbrella.h"; sourceTree = "<group>"; };
-		E1CDEC88926F3ECF5A354C7F200A0A91 /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJExtension.modulemap; sourceTree = "<group>"; };
-		E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
-		E71ADEDDD7F254857974D28F7A3F21D3 /* WTWifiSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTWifiSDK.debug.xcconfig; sourceTree = "<group>"; };
-		EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
-		F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
-		F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.release.xcconfig; sourceTree = "<group>"; };
-		F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
+		C2E9AA6DE8121C2AF76BAAD8AA9DB630 /* WTWifiSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTWifiSDK.debug.xcconfig; sourceTree = "<group>"; };
+		C7468F62F2CB247A7D4562D8701B3C26 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		D15FAA4E311CBF3CE8588654E011F5EB /* JSONModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.debug.xcconfig; sourceTree = "<group>"; };
+		DF1ED2488AD8599FA58CE820592DD07D /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		EE16F25F7966C3B7FD966EA68035D3DB /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		EFD4D42C5BBE94067728C0E51A5F909D /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		F2D946D9450197C146414DF2C2037C0B /* JSONModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JSONModel.modulemap; sourceTree = "<group>"; };
+		F9637A14FA39E72CC99DC4E169EE6CE3 /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		FC36B978E6854BFF0A360CEDA0FD1FFD /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34B4B98FE14425EE98EE878CCB124D3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E368F649402D525F23915D68112F21D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44FFFD805C4E8569C4409FEF612D1213 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,48 +188,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87AF06A7403625E7F72F0B1C7F93C819 /* Frameworks */ = {
+		8267C980845C3F330B6F6669A494EE91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5245783DD6091088CC902AFAB65542D /* Foundation.framework in Frameworks */,
+				BFD7D7F51FAE952D523C8E30E10E169B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6AEAB760340E9E5BC9E1D613414C706 /* Frameworks */ = {
+		D37DD023A3721BF2E9A52660FA8A3C6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA1DC5783EBC5273E058F1B7A30026D8 /* Foundation.framework in Frameworks */,
+				33A88215D5655DDBF56DEAA41CC8D8DA /* CFNetwork.framework in Frameworks */,
+				26F87A3DC73299D66231DFE835E9C13D /* Foundation.framework in Frameworks */,
+				8861DA09219E12C0A1DBA07EB1CEB94A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09CFB7B0128F70A029CD34F214B5EEA3 /* Support Files */ = {
+		026642D538F9260D47F4715864154765 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E1CDEC88926F3ECF5A354C7F200A0A91 /* MJExtension.modulemap */,
-				EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */,
-				B3E2896E58D70126F579F90790BB4670 /* MJExtension-Info.plist */,
-				520A3A9FD574A96B394D81B865C1E6BB /* MJExtension-prefix.pch */,
-				D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */,
-				CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */,
-				F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */,
+				372E255D93B296B20DC48A7C24E2D813 /* WTWifiSDK.xcframework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MJExtension";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		109BDB13C482A7B4AA43E9214EE9AC87 /* Support Files */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E71ADEDDD7F254857974D28F7A3F21D3 /* WTWifiSDK.debug.xcconfig */,
-				D3D3B8819C0A132316D47BC9FBF4FEBE /* WTWifiSDK.release.xcconfig */,
+				D5B250C191F0E4C7AD947CD0C88A0F4B /* iOS */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WTWifiSDK";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F002779218D0B5C1EDF5E6354C1866E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */,
+				BAACA1BF7AB3DD28402C4F9A7C2FD104 /* JSONModel */,
+				765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */,
+				69320C042468B66EEE715E69DB347136 /* Pods-WTWifiSDK_Tests */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		22A7AD0EB2298AE7D1EC15371F158DDE /* Pods-WTWifiSDK_Tests */ = {
@@ -202,88 +252,78 @@
 			path = "Target Support Files/Pods-WTWifiSDK_Tests";
 			sourceTree = "<group>";
 		};
-		50932FD416ED565CF39BAA8A52A04A2B /* WTWifiSDK */ = {
+		32AC5CC96900C96109E62042D03E1FC6 /* WTWifiSDK */ = {
 			isa = PBXGroup;
 			children = (
-				6BAE8153CBB1F56B58F85E28DA40A2D8 /* Frameworks */,
-				9C9B7F898EEE8240B9EA4ADBEE114357 /* Pod */,
-				109BDB13C482A7B4AA43E9214EE9AC87 /* Support Files */,
+				026642D538F9260D47F4715864154765 /* Frameworks */,
+				D0B4D920FE97079785EF9F9129D9D5BC /* Support Files */,
 			);
 			name = WTWifiSDK;
-			path = ../..;
+			path = WTWifiSDK;
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		3B032421FFEE5EAA3F5A601DF7A77D83 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				852B574AE08A9B284E6274C7D03AE39C /* CocoaAsyncSocket.modulemap */,
+				9CDFB317BED983D1F91283C34D5A6ED5 /* CocoaAsyncSocket-dummy.m */,
+				937CAD650AC267042182DC803F1ED1C3 /* CocoaAsyncSocket-Info.plist */,
+				BB5966CC22615E288AF61DD7B40C3ABE /* CocoaAsyncSocket-prefix.pch */,
+				1F5D6452F019E4A728881D19881BC2BC /* CocoaAsyncSocket-umbrella.h */,
+				2255755EC8C46974866F98EB98EF850B /* CocoaAsyncSocket.debug.xcconfig */,
+				90FD2267FF1DAA84801F80D6117DDDCC /* CocoaAsyncSocket.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/CocoaAsyncSocket";
 			sourceTree = "<group>";
 		};
-		606B060E57D82BECCA73921ABBBF8980 /* Products */ = {
+		4003DB813A863C85F268F4C3BB3F4393 /* JSONModel */ = {
 			isa = PBXGroup;
 			children = (
-				2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension */,
-				765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */,
-				69320C042468B66EEE715E69DB347136 /* Pods-WTWifiSDK_Tests */,
+				FC36B978E6854BFF0A360CEDA0FD1FFD /* JSONAPI.h */,
+				9844E493964A0657A467DE201AFE5C7A /* JSONAPI.m */,
+				6367E620AC360C525BAFAC228EB7392C /* JSONHTTPClient.h */,
+				9FFB6367ED5A1737055B8DBB17403EDD /* JSONHTTPClient.m */,
+				740482241B1B0C7B3D3D31974BC8E145 /* JSONKeyMapper.h */,
+				EE16F25F7966C3B7FD966EA68035D3DB /* JSONKeyMapper.m */,
+				F9637A14FA39E72CC99DC4E169EE6CE3 /* JSONModel.h */,
+				8B60471719E10FF43A3B1E7983089227 /* JSONModel.m */,
+				AE1A593B2D819FBB3FD9AD212A6BF30F /* JSONModel+networking.h */,
+				2F041F869DA2E3040474EE7C99EBF12B /* JSONModel+networking.m */,
+				5FF4506D7EE88EA55723B0771951029C /* JSONModelClassProperty.h */,
+				EFD4D42C5BBE94067728C0E51A5F909D /* JSONModelClassProperty.m */,
+				A612E68DFEFFFDA442E565EA6035A419 /* JSONModelError.h */,
+				842E0910C51130426F1E5540AAD5A810 /* JSONModelError.m */,
+				845F1F97DCF5C6EEA01017538BC5C196 /* JSONModelLib.h */,
+				0CA21192C0A55B071705AF6B1FBF0F1F /* JSONValueTransformer.h */,
+				A77EF1C1D00FC8610558BC0DD5B2CE41 /* JSONValueTransformer.m */,
+				F078F8CEADEE710A16B24E6B6ADE0AD4 /* Support Files */,
 			);
-			name = Products;
+			name = JSONModel;
+			path = JSONModel;
 			sourceTree = "<group>";
 		};
-		6BAE8153CBB1F56B58F85E28DA40A2D8 /* Frameworks */ = {
+		6EEE4CF69709FBD981B2A62B38DF584C /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
-				691905D88FA53C32438ACEDD6531FF27 /* WTWifiSDK.framework */,
+				A8F49A115E1DDBCF82FCA3F287564D9D /* GCDAsyncSocket.h */,
+				C7468F62F2CB247A7D4562D8701B3C26 /* GCDAsyncSocket.m */,
+				35EFAAF2BFF74288BAF170F4664C8522 /* GCDAsyncUdpSocket.h */,
+				DF1ED2488AD8599FA58CE820592DD07D /* GCDAsyncUdpSocket.m */,
+				3B032421FFEE5EAA3F5A601DF7A77D83 /* Support Files */,
 			);
-			name = Frameworks;
+			name = CocoaAsyncSocket;
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
-		808A5CABAA06C682B29EC43B40BF875E /* MJExtension */ = {
+		8EABBE39A190F3298996791F901DE3A3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */,
-				5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */,
-				8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */,
-				2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */,
-				CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */,
-				1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */,
-				B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */,
-				647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */,
-				F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */,
-				F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */,
-				9439ED235893B1765356769F00419D69 /* MJPropertyType.m */,
-				7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */,
-				A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */,
-				B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */,
-				38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */,
-				722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */,
-				15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */,
-				52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */,
-				E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */,
-				9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */,
-				CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */,
-				09CFB7B0128F70A029CD34F214B5EEA3 /* Support Files */,
+				6EEE4CF69709FBD981B2A62B38DF584C /* CocoaAsyncSocket */,
+				4003DB813A863C85F268F4C3BB3F4393 /* JSONModel */,
+				32AC5CC96900C96109E62042D03E1FC6 /* WTWifiSDK */,
 			);
-			name = MJExtension;
-			path = MJExtension;
-			sourceTree = "<group>";
-		};
-		9C9B7F898EEE8240B9EA4ADBEE114357 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				427D8B31962DED1CE8D5D6527BFF368C /* LICENSE */,
-				AF48524923F0B3BA809E697F3E0E4907 /* WTWifiSDK.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		ADD5D62BAD195EB5B12AB28B0AA3A118 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				50932FD416ED565CF39BAA8A52A04A2B /* WTWifiSDK */,
-			);
-			name = "Development Pods";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B126FE5814DB750E8E764CBAAC36AE87 /* Pods-WTWifiSDK_Example */ = {
@@ -312,53 +352,88 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BBE7F25BDF6E2ECE64867498D8902AF4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				808A5CABAA06C682B29EC43B40BF875E /* MJExtension */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				ADD5D62BAD195EB5B12AB28B0AA3A118 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				BBE7F25BDF6E2ECE64867498D8902AF4 /* Pods */,
-				606B060E57D82BECCA73921ABBBF8980 /* Products */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				8EABBE39A190F3298996791F901DE3A3 /* Pods */,
+				1F002779218D0B5C1EDF5E6354C1866E /* Products */,
 				B855B29ED624FD6DD5C5472B318608AC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D0B4D920FE97079785EF9F9129D9D5BC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				914196EEB9D6870B41970A89D421F052 /* WTWifiSDK-xcframeworks.sh */,
+				C2E9AA6DE8121C2AF76BAAD8AA9DB630 /* WTWifiSDK.debug.xcconfig */,
+				32DC6A173448CB737FBFB541E1557569 /* WTWifiSDK.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/WTWifiSDK";
+			sourceTree = "<group>";
+		};
+		D5B250C191F0E4C7AD947CD0C88A0F4B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6BE90665B4A1053C5FF26D5289CBC83 /* CFNetwork.framework */,
+				7CB6704A70D55B80A3F7281F31BAE70C /* Foundation.framework */,
+				7ABAB7562D0623DFC2D01E0A09448472 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F078F8CEADEE710A16B24E6B6ADE0AD4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2D946D9450197C146414DF2C2037C0B /* JSONModel.modulemap */,
+				77C1440E827C4815EBECD93953774CE6 /* JSONModel-dummy.m */,
+				5939A1FD0698CB2F1DC556619B52D8E0 /* JSONModel-Info.plist */,
+				B6B55ACD5768FB1AE02A54E389C445E3 /* JSONModel-prefix.pch */,
+				4AEAD5999272190A4A7DBEB160621C08 /* JSONModel-umbrella.h */,
+				D15FAA4E311CBF3CE8588654E011F5EB /* JSONModel.debug.xcconfig */,
+				623E4CECCBFC88210ECE8963C4B27588 /* JSONModel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONModel";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		65698788A38D6A188CBC7939C6A94525 /* Headers */ = {
+		17317FE99BCBCAE1DCC6BF783E1EFAF0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33DC154CACD614244DE45A53CE08EF0D /* MJExtension.h in Headers */,
-				CE9F398B1DAD84FEA79B6E830A05E852 /* MJExtension-umbrella.h in Headers */,
-				5807E0632368B365308B44C5AE6973BD /* MJExtensionConst.h in Headers */,
-				1339E6C9911F6C3F413CF37B1DB1207A /* MJFoundation.h in Headers */,
-				6130390A28FACC2AAB743924489049C0 /* MJProperty.h in Headers */,
-				D6B9216743757D8CCF0DC1BAFAAEFBE6 /* MJPropertyKey.h in Headers */,
-				886B4AC9B1FE36EFF7CD38820E10BFAD /* MJPropertyType.h in Headers */,
-				A36B349F4F080AAA4038E80CBFCD0140 /* NSObject+MJClass.h in Headers */,
-				CCD4362E8522B5BC2820666098E91B93 /* NSObject+MJCoding.h in Headers */,
-				37F6A3BECF37C125152A3BBA232AD7DC /* NSObject+MJKeyValue.h in Headers */,
-				AC437AB3F30FD2D50B2F02256A50BC22 /* NSObject+MJProperty.h in Headers */,
-				6E5BA38F45C9B904BAA86970852F0A9E /* NSString+MJExtension.h in Headers */,
+				7C1DD31A3A7A0FBBA1A9C88A92CAA28C /* CocoaAsyncSocket-umbrella.h in Headers */,
+				67A4DC4B4DB5321811BC3D3627AE855E /* GCDAsyncSocket.h in Headers */,
+				B19D3C79B36157522E7662E737D558EF /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185AEC2167F8BAF6174A349A76C560B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E790E97FB101084DD279EC5169AF7518 /* Pods-WTWifiSDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7526E79C2C6C091FA3B1ECAA7C8E5AEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E215A01778A3DF5EF7B522CE5262A0DF /* JSONAPI.h in Headers */,
+				80003F11C6F2225FE936BFCA89CF2717 /* JSONHTTPClient.h in Headers */,
+				980CC0C3C1236D05EBBD4AEA163F872B /* JSONKeyMapper.h in Headers */,
+				8995498E3EAB7873FC5CB4F1DB0FC7CF /* JSONModel.h in Headers */,
+				811D473E0DFE216172F3076A4548DA20 /* JSONModel+networking.h in Headers */,
+				07F8C8D8AFDF008C5A8590BFD794A980 /* JSONModel-umbrella.h in Headers */,
+				C892935D016AB0F0CAE15B238F7F9160 /* JSONModelClassProperty.h in Headers */,
+				E3A41F9538887DE8A83E5FE2110F17C3 /* JSONModelError.h in Headers */,
+				E3E54ABA5E9BD709238DC219D8659B9A /* JSONModelLib.h in Headers */,
+				D8F9FFF00149646E979A3B4A68D49658 /* JSONValueTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,53 +445,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2F483FB60DC6A28FBB331E886BBF3FD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				027F75AA90C991AFF7887F0B810C141C /* Pods-WTWifiSDK_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9D326A844400EE674E60B84B2923F65 /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */;
+			buildConfigurationList = 7351D677716C72AA905D9624287D6843 /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */;
 			buildPhases = (
-				E2F483FB60DC6A28FBB331E886BBF3FD /* Headers */,
-				BE054AFCE383FADAF99287474104E471 /* Sources */,
-				E6AEAB760340E9E5BC9E1D613414C706 /* Frameworks */,
-				BFF1852000DC4E31E3814EF4BA0BC071 /* Resources */,
+				185AEC2167F8BAF6174A349A76C560B2 /* Headers */,
+				AFD54D8303457529E1E25258A853C55C /* Sources */,
+				8267C980845C3F330B6F6669A494EE91 /* Frameworks */,
+				36E2BBC6DEEFD9F029E6767A5BE6ABA7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A3B0C8352635E6418B840B043F936111 /* PBXTargetDependency */,
-				2C0F10073E81D2590858E7F4EB9AF2A7 /* PBXTargetDependency */,
+				58E9102D908E26BA08ECB010EEDDE7F1 /* PBXTargetDependency */,
+				E237FA248E0B8B12F11D327D618E337B /* PBXTargetDependency */,
+				78452C691F5BDBFFA6CDB56824AB0302 /* PBXTargetDependency */,
 			);
 			name = "Pods-WTWifiSDK_Example";
 			productName = Pods_WTWifiSDK_Example;
 			productReference = 765D2F46C4D09D86C19A146EB43E3364 /* Pods-WTWifiSDK_Example */;
 			productType = "com.apple.product-type.framework";
 		};
-		4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */ = {
+		6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D268A7665B36CDB9436B0809E0E3055 /* Build configuration list for PBXNativeTarget "MJExtension" */;
+			buildConfigurationList = B0A95C19FCB7B5FAAC46BE001C359756 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
 			buildPhases = (
-				65698788A38D6A188CBC7939C6A94525 /* Headers */,
-				F9ACB1917E93605EE8CFF449459A3309 /* Sources */,
-				87AF06A7403625E7F72F0B1C7F93C819 /* Frameworks */,
-				B8E8D5E5D1ED0D861BF0C3F5228B5E45 /* Resources */,
+				17317FE99BCBCAE1DCC6BF783E1EFAF0 /* Headers */,
+				B9BA2F3E20981E6576E8626EADB9300B /* Sources */,
+				D37DD023A3721BF2E9A52660FA8A3C6D /* Frameworks */,
+				3D473FD104BFCD98C99B267430355524 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MJExtension;
-			productName = MJExtension;
-			productReference = 2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension */;
+			name = CocoaAsyncSocket;
+			productName = CocoaAsyncSocket;
+			productReference = 6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E950F62BA248FB5D8F9F3808D3E6A20E /* Build configuration list for PBXNativeTarget "JSONModel" */;
+			buildPhases = (
+				7526E79C2C6C091FA3B1ECAA7C8E5AEB /* Headers */,
+				164188E8EB3EEE1AC8B1EA106A6242BA /* Sources */,
+				34B4B98FE14425EE98EE878CCB124D3C /* Frameworks */,
+				98F3CA621FD927E53FBC948642CAD80D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONModel;
+			productName = JSONModel;
+			productReference = BAACA1BF7AB3DD28402C4F9A7C2FD104 /* JSONModel */;
 			productType = "com.apple.product-type.framework";
 		};
 		F7E01CFECD0A146F31FA004A0A68E5E2 /* Pods-WTWifiSDK_Tests */ = {
@@ -431,7 +517,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2D3F90CFAE4F73E5854A63A955F377C9 /* PBXTargetDependency */,
+				4F5CB5155783B7599AD6DD4FD2C0A59F /* PBXTargetDependency */,
 			);
 			name = "Pods-WTWifiSDK_Tests";
 			productName = Pods_WTWifiSDK_Tests;
@@ -456,11 +542,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 606B060E57D82BECCA73921ABBBF8980 /* Products */;
+			productRefGroup = 1F002779218D0B5C1EDF5E6354C1866E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */,
+				6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */,
+				E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */,
 				35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */,
 				F7E01CFECD0A146F31FA004A0A68E5E2 /* Pods-WTWifiSDK_Tests */,
 				3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */,
@@ -469,14 +556,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B8E8D5E5D1ED0D861BF0C3F5228B5E45 /* Resources */ = {
+		36E2BBC6DEEFD9F029E6767A5BE6ABA7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFF1852000DC4E31E3814EF4BA0BC071 /* Resources */ = {
+		3D473FD104BFCD98C99B267430355524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98F3CA621FD927E53FBC948642CAD80D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,7 +586,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FAD79CAAF58BEEBDBD0D050243B0257C /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/WTWifiSDK/WTWifiSDK-xcframeworks.sh",
+				"${PODS_ROOT}/WTWifiSDK/WTWifiSDK.xcframework",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputPaths = (
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/WTWifiSDK/WTWifiSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/WTWifiSDK/WTWifiSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		164188E8EB3EEE1AC8B1EA106A6242BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B83B01AE4C3DAECB65F98602C19C654 /* JSONAPI.m in Sources */,
+				DF71E1ABEAD8ED2279E72B73E9A2C9F9 /* JSONHTTPClient.m in Sources */,
+				F124DF686BA9DAAFCC26D537273B0495 /* JSONKeyMapper.m in Sources */,
+				F8C7DFCD2A4963368DE7E89863201D1A /* JSONModel.m in Sources */,
+				04C31B7D575E46A1F115E23C14CD43DC /* JSONModel+networking.m in Sources */,
+				C532616929A9C911A380CE85D4BE963E /* JSONModel-dummy.m in Sources */,
+				BCD200C62F27CDD1442CA4DFD7226B6D /* JSONModelClassProperty.m in Sources */,
+				7E74F615C738473B6C0040D0EBAA9066 /* JSONModelError.m in Sources */,
+				72CAD26DC86BDDD5AE05CA3C4D9A0C8C /* JSONValueTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A98F7D40121063186C67424A3DB1AC30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -501,59 +632,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE054AFCE383FADAF99287474104E471 /* Sources */ = {
+		AFD54D8303457529E1E25258A853C55C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22B5BF1438F18E67E8B3198CD203BEF /* Pods-WTWifiSDK_Example-dummy.m in Sources */,
+				822A048982FB0E835ACB632563E0F489 /* Pods-WTWifiSDK_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9ACB1917E93605EE8CFF449459A3309 /* Sources */ = {
+		B9BA2F3E20981E6576E8626EADB9300B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86469EDD5558A59BA4109620C6724E8B /* MJExtension-dummy.m in Sources */,
-				8C403AA7D32772AB3A3D4E60F41FE066 /* MJExtensionConst.m in Sources */,
-				F0D6C8DDEFDF0F3A615478F18522F28C /* MJFoundation.m in Sources */,
-				04BCB9A795A9F6FCFE32F445FF9BD723 /* MJProperty.m in Sources */,
-				0B492FFEC27BBC3C6E2B8F0333B05FF6 /* MJPropertyKey.m in Sources */,
-				94EEDF6D32DFE12B049F9FDF67F48373 /* MJPropertyType.m in Sources */,
-				F1D87801447F8DD985630C5665F159C3 /* NSObject+MJClass.m in Sources */,
-				CBA797C292CF129755168E042F96531E /* NSObject+MJCoding.m in Sources */,
-				997795BA486CFE8E8F47247BA54075F8 /* NSObject+MJKeyValue.m in Sources */,
-				644ED9B098E888EBC0954AFB0C8AA6D4 /* NSObject+MJProperty.m in Sources */,
-				6B22D895CE423C00B2DDAC0EA08F4D7C /* NSString+MJExtension.m in Sources */,
+				12F482FE2022286A223FFC9BFA84F83A /* CocoaAsyncSocket-dummy.m in Sources */,
+				4FC2272F4C11472C903CFCC6A101313E /* GCDAsyncSocket.m in Sources */,
+				37B0BF2484BE142772F5429AEE5CF0B1 /* GCDAsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C0F10073E81D2590858E7F4EB9AF2A7 /* PBXTargetDependency */ = {
+		426DE68C994209C81B8837A090E646F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = WTWifiSDK;
-			target = 3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */;
-			targetProxy = 656125ED4AA2DA6C1BF258EB8FC29FF4 /* PBXContainerItemProxy */;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = 8047FF8E13DDCAE777CC0741463CF817 /* PBXContainerItemProxy */;
 		};
-		2D3F90CFAE4F73E5854A63A955F377C9 /* PBXTargetDependency */ = {
+		4F5CB5155783B7599AD6DD4FD2C0A59F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WTWifiSDK_Example";
 			target = 35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */;
-			targetProxy = 112D1DA7981D911E29E334710C6DC1D2 /* PBXContainerItemProxy */;
+			targetProxy = 23C01D55187FB839F4204E07196B1691 /* PBXContainerItemProxy */;
 		};
-		A3B0C8352635E6418B840B043F936111 /* PBXTargetDependency */ = {
+		58E9102D908E26BA08ECB010EEDDE7F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MJExtension;
-			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
-			targetProxy = A13054C2C9CF64704DC6EC3BFFED1AAF /* PBXContainerItemProxy */;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = E52962B78D44E6B95ECB268B1E4FB6EC /* PBXContainerItemProxy */;
+		};
+		651B8EDAD8E3B84B6509BFCD05218286 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
+			targetProxy = 1AB05103213BB5CBE7257E0672E5CAC6 /* PBXContainerItemProxy */;
+		};
+		78452C691F5BDBFFA6CDB56824AB0302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WTWifiSDK;
+			target = 3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */;
+			targetProxy = 60A1D1C848A2FC5548512635D5B89104 /* PBXContainerItemProxy */;
+		};
+		E237FA248E0B8B12F11D327D618E337B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
+			targetProxy = 1CF537AF2F5D4C2BFC1D5E4A40D84C2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		31EE52BBF0901BB6001A0675B983ED79 /* Debug */ = {
+		0247D858711773713777F25A7771B350 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */;
+			baseConfigurationReference = 90FD2267FF1DAA84801F80D6117DDDCC /* CocoaAsyncSocket.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -563,14 +704,138 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MJExtension/MJExtension-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
-				PRODUCT_MODULE_NAME = MJExtension;
-				PRODUCT_NAME = MJExtension;
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		159127D3A03255A0EBA0D84325A22420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32DC6A173448CB737FBFB541E1557569 /* WTWifiSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A289AABEDB44B0E91A0E3D68D83169E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26285E3B8B261C510AA3CBCD94A0C5B8 /* Pods-WTWifiSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61A93E48DDBC3119C50DEE3E271EEE1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E9AA6DE8121C2AF76BAAD8AA9DB630 /* WTWifiSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		758E99FA3C0262DF094B9DC716D144F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 623E4CECCBFC88210ECE8963C4B27588 /* JSONModel.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/JSONModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				PRODUCT_MODULE_NAME = JSONModel;
+				PRODUCT_NAME = JSONModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EB696D49BFDA62EBF045C0A10971288 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2255755EC8C46974866F98EB98EF850B /* CocoaAsyncSocket.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -677,9 +942,9 @@
 			};
 			name = Release;
 		};
-		C294FDD0878130921362C9E5863B7432 /* Release */ = {
+		A3BDFA87ED3884CAFFDEE06D5891EF85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */;
+			baseConfigurationReference = D15FAA4E311CBF3CE8588654E011F5EB /* JSONModel.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -689,18 +954,51 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MJExtension/MJExtension-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONModel/JSONModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONModel/JSONModel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
-				PRODUCT_MODULE_NAME = MJExtension;
-				PRODUCT_NAME = MJExtension;
+				MODULEMAP_FILE = "Target Support Files/JSONModel/JSONModel.modulemap";
+				PRODUCT_MODULE_NAME = JSONModel;
+				PRODUCT_NAME = JSONModel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8CE1077D7D48B6CC95B42E196E213F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152F335FF5B24F1AFE167CD9DA1ED348 /* Pods-WTWifiSDK_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -774,55 +1072,6 @@
 			};
 			name = Debug;
 		};
-		D67E23F1A44BE25DA9B39DB88EDCBF94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 152F335FF5B24F1AFE167CD9DA1ED348 /* Pods-WTWifiSDK_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D971DF36BDF42FDE0D7415B7F5C2CBBE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3D3B8819C0A132316D47BC9FBF4FEBE /* WTWifiSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		DCD546CB5767D807F424F34FD9313F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 997F899BA0EEFDC5BBBAC96F919B4CEC /* Pods-WTWifiSDK_Tests.debug.xcconfig */;
@@ -856,61 +1105,14 @@
 			};
 			name = Debug;
 		};
-		EE3D9E4C672187DA9223E3A18B01841C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E71ADEDDD7F254857974D28F7A3F21D3 /* WTWifiSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F4DFC80346BE0BF6EB0558E8096D72BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26285E3B8B261C510AA3CBCD94A0C5B8 /* Pods-WTWifiSDK_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D268A7665B36CDB9436B0809E0E3055 /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+		3B2D82C86783C32A38D14FDB075A119D /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31EE52BBF0901BB6001A0675B983ED79 /* Debug */,
-				C294FDD0878130921362C9E5863B7432 /* Release */,
+				61A93E48DDBC3119C50DEE3E271EEE1C /* Debug */,
+				159127D3A03255A0EBA0D84325A22420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -924,11 +1126,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9D326A844400EE674E60B84B2923F65 /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */ = {
+		7351D677716C72AA905D9624287D6843 /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4DFC80346BE0BF6EB0558E8096D72BD /* Debug */,
-				D67E23F1A44BE25DA9B39DB88EDCBF94 /* Release */,
+				5A289AABEDB44B0E91A0E3D68D83169E /* Debug */,
+				B8CE1077D7D48B6CC95B42E196E213F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0A95C19FCB7B5FAAC46BE001C359756 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB696D49BFDA62EBF045C0A10971288 /* Debug */,
+				0247D858711773713777F25A7771B350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -942,11 +1153,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3BB2E5A5A019107DB6BB45DF9BAD4A1 /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */ = {
+		E950F62BA248FB5D8F9F3808D3E6A20E /* Build configuration list for PBXNativeTarget "JSONModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE3D9E4C672187DA9223E3A18B01841C /* Debug */,
-				D971DF36BDF42FDE0D7415B7F5C2CBBE /* Release */,
+				A3BDFA87ED3884CAFFDEE06D5891EF85 /* Debug */,
+				758E99FA3C0262DF094B9DC716D144F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

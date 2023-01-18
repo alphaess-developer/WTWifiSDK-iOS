@@ -4,14 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/Pods_WTWifiSDK.framework/Info.plist</key>
-		<data>
-		TGu7LHSvqzc4xJj1sFRiKNX9bBQ=
-		</data>
-		<key>Frameworks/Pods_WTWifiSDK.framework/Pods_WTWifiSDK</key>
-		<data>
-		cP5CmTocDJdU9+Kl7p+C4DLx4Es=
-		</data>
 		<key>Headers/WTUpdateModel.h</key>
 		<data>
 		6Hht/rFa85eQrfZxURq5v7cHMMQ=
@@ -39,20 +31,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/Pods_WTWifiSDK.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gwP/6l6Srj57MQzoDHbFe3tryoOJjN0IncI7if5BVfg=
-			</data>
-		</dict>
-		<key>Frameworks/Pods_WTWifiSDK.framework/Pods_WTWifiSDK</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			M432cgqRdFXt9ocluHZ7oNz32xHCpD5dz6TyM4etwSc=
-			</data>
-		</dict>
 		<key>Headers/WTUpdateModel.h</key>
 		<dict>
 			<key>hash2</key>

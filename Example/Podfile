@@ -3,9 +3,8 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'WTWifiSDK_Example' do
-  pod 'WTWifiSDK', :path => '../'
-  pod 'MJExtension'
-
+#  pod 'WTWifiSDK', :path => '../'
+  pod 'WTWifiSDK'
   target 'WTWifiSDK_Tests' do
     inherit! :search_paths
 

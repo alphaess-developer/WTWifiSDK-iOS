@@ -7,8 +7,7 @@
 //
 
 #import "WTEMSInfoController.h"
-#import "WTWifiCenter.h"
-#import "MJExtension.h"
+#import <WTWifiSDK/WTWifiSDK.h>
 
 @interface WTEMSInfoController ()<WTWifiCenterDelegate>
 
@@ -140,19 +139,19 @@
     NSLog(@"WTSystemInfoController - 未连接 %@", ssid);
 }
 
-- (void)didReceiveEMSSystemInfo:(WTSystemModel *)info {
-    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", info.mj_keyValues];
+- (void)didReceiveEMSSystemInfo:(NSDictionary *)info {
+    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", info];
     [self resizeLabelWith:labelText];
    
 }
 
-- (void)didReceiveEMSRunningInfo:(WTRunningModel *)info {
-    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应运行信息数据：\n %@", info.mj_keyValues];
+- (void)didReceiveEMSRunningInfo:(NSDictionary *)info {
+    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应运行信息数据：\n %@", info];
     [self resizeLabelWith:labelText];
 }
 
-- (void)didReceiveEMSSafetyInfo:(WTSafetyModel *)info {
-    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应安规信息数据：\n %@", info.mj_keyValues];
+- (void)didReceiveEMSSafetyInfo:(NSDictionary *)info {
+    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应安规信息数据：\n %@", info];
     [self resizeLabelWith:labelText];
 }
 
