@@ -114,7 +114,7 @@ Pod::Spec.new do |spec|
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
 
-  spec.preserve_paths = "WTWifiSDK"
+  # spec.preserve_paths = "WTWifiSDK"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
