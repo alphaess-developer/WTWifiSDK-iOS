@@ -4,59 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/WTWifiSDK-umbrella.h</key>
-		<data>
-		henDAW+IXnVaEC3pKQM1U6cdvoo=
-		</data>
-		<key>Headers/WTWifiSDK.h</key>
-		<data>
-		VLDu/+Rg+JY7WOvYnBHg4xUpSvc=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		L3ohKinuLHjF+pnC3iO1GU5qdt8=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		UGuD4c4pdilibxAxChF/gPA5EBs=
+		m4PCHTO8CyPZXD9hvDTG/MBGAuw=
 		</data>
 	</dict>
 	<key>files2</key>
-	<dict>
-		<key>Headers/WTWifiSDK-umbrella.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			henDAW+IXnVaEC3pKQM1U6cdvoo=
-			</data>
-			<key>hash2</key>
-			<data>
-			BVna6YN6Gt736+H4zLVI8od29Qx9mfUt3disypMkfrQ=
-			</data>
-		</dict>
-		<key>Headers/WTWifiSDK.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VLDu/+Rg+JY7WOvYnBHg4xUpSvc=
-			</data>
-			<key>hash2</key>
-			<data>
-			wY43jefKe2ux5vWchbuuQHimNZJ03hM1YioNPUW0x2Q=
-			</data>
-		</dict>
-		<key>Modules/module.modulemap</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UGuD4c4pdilibxAxChF/gPA5EBs=
-			</data>
-			<key>hash2</key>
-			<data>
-			w3MknAWHvCKgdGVmb3dTlKjwx4gwFiz7f3uWGhDX10Q=
-			</data>
-		</dict>
-	</dict>
+	<dict/>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>
