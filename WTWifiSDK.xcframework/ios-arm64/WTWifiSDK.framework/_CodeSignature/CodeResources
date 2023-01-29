@@ -4,13 +4,69 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/WTUpdateModel.h</key>
+		<data>
+		qqrefZ+bMcVTqB5PkpHmfWYIU+I=
+		</data>
+		<key>Headers/WTWifiCenter.h</key>
+		<data>
+		cOtmiF21n4tmfuG5KSzCc3j/cjo=
+		</data>
+		<key>Headers/WTWifiModel.h</key>
+		<data>
+		37mN38zCV9cB7qMKEQFp0mvrRLk=
+		</data>
+		<key>Headers/WTWifiSDK.h</key>
+		<data>
+		VLDu/+Rg+JY7WOvYnBHg4xUpSvc=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		pscKC6ykrfop3IZNu3xzv7reuoQ=
 		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		LtBTgxChOeQmD7KJS/hp8tY1H2o=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Headers/WTUpdateModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			x3vJQx6YZqA3sEV9AVoBy4o1a1qD0M7U5HbaxzJ0kPM=
+			</data>
+		</dict>
+		<key>Headers/WTWifiCenter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			145VZp2t8421SB6EspUUofsb57pu6ZNxQXymtfBg93Q=
+			</data>
+		</dict>
+		<key>Headers/WTWifiModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nmdpJttnDVNMcPHrfPDc81Jqup+VCeMD4tKMggWHF6g=
+			</data>
+		</dict>
+		<key>Headers/WTWifiSDK.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wY43jefKe2ux5vWchbuuQHimNZJ03hM1YioNPUW0x2Q=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IsaxRUfsT7rgAJ5/vWKUCj2l/u8pE3G3XKFvFK+ITn0=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>
