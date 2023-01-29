@@ -4,25 +4,36 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/WTUpdateModel.h</key>
+		<data>
+		6Hht/rFa85eQrfZxURq5v7cHMMQ=
+		</data>
 		<key>Headers/WTWifiCenter.h</key>
 		<data>
 		cOtmiF21n4tmfuG5KSzCc3j/cjo=
 		</data>
-		<key>Headers/WTWifiSDK-umbrella.h</key>
+		<key>Headers/WTWifiModel.h</key>
 		<data>
-		MHcDASQU9+1qoJ5hvogyQZ8VA7Q=
+		37mN38zCV9cB7qMKEQFp0mvrRLk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qdtmVRzlA/1PWcQRH0iheNlX8VU=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		UGuD4c4pdilibxAxChF/gPA5EBs=
+		m4PCHTO8CyPZXD9hvDTG/MBGAuw=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/WTUpdateModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6Hht/rFa85eQrfZxURq5v7cHMMQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			EDH3sHfg126KJwIVOHInlnOKMuRZopTSV94+YsvOjv8=
+			</data>
+		</dict>
 		<key>Headers/WTWifiCenter.h</key>
 		<dict>
 			<key>hash</key>
@@ -34,26 +45,15 @@
 			145VZp2t8421SB6EspUUofsb57pu6ZNxQXymtfBg93Q=
 			</data>
 		</dict>
-		<key>Headers/WTWifiSDK-umbrella.h</key>
+		<key>Headers/WTWifiModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MHcDASQU9+1qoJ5hvogyQZ8VA7Q=
+			37mN38zCV9cB7qMKEQFp0mvrRLk=
 			</data>
 			<key>hash2</key>
 			<data>
-			R/r2FCq9dJSbPVqfmqAVcOxnX/zBpcSa+4PXH7XKE0M=
-			</data>
-		</dict>
-		<key>Modules/module.modulemap</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UGuD4c4pdilibxAxChF/gPA5EBs=
-			</data>
-			<key>hash2</key>
-			<data>
-			w3MknAWHvCKgdGVmb3dTlKjwx4gwFiz7f3uWGhDX10Q=
+			nmdpJttnDVNMcPHrfPDc81Jqup+VCeMD4tKMggWHF6g=
 			</data>
 		</dict>
 	</dict>
