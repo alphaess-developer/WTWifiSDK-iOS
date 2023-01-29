@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/WTWifiCenter.h</key>
 		<data>
-		PBAqrrqODmgopm3moMNLiHU6qSg=
+		cOtmiF21n4tmfuG5KSzCc3j/cjo=
 		</data>
 		<key>Headers/WTWifiModel.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/WTWifiSDK.h</key>
 		<data>
-		TFT/Tpv7Jv21h4O42yCc6JPfbGE=
+		VLDu/+Rg+JY7WOvYnBHg4xUpSvc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -26,7 +26,11 @@
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		LtBTgxChOeQmD7KJS/hp8tY1H2o=
+		mQaenDBiELxXGm+7eu/ToorHKT8=
+		</data>
+		<key>module.modulemap</key>
+		<data>
+		mQaenDBiELxXGm+7eu/ToorHKT8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -42,7 +46,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s1tU3fsW03t40nLhhjhCpbVn9BOXRSLnyNJqTBqcuZY=
+			145VZp2t8421SB6EspUUofsb57pu6ZNxQXymtfBg93Q=
 			</data>
 		</dict>
 		<key>Headers/WTWifiModel.h</key>
@@ -56,14 +60,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GlPph3QUe9ktiayKDXD5v3h790KtDdGdZ8qptM+C9KY=
+			wY43jefKe2ux5vWchbuuQHimNZJ03hM1YioNPUW0x2Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IsaxRUfsT7rgAJ5/vWKUCj2l/u8pE3G3XKFvFK+ITn0=
+			tZOpCeWqXvMFsImBBqI6xRk/VVdOdHEbXPKa8HiXN7I=
+			</data>
+		</dict>
+		<key>module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tZOpCeWqXvMFsImBBqI6xRk/VVdOdHEbXPKa8HiXN7I=
 			</data>
 		</dict>
 	</dict>
