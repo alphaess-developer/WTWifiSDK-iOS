@@ -1,6 +1,0 @@
-framework module WTWifiSDK {
-	umbrella header "WTWifiSDK-umbrella.h"
-
-	export *
-	module * { export * }
-}

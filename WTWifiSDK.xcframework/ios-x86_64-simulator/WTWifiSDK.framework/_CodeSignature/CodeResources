@@ -4,17 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/WTUpdateModel.h</key>
+		<key>Headers/WTWifiSDK-umbrella.h</key>
 		<data>
-		6Hht/rFa85eQrfZxURq5v7cHMMQ=
-		</data>
-		<key>Headers/WTWifiCenter.h</key>
-		<data>
-		cOtmiF21n4tmfuG5KSzCc3j/cjo=
-		</data>
-		<key>Headers/WTWifiModel.h</key>
-		<data>
-		37mN38zCV9cB7qMKEQFp0mvrRLk=
+		henDAW+IXnVaEC3pKQM1U6cdvoo=
 		</data>
 		<key>Headers/WTWifiSDK.h</key>
 		<data>
@@ -22,42 +14,32 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		pscKC6ykrfop3IZNu3xzv7reuoQ=
+		L3ohKinuLHjF+pnC3iO1GU5qdt8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		mQaenDBiELxXGm+7eu/ToorHKT8=
-		</data>
-		<key>module.modulemap</key>
-		<data>
-		mQaenDBiELxXGm+7eu/ToorHKT8=
+		UGuD4c4pdilibxAxChF/gPA5EBs=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/WTUpdateModel.h</key>
+		<key>Headers/WTWifiSDK-umbrella.h</key>
 		<dict>
-			<key>hash2</key>
+			<key>hash</key>
 			<data>
-			EDH3sHfg126KJwIVOHInlnOKMuRZopTSV94+YsvOjv8=
+			henDAW+IXnVaEC3pKQM1U6cdvoo=
 			</data>
-		</dict>
-		<key>Headers/WTWifiCenter.h</key>
-		<dict>
 			<key>hash2</key>
 			<data>
-			145VZp2t8421SB6EspUUofsb57pu6ZNxQXymtfBg93Q=
-			</data>
-		</dict>
-		<key>Headers/WTWifiModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nmdpJttnDVNMcPHrfPDc81Jqup+VCeMD4tKMggWHF6g=
+			BVna6YN6Gt736+H4zLVI8od29Qx9mfUt3disypMkfrQ=
 			</data>
 		</dict>
 		<key>Headers/WTWifiSDK.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			VLDu/+Rg+JY7WOvYnBHg4xUpSvc=
+			</data>
 			<key>hash2</key>
 			<data>
 			wY43jefKe2ux5vWchbuuQHimNZJ03hM1YioNPUW0x2Q=
@@ -65,16 +47,13 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash2</key>
+			<key>hash</key>
 			<data>
-			tZOpCeWqXvMFsImBBqI6xRk/VVdOdHEbXPKa8HiXN7I=
+			UGuD4c4pdilibxAxChF/gPA5EBs=
 			</data>
-		</dict>
-		<key>module.modulemap</key>
-		<dict>
 			<key>hash2</key>
 			<data>
-			tZOpCeWqXvMFsImBBqI6xRk/VVdOdHEbXPKa8HiXN7I=
+			w3MknAWHvCKgdGVmb3dTlKjwx4gwFiz7f3uWGhDX10Q=
 			</data>
 		</dict>
 	</dict>
