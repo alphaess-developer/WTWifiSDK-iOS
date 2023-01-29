@@ -1,5 +1,5 @@
 framework module WTWifiSDK {
-	umbrella header "WTWifiSDK.h"
+	umbrella header "WTWifiSDK-umbrella.h"
 
 	export *
 	module * { export * }

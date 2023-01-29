@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WTWifiSDK"
-  spec.version      = "1.0.5"
+  spec.version      = "1.0.6"
   spec.summary      = "A sdk for alphaess wifi connect."
 
   # This description is used to generate tags and improve search results.
@@ -137,6 +137,8 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   spec.requires_arc = true
+  
+  spec.module_map = 'WTWifiSDK.modulemap'
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency "JSONModel"

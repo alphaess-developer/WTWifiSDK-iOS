@@ -15,6 +15,7 @@ FOUNDATION_EXPORT const unsigned char WTWifiSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <WTWifiSDK/PublicHeader.h>
 
-#import <WTWifiSDK/WTWifiCenter.h>
-#import <WTWifiSDK/WTWifiModel.h>
-#import <WTWifiSDK/WTUpdateModel.h>
+#import "WTWifiCenter.h"
+#import "WTWifiModel.h"
+#import "WTUpdateModel.h"
+
