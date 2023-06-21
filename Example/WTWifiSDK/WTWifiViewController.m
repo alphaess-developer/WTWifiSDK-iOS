@@ -25,10 +25,6 @@
 @implementation WTWifiViewController
 
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [[WTWifiCenter sharedInstance] addDelegate:self];
-}
 
 - (void)viewDidLoad
 {
@@ -44,15 +40,9 @@
 
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[WTWifiCenter sharedInstance] removeDelegate:self];
-}
 
 - (void)dealloc {
-    NSLog(@"开始dealloc");
     [[WTWifiCenter sharedInstance] releaseConfiguration];
-    [[WTWifiCenter sharedInstance] removeDelegate:self];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
@@ -66,49 +56,88 @@
 #pragma mark - Actions
 
 - (void) buttonTap{
-    [[WTWifiCenter sharedInstance] fetchWifiList:^(NSArray * _Nullable list, NSError * _Nullable error) {
-        self.ssids = list;
-        [self.tableview reloadData];
+    [[WTWifiCenter sharedInstance] fetchWifiList:^(NSString * _Nullable ssid, NSArray * _Nullable list) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.ssids = list;
+            [self.tableview reloadData];
+        });
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"查询WIFI列表失败");
     }];
 }
 
 - (void)loadWifiConfiguration {
-    [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSDictionary * _Nullable result, NSError * _Nullable error) {
-        bool success = result && !error;
-        NSString *title = success ? @"已检测到历史配置" : @"获取配置失败";
-        NSString *message = success ? [[NSString alloc] initWithFormat:@"所配置SSID：%@，\n密码：%@，\n 连接状态：%@", result[@"ssid"],  result[@"password"], result[@"state"] ? @"已连接" : @"未连接"] : @"请重试或重新进行配网操作";
-        NSString *okActionTitle = success ? @"跳过配网" : @"确定";
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:okActionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            if (success) {
+    [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *title = @"已检测到历史配置";
+            NSString *message = [[NSString alloc] initWithFormat:@"所配置SSID：%@，\n密码：%@，\n 连接状态：%@", result[@"ssid"],  result[@"password"], result[@"state"] ? @"已连接" : @"未连接"];
+            NSString *okActionTitle = @"跳过配网";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:okActionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 WTEMSInfoController *controller = [[WTEMSInfoController alloc] init];
                 [self.navigationController pushViewController:controller animated:YES];
-            }
-        }];
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"继续配网" style:UIAlertActionStyleDefault handler:nil];
-        if (success) {
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"继续配网" style:UIAlertActionStyleDefault handler:nil];
             [alert addAction:cancel];
-        }
-        [alert addAction:ok];
-        [self presentViewController:alert animated:YES completion:nil];
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
+    } failure:^(NSError * _Nullable error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *title = @"获取配置失败";
+            NSString *message = @"请重试或重新进行配网操作";
+            NSString *okActionTitle = @"确定";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:okActionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
     }];
 }
 
-- (void)configurationWifiWith:(NSString *)ssid password:(NSString *)password {
-    [[WTWifiCenter sharedInstance] wifiConfigurationWith:ssid password:password completionHandler:^(bool result, NSError * _Nullable error) {
-        bool success = result && !error;
-        NSString *title = success ? @"恭喜配网成功!" : @"配网失败，请重试";
-        NSString *message = success ? nil : @"请确认密码是否正确或是否连接硬件热点";
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            if (success) {
-                WTEMSInfoController *controller = [[WTEMSInfoController alloc] init];
-                [self.navigationController pushViewController:controller animated:YES];
-            }
-        }];
-        [alert addAction:ok];
-        [self presentViewController:alert animated:YES completion:nil];
+- (void)configurationWifiWith:(NSString *)account password:(NSString *)password {
+    [[WTWifiCenter sharedInstance] wifiConfigurationWith:account password:password success:^(NSString  *ssid,bool result) {
+        
+        if (result) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *title = @"恭喜配网成功!";
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: nil preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    WTEMSInfoController *controller = [[WTEMSInfoController alloc] init];
+                    [self.navigationController pushViewController:controller animated:YES];
+                }];
+                [alert addAction:ok];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *title =  @"配网失败，请重试";
+                NSString *message = @"请确认密码是否正确或是否连接硬件热点";
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   
+                }];
+                [alert addAction:ok];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
+        }
+    } failure:^(NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *title =  @"配网失败，请重试";
+            NSString *message = @"请确认密码是否正确或是否连接硬件热点";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+               
+            }];
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
     }];
+   
 }
 
 
@@ -123,7 +152,11 @@
     update.SafetyType = @"25";
     update.SelfUseOrEconomic = @"0";
     update.VPPMode = @"1";
-    [[WTWifiCenter sharedInstance] updateEMSConfigurationWith:update];
+    [[WTWifiCenter sharedInstance] updateEMSConfigurationByElinterWith:update success:^(NSString * _Nullable ssid, bool result) {
+        NSLog(@"配置成功");
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"配置失败");
+    }];
 }
 
 #pragma mark - lazy initila
@@ -214,36 +247,6 @@
     [alert addAction:cancel];
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
-    
-
-}
-
-#pragma mark - WTWifiCenterDelegate
-
-
-- (void)didConnectedWith:(NSString *)ssid {
-    NSLog(@"已连接热点%@", ssid);
-}
-
-- (void)didDisconnectedWith:(NSString *)ssid {
-    NSLog(@"----热点Ping不通%@", ssid);
-    if (ssid) {
-        NEHotspotConfiguration *hotspotConfig = [[NEHotspotConfiguration alloc] initWithSSID:ssid passphrase:@"12345678" isWEP:NO];
-        [[NEHotspotConfigurationManager sharedManager] applyConfiguration:hotspotConfig completionHandler:^(NSError * _Nullable error) {
-            if (error && error.code != 13 && error.code != 7) {
-                NSLog(@"加入失败");
-            }else if(error.code ==7){
-                NSLog(@"已取消");
-            }else{
-                NSLog(@"已连接");
-            }
-        }];
-    }
-    
-}
-
-- (void)didUpdateEMSParametersSuccess {
-    NSLog(@"已成功更新EMS参数配置");
 }
 
 @end

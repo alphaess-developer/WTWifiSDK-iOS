@@ -7,9 +7,10 @@
 //
 
 #import "WTEMSInfoController.h"
-#import <WTWifiSDK/WTWifiSDK.h>
+#import "WTWifiSDK/WTWifiCenter.h"
 
-@interface WTEMSInfoController ()<WTWifiCenterDelegate>
+
+@interface WTEMSInfoController ()
 
 @property (nonatomic , strong) UIButton *systemBtn;
 @property (nonatomic , strong) UIButton *runningBtn;
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"EMS信息获取";
     self.view.backgroundColor = UIColor.whiteColor;
-    [[WTWifiCenter sharedInstance] addDelegate:self];
+
     
     [self.view addSubview:self.systemBtn];
     [self.view addSubview:self.runningBtn];
@@ -52,15 +53,37 @@
 #pragma mark - Actions
 
 - (void)systemBtnTap {
-    [[WTWifiCenter sharedInstance] sendSystemInfoCommand];
+    [[WTWifiCenter sharedInstance] loadSystemInfo:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", result];
+            [self resizeLabelWith:labelText];
+        });
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"系统信息获取失败");
+    }];
 }
 
 - (void)runningBtnTap {
-    [[WTWifiCenter sharedInstance] sendRunningInfoCommand];
+    [[WTWifiCenter sharedInstance] loadRunningInfo:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", result];
+            [self resizeLabelWith:labelText];
+        });
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"运行信息获取失败");
+    }];
 }
 
 - (void)safetyBtnTap {
-    [[WTWifiCenter sharedInstance] sendSafetyInfoCommand];
+    [[WTWifiCenter sharedInstance] loadSafetyInfo:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应安规信息数据：\n %@", result];
+            [self resizeLabelWith:labelText];
+        });
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"安规信息获取失败");
+    }];
 }
 
 
@@ -128,33 +151,6 @@
     }
     return _safetyBtn;
 }
-
-#pragma mark - WTWifiCenterDelegate
-
-- (void)didConnectedWith:(NSString *)ssid {
-    NSLog(@"WTSystemInfoController - 已连接 %@", ssid);
-}
-
-- (void)didDisconnectedWith:(NSString *)ssid {
-    NSLog(@"WTSystemInfoController - 未连接 %@", ssid);
-}
-
-- (void)didReceiveEMSSystemInfo:(NSDictionary *)info {
-    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", info];
-    [self resizeLabelWith:labelText];
-   
-}
-
-- (void)didReceiveEMSRunningInfo:(NSDictionary *)info {
-    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应运行信息数据：\n %@", info];
-    [self resizeLabelWith:labelText];
-}
-
-- (void)didReceiveEMSSafetyInfo:(NSDictionary *)info {
-    NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应安规信息数据：\n %@", info];
-    [self resizeLabelWith:labelText];
-}
-
 
 
 @end

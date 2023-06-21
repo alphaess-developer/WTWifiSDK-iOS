@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WTWifiSDK"
-  spec.version      = "1.1.1"
+  spec.version      = "2.0.0"
   spec.summary      = "A sdk for alphaess wifi connect."
 
   # This description is used to generate tags and improve search results.

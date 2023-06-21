@@ -359,13 +359,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/WTWifiSDK/WTWifiSDK.framework/WTWifiSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WTWifiSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

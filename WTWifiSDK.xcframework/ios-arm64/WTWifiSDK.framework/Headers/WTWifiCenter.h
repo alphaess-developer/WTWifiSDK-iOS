@@ -14,32 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-/// The wifi module of the energy storage device hotspot connection has been disconnected.
-/// @param ssid The name of the wifi module of the energy storage device.
-- (void)didDisconnectedWith:(NSString *)ssid;
-
-/// The wifi module of the energy storage device hotspot has been connected successfully.
-/// @param ssid The name of the wifi module of the energy storage device.
-- (void)didConnectedWith:(NSString *)ssid;
-
-/// Receive system information returned by the energy storage management system.
-/// @param info The keys and values of system information.
-- (void)didReceiveEMSSystemInfo:(NSDictionary *)info;
-
-/// Receive running information returned by the energy storage management system.
-/// @param info The keys and values of running information.
-- (void)didReceiveEMSRunningInfo:(NSDictionary *)info;
-
-/// Receive safety information returned by the energy storage management system.
-/// @param info The keys and values of safety information.
-- (void)didReceiveEMSSafetyInfo:(NSDictionary *)info;
-
-/// Energy management system related parameters have been successfully configured.
-- (void)didUpdateEMSParametersSuccess;
-
-/// An exception occurs when configuring parameters related to the energy management system.
-/// At this point it is necessary to ensure that is the SSID of the energy management system connected correctly? or try calling [updateEMSConfigurationWith] multiple times.
-- (void)didUpdateEMSParametersFailed;
 
 @end
 
@@ -64,37 +38,44 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)releaseConfiguration;
 
 /// Get WiFi SSID list from WiFi collector device
-/// @param completionHandler Callback WiFi SSID list, the list is an array of NSString.
-- (void)fetchWifiList:(void (^)(NSArray * _Nullable list, NSError * _Nullable error))completionHandler;
+/// @param success Callback WiFi SSID list, the list is an array of NSString.
+/// @param failure Callback when load WiFi SSID list error.
+- (void)fetchWifiList:(void (^)(NSString * _Nullable ssid,NSArray * _Nullable list))success failure: (void (^)(NSError * _Nullable error)) failure;
 
 /// Use the nearby wifi name and password to configure the collector so that it can access the Internet.
-/// @param ssid Name of nearby Wifi that can access internet.
+/// @param account Name of nearby Wifi that can access internet.
 /// @param password Password of nearby Wifi that can access internet.
-/// @param completionHandler Callback the configuration result, the result will be true if configuration success.
-- (void)wifiConfigurationWith:(NSString *)ssid password:(NSString *)password completionHandler:(void (^)(bool result, NSError * _Nullable error))completionHandler;
+/// @param success Callback the configuration result, the result will be true if configuration success.
+/// @param failure Callback the error info when configuration failed.
+- (void)wifiConfigurationWith:(NSString *)account password:(NSString *)password success:(void (^)(NSString * _Nullable ssid,bool result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
-/// Get collector history configuration.
-/// @param completionHandler The result contains some keys e.g. ssid/password/state, where the password keyword may be an empty string.
-- (void)loadWifiConfiguration:(void (^)(NSDictionary * _Nullable result, NSError * _Nullable error))completionHandler;
+/// Get wifi module's history configurations.
+/// @param success Callback the history configurations. The result contains some keys e.g. ssid/password/state, where the password keyword may be an empty string.
+/// @param failure Callback the error info when load failed.
+- (void)loadWifiConfiguration: (void (^)(NSString * _Nullable ssid,NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
-/// Send EMS commands to query the system information of energy storage devices.
-/// The result will be called back by [didReceiveEMSSystemInfo] in WTWifiCenterDelegate.
-/// But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
-- (void)sendSystemInfoCommand;
+/// Load system information returned by the energy storage management system.
+/// @param success Callback system info.
+/// @param failure Callback error info.
+- (void)loadSystemInfo:(void (^)(NSString * _Nullable ssid, NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
-/// Send EMS commands to query the running information of energy storage devices.
-/// The result will be called back by [didReceiveEMSRunningInfo] in WTWifiCenterDelegate.
-/// But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
-- (void)sendRunningInfoCommand;
 
-/// Send EMS commands to query the safety information of energy storage devices.
-/// The result will be called back by [didReceiveEMSSafetyInfo] in WTWifiCenterDelegate.
-/// But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
-- (void)sendSafetyInfoCommand;
+/// Load running information returned by the energy storage management system.
+/// @param success Callback running info.
+/// @param failure Callback error info.
+- (void)loadRunningInfo:(void (^)(NSString * _Nullable ssid, NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
+
+/// Load safety information returned by the energy storage management system.
+/// @param success Callback safety info.
+/// @param failure Callback error info.
+- (void)loadSafetyInfo:(void (^)(NSString * _Nullable ssid, NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
 /// Update the related configuration parameters in the energy storage device.
-/// @param data Valid keys in energy management systems.
-- (void)updateEMSConfigurationWith:(nonnull WTUpdateModel *)data;
+/// @param data EMS configurations.
+/// @param success Callback success when update success.
+/// @param failure Callback error info when update failed.
+- (void)updateEMSConfigurationByElinterWith:(WTUpdateModel *)data success:(void (^)(NSString * _Nullable ssid, bool result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
 @end
 

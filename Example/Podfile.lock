@@ -1,24 +1,27 @@
 PODS:
   - CocoaAsyncSocket (7.6.5)
   - JSONModel (1.8.0)
-  - WTWifiSDK (1.0.5):
+  - WTWifiSDK (1.1.1):
     - CocoaAsyncSocket
     - JSONModel
 
 DEPENDENCIES:
-  - WTWifiSDK (~> 1.0.5)
+  - WTWifiSDK (from `../`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - CocoaAsyncSocket
     - JSONModel
-    - WTWifiSDK
+
+EXTERNAL SOURCES:
+  WTWifiSDK:
+    :path: "../"
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
-  WTWifiSDK: ad2d792ff0f4ecfe4bc6f7c6373c58b228073b86
+  WTWifiSDK: 5d1c75edb3107f77347679824c141aad5b54f9a2
 
-PODFILE CHECKSUM: 8b4ef5b57e143ee4bb004d04e66080f290066ed7
+PODFILE CHECKSUM: 897e4971079e929213f17eb6aba55118941d19a3
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
