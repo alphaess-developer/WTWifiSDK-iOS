@@ -10,32 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol WTWifiCenterDelegate <NSObject>
-
-@optional
-
-
-@end
-
 
 @interface WTWifiCenter : NSObject
 
 /// The Wifi SDK instance initial method.
 + (instancetype)sharedInstance;
-
-/// Add a delegate to WTWifiCenter, and WTWifiCenter supports adding multiple delegates.
-/// @param delegate Must follow WTWifiCenterDelegate.
-- (void)addDelegate:(id<WTWifiCenterDelegate>)delegate;
-
-/// Remove a delegate from WTWifiCenter,
-/// @param delegate Must follow WTWifiCenterDelegate.
-- (void)removeDelegate:(id<WTWifiCenterDelegate>)delegate;
-
-/// Initialize the internal business logic of the wifi sdk, this method must be called when the SDK is initialized.
-- (void)startConfiguration;
-
-/// Release the internal business logic of the wifi sdk, this method must be called when the SDK is no longer used
-- (void)releaseConfiguration;
 
 /// Get WiFi SSID list from WiFi collector device
 /// @param success Callback WiFi SSID list, the list is an array of NSString.

@@ -143,7 +143,7 @@
 
 - (void) updateEMSConfigurationTap{
     WTUpdateModel *update = [[WTUpdateModel alloc] init];
-    update.ACDC = @"3";
+    update.ACDC = @"2";
     update.CTRate = @"1";
     update.GridMeterCTE = @"0";
     update.Meter_CT_Select = @"2";
