@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WTWifiModel : NSObject
 
 /// 交流过压下拉选择值
-+(NSArray *)overVs;
++ (NSArray *)overVs;
 ///交流欠压下拉选择值
 + (NSArray *)underVs;
 ///交流过频下拉选择值50HZ
