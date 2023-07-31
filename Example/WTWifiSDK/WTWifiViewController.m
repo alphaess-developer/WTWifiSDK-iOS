@@ -12,9 +12,11 @@
 #import "WTSSIDCell.h"
 #import "WTEMSInfoController.h"
 
-@interface WTWifiViewController ()<WTWifiCenterDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface WTWifiViewController ()<UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic , strong) UILabel *snLabel;
 @property (nonatomic , strong) UIButton *button;
+@property (nonatomic , strong) UIButton *loadSnBtn;
 @property (nonatomic , strong) UIButton *loadConfigBtn;
 @property (nonatomic , strong) UIButton *updateEMSBtn;
 @property (nonatomic , strong) UITableView *tableview;
@@ -31,19 +33,16 @@
     [super viewDidLoad];
     self.navigationItem.title = @"WIFI配置";
     self.view.backgroundColor = UIColor.whiteColor;
-    [[WTWifiCenter sharedInstance] startConfiguration];
    
+    [self.view addSubview:self.snLabel];
     [self.view addSubview:self.button];
+    [self.view addSubview:self.loadSnBtn];
     [self.view addSubview:self.loadConfigBtn];
     [self.view addSubview:self.updateEMSBtn];
     [self.view addSubview:self.tableview];
 
 }
 
-
-- (void)dealloc {
-    [[WTWifiCenter sharedInstance] releaseConfiguration];
-}
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
     if (@available(iOS 13.0, *)) {
@@ -55,8 +54,20 @@
 
 #pragma mark - Actions
 
+
+- (void) loadSnTap{
+    [[WTWifiCenter sharedInstance] fetchSystemSN:^(NSString * _Nullable ssid) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.snLabel setText:[NSString stringWithFormat:@"当前SN为：%@", ssid]];
+        });
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"查询SN失败");
+    }];
+}
+
+
 - (void) buttonTap{
-    [[WTWifiCenter sharedInstance] fetchWifiList:^(NSString * _Nullable ssid, NSArray * _Nullable list) {
+    [[WTWifiCenter sharedInstance] fetchWifiList:^(NSArray * _Nullable list) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.ssids = list;
             [self.tableview reloadData];
@@ -67,7 +78,7 @@
 }
 
 - (void)loadWifiConfiguration {
-    [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+    [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSDictionary * _Nullable result) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *title = @"已检测到历史配置";
             NSString *message = [[NSString alloc] initWithFormat:@"所配置SSID：%@，\n密码：%@，\n 连接状态：%@", result[@"ssid"],  result[@"password"], result[@"state"] ? @"已连接" : @"未连接"];
@@ -100,7 +111,7 @@
 }
 
 - (void)configurationWifiWith:(NSString *)account password:(NSString *)password {
-    [[WTWifiCenter sharedInstance] wifiConfigurationWith:account password:password success:^(NSString  *ssid,bool result) {
+    [[WTWifiCenter sharedInstance] wifiConfigurationWith:account password:password success:^(bool result) {
         
         if (result) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -152,7 +163,7 @@
     update.SafetyType = @"25";
     update.SelfUseOrEconomic = @"0";
     update.VPPMode = @"1";
-    [[WTWifiCenter sharedInstance] updateEMSConfigurationByElinterWith:update success:^(NSString * _Nullable ssid, bool result) {
+    [[WTWifiCenter sharedInstance] updateEMSConfigurationByElinterWith:update success:^(bool result) {
         NSLog(@"配置成功");
     } failure:^(NSError * _Nullable error) {
         NSLog(@"配置失败");
@@ -161,10 +172,35 @@
 
 #pragma mark - lazy initila
 
+- (UILabel *)snLabel {
+    if (_snLabel == nil) {
+        _snLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, UIScreen.mainScreen.bounds.size.width - 20,30)];
+        [_snLabel setTextColor:UIColor.blackColor];
+        [_snLabel setFont:[UIFont systemFontOfSize:15]];
+        [_snLabel setNumberOfLines:0];
+        [_snLabel setTextAlignment:NSTextAlignmentCenter];
+    }
+    return _snLabel;
+}
+
+- (UIButton *)loadSnBtn {
+    if (_loadSnBtn == nil) {
+        _loadSnBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 150, 200, 40)];
+        [_loadSnBtn setTitle:@"查询设备SN" forState:UIControlStateNormal];
+        [_loadSnBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_loadSnBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _loadSnBtn.layer.cornerRadius = 5;
+        _loadSnBtn.layer.borderWidth = 0.5;
+        [_loadSnBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_loadSnBtn addTarget:self action:@selector(loadSnTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loadSnBtn;
+}
+
 
 - (UIButton *)button {
     if (_button == nil) {
-        _button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 40)];
+        _button = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 200, 40)];
         [_button setTitle:@"查询WIFI列表" forState:UIControlStateNormal];
         [_button setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_button layer] setBorderColor:UIColor.grayColor.CGColor];
@@ -178,7 +214,7 @@
 
 - (UIButton *)loadConfigBtn {
     if (_loadConfigBtn == nil) {
-        _loadConfigBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 150, 200, 40)];
+        _loadConfigBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 200, 40)];
         [_loadConfigBtn setTitle:@"查询已配网信息" forState:UIControlStateNormal];
         [_loadConfigBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_loadConfigBtn layer] setBorderColor:UIColor.grayColor.CGColor];
@@ -192,7 +228,7 @@
 
 - (UIButton *)updateEMSBtn {
     if (_updateEMSBtn == nil) {
-        _updateEMSBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 200, 40)];
+        _updateEMSBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 200, 40)];
         [_updateEMSBtn setTitle:@"更新EMS参数配置" forState:UIControlStateNormal];
         [_updateEMSBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_updateEMSBtn layer] setBorderColor:UIColor.grayColor.CGColor];
@@ -206,7 +242,7 @@
 
 - (UITableView *)tableview {
     if (_tableview == nil) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 250, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 300)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 350, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 400)];
         _tableview.tableFooterView = [UIView new];
         _tableview.delegate = self;
         _tableview.dataSource = self;

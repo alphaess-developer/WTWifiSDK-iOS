@@ -14,111 +14,111 @@ The system requirement for WTWifiSDK is iOS 11.0+
 
 * `#import "WTWifiSDK/WTWifiCenter.h"`
 
-* Add or remove delegate with `WTWifiCenterDelegate`, for example:
+* You can get device serial number from ap, for example:
 
   ```objective-c
-   [[WTWifiCenter sharedInstance] addDelegate:self];
-   [[WTWifiCenter sharedInstance] removeDelegate:self];
-  ```
-
-* Start the wifi configuration when the configuration view will appear, and release the wifi configuration when the view dealloc,  for example:
-
-  ```objective-c
-   [[WTWifiCenter sharedInstance] startConfiguration];
-   [[WTWifiCenter sharedInstance] releaseConfiguration];
+   [[WTWifiCenter sharedInstance] fetchSystemSN:^(NSString * _Nullable ssid) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+             // Load ssid success, and refresh UI.
+          });
+      } failure:^(NSError * _Nullable error) {
+          // Error
+      }];
   ```
 
 * Get the wifi ssid list from wifi collector device, for example:
 
   ```objective-c
-  [[WTWifiCenter sharedInstance] fetchWifiList:^(NSArray * _Nullable list, NSError * _Nullable error) {
-          self.ssids = list;
-          [self.tableview reloadData];
-  }];
+   [[WTWifiCenter sharedInstance] fetchWifiList:^(NSArray * _Nullable list) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+              self.ssids = list;
+              [self.tableview reloadData];
+          });
+      } failure:^(NSError * _Nullable error) {
+          // Error
+      }];
   ```
 
 * And if you want to config the local wifi for energy storage device, use this api:
 
   ```objective-c
-  [[WTWifiCenter sharedInstance] wifiConfigurationWith:ssid password:password completionHandler:^(bool result, NSError * _Nullable error) {
-          bool success = result && !error;
-         if (success) {
+   [[WTWifiCenter sharedInstance] wifiConfigurationWith:account password:password success:^(bool result) {
+          
+          if (result) {
+              dispatch_async(dispatch_get_main_queue(), ^{
                  // Congratulations! you're successed!
-              }
+              });
+          } else {
+              dispatch_async(dispatch_get_main_queue(), ^{
+                 // Configure wrong. The reason maybe password is wrong.
+              });
+          }
+      } failure:^(NSError * _Nullable error) {
+         // Error
       }];
   ```
 
 * If you want to see historical configuration then use Api like this：
 
   ```objective-c
-   [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSDictionary * _Nullable result, NSError * _Nullable error) {
-          bool success = result && !error;
-         if (success) {
-                  // Congratulations! you're successed!
-              }
-      }];
+   [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSDictionary * _Nullable result) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+              // Congratulations! you're successed!
+          });
+      } failure:^(NSError * _Nullable error) {
+         // Error
+      }]; 
   ```
 
 * How to load the system information of energy management system?
 
-  **Step one:**
+  **Just call this api:**
 
-  Send EMS commands to query the system information of energy storage devices.
-
-  ```objective-c
-  [[WTWifiCenter sharedInstance] sendSystemInfoCommand];
-  ```
-
-  **Step two:**
-
-  The result will be called back by [didReceiveEMSSystemInfo] in WTWifiCenterDelegate.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
+  The result will be called back by `loadSystemInfo`.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 
   ```objective-c
-  - (void)didReceiveEMSSystemInfo:(WTSystemModel *)info {
+      [[WTWifiCenter sharedInstance] loadSystemInfo:^( NSDictionary * _Nullable result) {
+          
+          dispatch_async(dispatch_get_main_queue(), ^{
    // Congratulations! you're successed if the info not nil.
-  }
+          });
+      } failure:^(NSError * _Nullable error) {
+         // Error
+      }];
   ```
-
+  
 * How to load the running information of energy management system?
 
-  **Step one:**
+  **Just call this api:**
 
-  Send EMS commands to query the running information of energy storage devices.
+  The result will be called back by `loadRunningInfo`.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 
   ```objective-c
-  [[WTWifiCenter sharedInstance] sendRunningInfoCommand];
+   [[WTWifiCenter sharedInstance] loadRunningInfo:^( NSDictionary * _Nullable result) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+              // Congratulations! you're successed if the info not nil.
+          });
+      } failure:^(NSError * _Nullable error) {
+          // Error
+      }];
   ```
+  
+* How to load the self-check information of energy management system?
 
-  **Step two:**
+  **Just call this api:**
 
-  The result will be called back by [didReceiveEMSRunningInfo] in WTWifiCenterDelegate.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
+  The result will be called back by `loadSelfCheckInfo`.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 
   ```objective-c
-  - (void)didReceiveEMSRunningInfo:(WTSystemModel *)info {
+    [[WTWifiCenter sharedInstance] loadSelfCheckInfo:^(NSDictionary * _Nullable result) {
+          dispatch_async(dispatch_get_main_queue(), ^{
    // Congratulations! you're successed if the info not nil.
-  }
+          });
+      } failure:^(NSError * _Nullable error) {
+         // Error
+      }];
   ```
-
-* How to load the safety information of energy management system?
-
-  **Step one:**
-
-  Send EMS commands to query the safety information of energy storage devices.
-
-  ```objective-c
-  [[WTWifiCenter sharedInstance] sendSafetyInfoCommand];
-  ```
-
-  **Step two:**
-
-  The result will be called back by [didReceiveEMSSafetyInfo] in WTWifiCenterDelegate.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
-
-  ```objective-c
-  - (void)didReceiveEMSSafetyInfo:(WTSystemModel *)info {
-   // Congratulations! you're successed if the info not nil.
-  }
-  ```
-
+  
 * And the last question, how to configuration the energy storage device with parameters?
 
   ```objective-c
@@ -132,12 +132,13 @@ The system requirement for WTWifiSDK is iOS 11.0+
       update.SafetyType = @"25";
       update.SelfUseOrEconomic = @"0";
       update.VPPMode = @"1";
-  [[WTWifiCenter sharedInstance] updateEMSConfigurationWith:update];
+      [[WTWifiCenter sharedInstance] updateEMSConfigurationByElinterWith:update success:^(bool result) {
+          // Congratulations! you're successed.
+      } failure:^(NSError * _Nullable error) {
+          // Error
+      }];
   ```
-
-  **Note:**
-
-  When the configuration success, the delegate method [didUpdateEMSParametersSuccess] will be called. And otherwise, the delegate method [didUpdateEMSParametersFailed] will be called.
+  
 
 ## Issues
 

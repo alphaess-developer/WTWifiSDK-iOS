@@ -14,7 +14,7 @@
 
 @property (nonatomic , strong) UIButton *systemBtn;
 @property (nonatomic , strong) UIButton *runningBtn;
-@property (nonatomic , strong) UIButton *safetyBtn;
+@property (nonatomic , strong) UIButton *selfCheckBtn;
 @property (nonatomic , strong) UIScrollView *scrollView;
 @property (nonatomic , strong) UILabel *label;
 @end
@@ -30,7 +30,7 @@
     
     [self.view addSubview:self.systemBtn];
     [self.view addSubview:self.runningBtn];
-    [self.view addSubview:self.safetyBtn];
+    [self.view addSubview:self.selfCheckBtn];
     [self.view addSubview:self.scrollView];
 }
 
@@ -53,7 +53,7 @@
 #pragma mark - Actions
 
 - (void)systemBtnTap {
-    [[WTWifiCenter sharedInstance] loadSystemInfo:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+    [[WTWifiCenter sharedInstance] loadSystemInfo:^( NSDictionary * _Nullable result) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", result];
@@ -65,7 +65,7 @@
 }
 
 - (void)runningBtnTap {
-    [[WTWifiCenter sharedInstance] loadRunningInfo:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+    [[WTWifiCenter sharedInstance] loadRunningInfo:^( NSDictionary * _Nullable result) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应系统信息数据：\n %@", result];
             [self resizeLabelWith:labelText];
@@ -75,8 +75,8 @@
     }];
 }
 
-- (void)safetyBtnTap {
-    [[WTWifiCenter sharedInstance] loadSafetyInfo:^(NSString * _Nullable ssid, NSDictionary * _Nullable result) {
+- (void)selfCheckBtnTap {
+    [[WTWifiCenter sharedInstance] loadSelfCheckInfo:^(NSDictionary * _Nullable result) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应安规信息数据：\n %@", result];
             [self resizeLabelWith:labelText];
@@ -137,19 +137,19 @@
     return _runningBtn;
 }
 
-- (UIButton *)safetyBtn {
-    if (_safetyBtn == nil) {
-        _safetyBtn = [[UIButton alloc] initWithFrame:CGRectMake(240, 100, 100, 40)];
-        [_safetyBtn setTitle:@"EMS安规信息" forState:UIControlStateNormal];
-        [_safetyBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
-        [_safetyBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
-        [[_safetyBtn layer] setBorderColor:UIColor.grayColor.CGColor];
-        _safetyBtn.layer.cornerRadius = 5;
-        _safetyBtn.layer.borderWidth = 0.5;
-        [_safetyBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_safetyBtn addTarget:self action:@selector(safetyBtnTap) forControlEvents:UIControlEventTouchUpInside];
+- (UIButton *)selfCheckBtn {
+    if (_selfCheckBtn == nil) {
+        _selfCheckBtn = [[UIButton alloc] initWithFrame:CGRectMake(240, 100, 100, 40)];
+        [_selfCheckBtn setTitle:@"EMS安规自检信息" forState:UIControlStateNormal];
+        [_selfCheckBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        [_selfCheckBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_selfCheckBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _selfCheckBtn.layer.cornerRadius = 5;
+        _selfCheckBtn.layer.borderWidth = 0.5;
+        [_selfCheckBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_selfCheckBtn addTarget:self action:@selector(selfCheckBtnTap) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _safetyBtn;
+    return _selfCheckBtn;
 }
 
 
