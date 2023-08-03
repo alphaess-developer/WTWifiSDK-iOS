@@ -25,10 +25,6 @@
 	<dict>
 		<key>Headers/WTUpdateModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6Hht/rFa85eQrfZxURq5v7cHMMQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			EDH3sHfg126KJwIVOHInlnOKMuRZopTSV94+YsvOjv8=
@@ -36,10 +32,6 @@
 		</dict>
 		<key>Headers/WTWifiCenter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ZDyU7/7OoTb0D6IsSjaX0XQzGTk=
-			</data>
 			<key>hash2</key>
 			<data>
 			ZeVRmwcKV/s+Vz5qBOK7C2agBpmJN0hURLDTXaV/Kqc=
@@ -47,10 +39,6 @@
 		</dict>
 		<key>Headers/WTWifiModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4coJffacmdLG4hv7gp0TzErHcW0=
-			</data>
 			<key>hash2</key>
 			<data>
 			wMjLwT4170u/Vk/vAmZ/24ZRCOjUrLKmzd/LEFL6Elc=
