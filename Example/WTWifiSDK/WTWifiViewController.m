@@ -163,6 +163,8 @@
     update.SafetyType = @"25";
     update.SelfUseOrEconomic = @"0";
     update.VPPMode = @"1";
+    // 启用柴油机
+    update.Generator = true;
     [[WTWifiCenter sharedInstance] updateEMSConfigurationByElinterWith:update success:^(bool result) {
         NSLog(@"配置成功");
     } failure:^(NSError * _Nullable error) {
