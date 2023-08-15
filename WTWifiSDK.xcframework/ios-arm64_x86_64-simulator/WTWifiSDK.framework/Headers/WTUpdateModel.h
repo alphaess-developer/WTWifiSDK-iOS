@@ -130,6 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * ISOFlag;
 @property (nonatomic , copy) NSString              * ManualRecoverFlag;
 @property (nonatomic , copy) NSString              * ManualRecoverSet;
+@property (nonatomic , copy) NSString              * StorageBreakerSpecs;
 @property (nonatomic , copy) NSString              * IPMethod;
 @property (nonatomic , copy) NSString              * LocalIP;
 @property (nonatomic , copy) NSString              * SubnetMask;
