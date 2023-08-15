@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * TimeDisEWE2;
 @property (nonatomic , copy) NSString              * BatHighCapWE;
 @property (nonatomic , copy) NSString              * BatUseCapWE;
-@property (nonatomic , copy) NSString              * Generator;
+@property (nonatomic , assign) BOOL              * Generator;
 @property (nonatomic , copy) NSString              * GeneratorMode;
 @property (nonatomic , copy) NSString              * GCSOCStart;
 @property (nonatomic , copy) NSString              * GCSOCEnd;
