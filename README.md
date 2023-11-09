@@ -1,6 +1,6 @@
 ## WTWifiSDK-iOS
 
-WTWifiSDK is a Framework for wifi configuration  **for** alphaess.
+WTWifiSDK is a framework for wifi configuration  **for** alphaess.
 
 ## 🔨 Requirements
 
@@ -87,6 +87,21 @@ The system requirement for WTWifiSDK is iOS 11.0+
       }];
   ```
   
+  **With the extend information: **
+  
+  We provide query methods for extended parameters as follows:
+  
+  ```objective-c
+  [[WTWifiCenter sharedInstance] loadSystemInfoByExtendProtocol:^( NSDictionary * _Nullable result) {
+          
+          dispatch_async(dispatch_get_main_queue(), ^{
+              // Congratulations! you're successed if the info not nil.
+          });
+      } failure:^(NSError * _Nullable error) {
+          // Error
+      }];
+  ```
+  
 * How to load the running information of energy management system?
 
   **Just call this api:**
@@ -102,15 +117,29 @@ The system requirement for WTWifiSDK is iOS 11.0+
           // Error
       }];
   ```
-  
-* How to load the self-check information of energy management system?
+
+  **With the extend information: **
+
+  We provide query methods for extended parameters as follows:
+
+  ```objective-c
+   [[WTWifiCenter sharedInstance] loadRunningInfoByExtendProtocol:^( NSDictionary * _Nullable result) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+              // Congratulations! you're successed if the info not nil.
+          });
+      } failure:^(NSError * _Nullable error) {
+           // Error
+      }];
+  ```
+
+* How to load the italian safety self-check information of energy management system?
 
   **Just call this api:**
 
-  The result will be called back by `loadSelfCheckInfo`.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
+  The result will be called back by `loadAutoCheckInfoWithItalianSafety`.But it should be noted that this is not a very stable callback, you may try to send the command multiple times after ensuring that the direct connection is successful.
 
   ```objective-c
-    [[WTWifiCenter sharedInstance] loadSelfCheckInfo:^(NSDictionary * _Nullable result) {
+    [[WTWifiCenter sharedInstance] loadAutoCheckInfoWithItalianSafety:^(NSDictionary * _Nullable result) {
           dispatch_async(dispatch_get_main_queue(), ^{
    // Congratulations! you're successed if the info not nil.
           });
@@ -118,8 +147,8 @@ The system requirement for WTWifiSDK is iOS 11.0+
          // Error
       }];
   ```
-  
-* And the last question, how to configuration the energy storage device with parameters?
+
+* How to configuration the energy storage device with parameters?
 
   ```objective-c
    WTUpdateModel *update = [[WTUpdateModel alloc] init];
@@ -138,7 +167,22 @@ The system requirement for WTWifiSDK is iOS 11.0+
           // Error
       }];
   ```
-  
+
+  **With the extend parameters: **
+
+  We provide update methods for extended parameters as follows:
+
+  ```objective-c
+      WTUpdateExtendModel *update = [[WTUpdateExtendModel alloc] init];
+  		update.BalconyMode = 1;
+  		update.OnGridPower = 1022;
+      update.NNShortDetect = 2;
+      [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
+         // Congratulations! you're successed.
+      } failure:^(NSError * _Nullable error) {
+          // Error
+      }];
+  ```
 
 ## Issues
 
@@ -146,7 +190,9 @@ If you have any questions about the sdk, we welcome you to open issues. But when
 
 ## Feature
 
-We will work on a more stable implementation.
+We will support querying self-test information through EMS, including meter self-test information and battery self-test information. Although the SDK currently provides this API `loadAutoCheckInfo`, since the EMS system does not currently support it, you will always get null through this API. But don't worry, we will work on it all the time!
+
+If you have any questions, you can contact me anytime.
 
 
 

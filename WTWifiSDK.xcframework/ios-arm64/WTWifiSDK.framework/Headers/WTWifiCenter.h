@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WTUpdateModel.h"
+#import "WTUpdateExtendModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,21 +44,43 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param failure Callback error info.
 - (void)loadSystemInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
+/// Load the energy storage management system information by extend protocol..
+/// @param success Callback system info.
+/// @param failure Callback error info.
+- (void)loadSystemInfoByExtendProtocol:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
 /// Load running information returned by the energy storage management system.
 /// @param success Callback running info.
 /// @param failure Callback error info.
 - (void)loadRunningInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
-/// Load safety information returned by the energy storage management system.
+/// Load the energy storage management system running information by extend protocol.
+/// @param success Callback running info.
+/// @param failure Callback error info.
+- (void)loadRunningInfoByExtendProtocol:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
+/// Load battery and meter auto check information returned by the energy storage management system.
 /// @param success Callback safety info.
 /// @param failure Callback error info.
-- (void)loadSelfCheckInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+- (void)loadAutoCheckInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
+/// Load italian safety auto check information returned by the energy storage management system.
+/// @param success Callback running info.
+/// @param failure Callback error info.
+- (void)loadAutoCheckInfoWithItalianSafety:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
 /// Update the related configuration parameters in the energy storage device.
 /// @param data EMS configurations.
 /// @param success Callback success when update success.
 /// @param failure Callback error info when update failed.
-- (void)updateEMSConfigurationByElinterWith:(WTUpdateModel *)data success:(void (^)(bool result))success failure: (void (^)(NSError * _Nullable error)) failure;
+- (void)updateEMSConfiguration:(WTUpdateModel *)data success:(void (^)(bool result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
+
+/// Update the related configuration parameters in the energy storage device by extend protocol.
+/// @param data EMS configurations.
+/// @param success Callback success when update success.
+/// @param failure Callback error info when update failed.
+- (void)updateEMSConfigurationByExtendProtocol:(WTUpdateExtendModel *)data success:(void (^)(bool result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
 @end
 

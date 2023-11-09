@@ -19,6 +19,7 @@
 @property (nonatomic , strong) UIButton *loadSnBtn;
 @property (nonatomic , strong) UIButton *loadConfigBtn;
 @property (nonatomic , strong) UIButton *updateEMSBtn;
+@property (nonatomic , strong) UIButton *updateEMSExtendBtn;
 @property (nonatomic , strong) UITableView *tableview;
 @property (nonatomic , strong) NSArray *ssids;
 
@@ -39,6 +40,7 @@
     [self.view addSubview:self.loadSnBtn];
     [self.view addSubview:self.loadConfigBtn];
     [self.view addSubview:self.updateEMSBtn];
+    [self.view addSubview:self.updateEMSExtendBtn];
     [self.view addSubview:self.tableview];
 
 }
@@ -165,10 +167,22 @@
     update.VPPMode = @"1";
     // 启用柴油机
     update.Generator = true;
-    [[WTWifiCenter sharedInstance] updateEMSConfigurationByElinterWith:update success:^(bool result) {
+    [[WTWifiCenter sharedInstance] updateEMSConfiguration:update success:^(bool result) {
         NSLog(@"配置成功");
     } failure:^(NSError * _Nullable error) {
         NSLog(@"配置失败");
+    }];
+}
+
+- (void) updateEMSExtendConfigurationTap{
+    WTUpdateExtendModel *update = [[WTUpdateExtendModel alloc] init];
+//    update.BalconyMode = 1;
+//    update.OnGridPower = 1022;
+    update.NNShortDetect = 2;
+    [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
+        NSLog(@"扩展参数配置成功");
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"扩展参数配置失败");
     }];
 }
 
@@ -231,7 +245,7 @@
 - (UIButton *)updateEMSBtn {
     if (_updateEMSBtn == nil) {
         _updateEMSBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 200, 40)];
-        [_updateEMSBtn setTitle:@"更新EMS参数配置" forState:UIControlStateNormal];
+        [_updateEMSBtn setTitle:@"更新EMS参数" forState:UIControlStateNormal];
         [_updateEMSBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_updateEMSBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _updateEMSBtn.layer.cornerRadius = 5;
@@ -242,9 +256,23 @@
     return _updateEMSBtn;
 }
 
+- (UIButton *)updateEMSExtendBtn {
+    if (_updateEMSExtendBtn == nil) {
+        _updateEMSExtendBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 200, 40)];
+        [_updateEMSExtendBtn setTitle:@"更新EMS扩展参数" forState:UIControlStateNormal];
+        [_updateEMSExtendBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_updateEMSExtendBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _updateEMSExtendBtn.layer.cornerRadius = 5;
+        _updateEMSExtendBtn.layer.borderWidth = 0.5;
+        [_updateEMSExtendBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_updateEMSExtendBtn addTarget:self action:@selector(updateEMSExtendConfigurationTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _updateEMSExtendBtn;
+}
+
 - (UITableView *)tableview {
     if (_tableview == nil) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 350, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 400)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 400, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 450)];
         _tableview.tableFooterView = [UIView new];
         _tableview.delegate = self;
         _tableview.dataSource = self;
