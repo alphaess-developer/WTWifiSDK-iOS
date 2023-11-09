@@ -87,7 +87,7 @@ The system requirement for WTWifiSDK is iOS 11.0+
       }];
   ```
   
-  **With the extend information: **
+  **With the extend information:**
   
   We provide query methods for extended parameters as follows:
   
@@ -118,7 +118,7 @@ The system requirement for WTWifiSDK is iOS 11.0+
       }];
   ```
 
-  **With the extend information: **
+  **With the extend information:**
 
   We provide query methods for extended parameters as follows:
 
@@ -168,7 +168,7 @@ The system requirement for WTWifiSDK is iOS 11.0+
       }];
   ```
 
-  **With the extend parameters: **
+  **With the extend parameters:**
 
   We provide update methods for extended parameters as follows:
 
