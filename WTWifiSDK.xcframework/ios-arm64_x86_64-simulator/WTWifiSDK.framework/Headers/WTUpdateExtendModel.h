@@ -19,17 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// 2: off-grid mode
 /// 3: forced charging mode
 /// 4: custom mode
-@property (nonatomic , assign) NSInteger                BalconyMode;
+@property (nonatomic , copy) NSString              * BalconyMode;
 
 /// Feeder power setting (W)
-@property (nonatomic , assign) NSInteger                OnGridPower;
-
+@property (nonatomic , copy) NSString              * OnGridPower;
 /// Whether or not backup is connected to the load
 /// 0: No setting
 /// 1: Not connected to the load
 /// 2: Connected to the load
-@property (nonatomic , assign) NSInteger                NNShortDetect;
-
+@property (nonatomic , copy) NSString              * NNShortDetect;
 
 @end
 

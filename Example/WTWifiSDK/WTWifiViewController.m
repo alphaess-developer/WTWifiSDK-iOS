@@ -176,9 +176,9 @@
 
 - (void) updateEMSExtendConfigurationTap{
     WTUpdateExtendModel *update = [[WTUpdateExtendModel alloc] init];
-//    update.BalconyMode = 1;
-//    update.OnGridPower = 1022;
-    update.NNShortDetect = 2;
+    update.BalconyMode = @"1";
+    update.OnGridPower = @"1022";
+    update.NNShortDetect = @"0";
     [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
         NSLog(@"扩展参数配置成功");
     } failure:^(NSError * _Nullable error) {
