@@ -174,9 +174,9 @@ The system requirement for WTWifiSDK is iOS 11.0+
 
   ```objective-c
       WTUpdateExtendModel *update = [[WTUpdateExtendModel alloc] init];
-  		update.BalconyMode = 1;
-  		update.OnGridPower = 1022;
-      update.NNShortDetect = 2;
+  		update.BalconyMode = @"1";
+  		update.OnGridPower = @"1022";
+      update.NNShortDetect = @"2";
       [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
          // Congratulations! you're successed.
       } failure:^(NSError * _Nullable error) {
