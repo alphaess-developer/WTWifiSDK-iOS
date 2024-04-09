@@ -29,6 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 2: Connected to the load
 @property (nonatomic , copy) NSString              * NNShortDetect;
 
+/// APP side WIFI network configuration completion flag
+/// 0: Default value.  APP network configuration setting failed;
+/// 1: APP network configuration setting successful
+@property (nonatomic , copy) NSString              * APPConnectEnd;
+
 @end
 
 NS_ASSUME_NONNULL_END

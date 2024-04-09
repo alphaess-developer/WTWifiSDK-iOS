@@ -4,13 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
+		<key>Headers/WTBleCenter.h</key>
 		<data>
-		/GYEqJPMNMCZ9WSxSJgnTXzz9dU=
+		EIqGXyQrP0GX3cpg/DPTIvF8fnk=
 		</data>
 		<key>Headers/WTUpdateExtendModel.h</key>
 		<data>
-		EFDKDy6cwCkPFEuRzgyiP82Liag=
+		6sXmMdryslEKZkLE2UiLSWSGZaw=
 		</data>
 		<key>Headers/WTUpdateModel.h</key>
 		<data>
@@ -26,16 +26,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		srCOE4e9kBwFsL0//3MigvUYRTI=
+		9eWfDJ7kHTSjZeUJ46SuaARrBiM=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/WTBleCenter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			msDgXWbcfbvE5TF6Uu2kv/SJLzZP1Aenfbcx5UDNG+0=
+			</data>
+		</dict>
 		<key>Headers/WTUpdateExtendModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ycyBvdadu3/3AaKnKAyCJAmyC0q3v4A5SrZts72DS3w=
+			ddn0dmVWvYM4+BjoETdrkLo6f1ZIBPArfpWKX6RLRuE=
 			</data>
 		</dict>
 		<key>Headers/WTUpdateModel.h</key>

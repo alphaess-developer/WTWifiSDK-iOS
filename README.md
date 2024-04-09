@@ -4,7 +4,7 @@ WTWifiSDK is a framework for wifi configuration  **for** alphaess.
 
 ## 🔨 Requirements
 
-The system requirement for WTWifiSDK is iOS 11.0+
+The system requirement for WTWifiSDK is iOS 11.0+, and only support iOS device, not support iOS simulators.
 
 ## Install
 
