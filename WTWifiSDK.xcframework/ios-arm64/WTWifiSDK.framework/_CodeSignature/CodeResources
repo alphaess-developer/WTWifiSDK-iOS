@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/WTBleCenter.h</key>
 		<data>
-		EIqGXyQrP0GX3cpg/DPTIvF8fnk=
+		iqzdOHlj3E9ygknWH8sbJW/sH7o=
 		</data>
 		<key>Headers/WTUpdateExtendModel.h</key>
 		<data>
@@ -24,9 +24,17 @@
 		<data>
 		7dKsdraJnqPXAsHINaepppTTdhA=
 		</data>
+		<key>Headers/WTWifiSDK.h</key>
+		<data>
+		9fdVTkR+TpudMknf0Gq73QxSCL8=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		9eWfDJ7kHTSjZeUJ46SuaARrBiM=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		/nr/cfCYa98fuheOeR6n836LIVM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -35,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			msDgXWbcfbvE5TF6Uu2kv/SJLzZP1Aenfbcx5UDNG+0=
+			/YE5gnPVXLNO2UjlyuPvkiLZ2X3R5ZAb6tm8yhIwYBk=
 			</data>
 		</dict>
 		<key>Headers/WTUpdateExtendModel.h</key>
@@ -64,6 +72,20 @@
 			<key>hash2</key>
 			<data>
 			giS8oA57gyNPZ/FFA2SGCDY52Dy01gdTQt9AfYI6ikU=
+			</data>
+		</dict>
+		<key>Headers/WTWifiSDK.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VXNjz2FOQBHQ+wCkNma9qc+4aJU2FsSRAQM9nhyX+mk=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DWm4upw/MaoeRUpZ7w6ZXoYVUnxDZ1pJg7F+LbRxsGE=
 			</data>
 		</dict>
 	</dict>
