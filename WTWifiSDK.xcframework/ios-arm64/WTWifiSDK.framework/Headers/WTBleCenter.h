@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WTWifiSDK.h"
+#import "WTEnums.h"
 #import "CoreBluetooth/CoreBluetooth.h"
 
 NS_ASSUME_NONNULL_BEGIN
