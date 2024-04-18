@@ -8,6 +8,7 @@
 
 #import "WTViewController.h"
 #import "WTWifiViewController.h"
+#import "WTBleViewController.h"
 
 @interface WTViewController ()
 
@@ -44,7 +45,7 @@
 }
 
 - (void) startBleConfiguration{
-    WTWifiViewController *controller = [[WTWifiViewController alloc] init];
+    WTBleViewController *controller = [[WTBleViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

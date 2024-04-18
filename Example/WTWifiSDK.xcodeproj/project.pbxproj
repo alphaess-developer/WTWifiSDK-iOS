@@ -26,6 +26,7 @@
 		8686748528ACB3500097B955 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8686748428ACB3500097B955 /* NetworkExtension.framework */; };
 		8686748828ACC5960097B955 /* WTSSIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686748728ACC5960097B955 /* WTSSIDCell.m */; };
 		8686748B28ACE4510097B955 /* WTEMSInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686748A28ACE4510097B955 /* WTEMSInfoController.m */; };
+		868F68FE2BD0F1E9004745EE /* WTBleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868F68FD2BD0F1E9004745EE /* WTBleViewController.m */; };
 		86AB450228B797260035D807 /* WTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AB450128B797260035D807 /* WTNavigationController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		D3881E9BFA6CEF01F3662103 /* Pods_WTWifiSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67903F9E014A005381F1F883 /* Pods_WTWifiSDK_Example.framework */; };
@@ -77,6 +78,8 @@
 		8686748728ACC5960097B955 /* WTSSIDCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTSSIDCell.m; sourceTree = "<group>"; };
 		8686748928ACE4510097B955 /* WTEMSInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTEMSInfoController.h; sourceTree = "<group>"; };
 		8686748A28ACE4510097B955 /* WTEMSInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTEMSInfoController.m; sourceTree = "<group>"; };
+		868F68FC2BD0F1E9004745EE /* WTBleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBleViewController.h; sourceTree = "<group>"; };
+		868F68FD2BD0F1E9004745EE /* WTBleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTBleViewController.m; sourceTree = "<group>"; };
 		86AB450028B797260035D807 /* WTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTNavigationController.h; sourceTree = "<group>"; };
 		86AB450128B797260035D807 /* WTNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTNavigationController.m; sourceTree = "<group>"; };
 		86C5997128B3467A00F4B566 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -176,6 +179,8 @@
 				8686748A28ACE4510097B955 /* WTEMSInfoController.m */,
 				8605A58528C061D400AC1ECA /* WTWifiViewController.h */,
 				8605A58628C061D400AC1ECA /* WTWifiViewController.m */,
+				868F68FC2BD0F1E9004745EE /* WTBleViewController.h */,
+				868F68FD2BD0F1E9004745EE /* WTBleViewController.m */,
 				8686748628ACC5960097B955 /* WTSSIDCell.h */,
 				8686748728ACC5960097B955 /* WTSSIDCell.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -404,6 +409,7 @@
 				8686748828ACC5960097B955 /* WTSSIDCell.m in Sources */,
 				8686748B28ACE4510097B955 /* WTEMSInfoController.m in Sources */,
 				6003F5A7195388D20070C39A /* WTViewController.m in Sources */,
+				868F68FE2BD0F1E9004745EE /* WTBleViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				8605A58728C061D400AC1ECA /* WTWifiViewController.m in Sources */,
 			);
