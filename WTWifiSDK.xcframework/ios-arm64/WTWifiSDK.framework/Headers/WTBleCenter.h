@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// Callback for sending network configuration instructions (determine if sent successfully)
 - (void)onPostConfigureParams:(WTBLEStatus)status;
 
+/// After sending business instructions, the device responds to the callback
+/// For example: After sending the network configuration command, the network configuration result is called back (to determine whether the network configuration is successful)
+- (void)onDidReceiveDeviceResponseStatus:(WTBLEStatus)status;
+
 /// Callback for scanning surrounding WiFi
 - (void)onDeviceScanResponse:(NSArray<NSDictionary *> *)scanResults
                       status:(WTBLEStatus)status;

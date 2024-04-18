@@ -6,7 +6,11 @@
 	<dict>
 		<key>Headers/WTBleCenter.h</key>
 		<data>
-		Ukk2czl9NFbp+rnpk2rayi+5QPo=
+		WI4ukKP1cJinbAgQ4NEegg9bBKg=
+		</data>
+		<key>Headers/WTEnums.h</key>
+		<data>
+		/F4F65MYg+LvPHgXQWXtdU5K20g=
 		</data>
 		<key>Headers/WTUpdateExtendModel.h</key>
 		<data>
@@ -35,7 +39,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ir3DRDRzw+U53hnGYKtCPOQbAio6miT+KaCnrDXa5Vg=
+			KmXtQDgBLNlbm1k+n8GI6wHpq5orxk1wjGX9bplQkUY=
+			</data>
+		</dict>
+		<key>Headers/WTEnums.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LB9YjxSHHd9nzOAj4Nt48FbrefM4kGTv/PI6ze+lpUM=
 			</data>
 		</dict>
 		<key>Headers/WTUpdateExtendModel.h</key>
