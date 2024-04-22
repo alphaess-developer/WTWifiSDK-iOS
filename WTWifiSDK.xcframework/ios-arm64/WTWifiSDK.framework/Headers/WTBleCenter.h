@@ -89,6 +89,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Get device manufacturer code
 - (void)loadInverterCode;
 
+/// Get system sn.
+- (void)getBleSN;
 
 /// Inverter transparent data
 /// emsHex: Transparent Data (Converting Inverter Data Packets to Hexadecimal Strings)
