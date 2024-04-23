@@ -9,7 +9,7 @@
 #import "WTBleViewController.h"
 #import "WTWifiSDK/WTBleCenter.h"
 
-@interface WTBleViewController ()
+@interface WTBleViewController ()<WTBleCenterDelegate>
 
 @property (nonatomic , strong) UIButton *startScanBtn;
 @property (nonatomic , strong) UIButton *stopScanBtn;
@@ -17,6 +17,7 @@
 @property (nonatomic , strong) UIButton *disconnectBtn;
 @property (nonatomic , strong) UIButton *authBtn;
 @property (nonatomic , strong) UIButton *configNetworkBtn;
+@property (nonatomic , strong) UIButton *loadSystemSNBtn;
 
 @end
 
@@ -34,6 +35,9 @@
     [self.view addSubview:self.disconnectBtn];
     [self.view addSubview:self.authBtn];
     [self.view addSubview:self.configNetworkBtn];
+    [self.view addSubview:self.loadSystemSNBtn];
+    
+    [WTBleCenter sharedInstance].delegate = self;
 }
 
 #pragma mark - Actions
@@ -68,6 +72,19 @@
 }
 
 
+- (void)loadSystemSN {
+    [[WTBleCenter sharedInstance] getInvSN];
+}
+
+#pragma mark - delegates
+
+- (void)onDidReceiveDeviceResponseStatus:(WTBLEStatus)status {
+    
+}
+
+- (void)onDidReceiveCustomData:(NSDictionary *)result status:(WTBLEStatus)status {
+    NSLog(@"onDidReceiveCustomData: %@", result);
+}
 
 #pragma mark - lazy initila
 
@@ -156,5 +173,18 @@
     return _configNetworkBtn;
 }
 
+- (UIButton *)loadSystemSNBtn {
+    if (_loadSystemSNBtn == nil) {
+        _loadSystemSNBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 450, 300, 40)];
+        [_loadSystemSNBtn setTitle:@"Ble Load System SN" forState:UIControlStateNormal];
+        [_loadSystemSNBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_loadSystemSNBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _loadSystemSNBtn.layer.cornerRadius = 5;
+        _loadSystemSNBtn.layer.borderWidth = 0.5;
+        [_loadSystemSNBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_loadSystemSNBtn addTarget:self action:@selector(loadSystemSN) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loadSystemSNBtn;
+}
 
 @end
