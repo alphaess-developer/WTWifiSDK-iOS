@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		q0y0npONlugLuh8Yu8mpZu9bxKA=
+		</data>
 		<key>Headers/WTBleCenter.h</key>
 		<data>
-		hTp3kzSDbjWpduHzLnWdRWq2M5s=
+		iQCEtN4jfIlcQnUbetMrwBsIgjM=
 		</data>
 		<key>Headers/WTEnums.h</key>
 		<data>
@@ -39,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m1Aqo4fC6OAzRG4neI16YyBG6HTjZBNt/pL+PJn2xqw=
+			79pFRmLD4BsKTMODVzEdGe/MGue3OYCn3xnp08mfBZ0=
 			</data>
 		</dict>
 		<key>Headers/WTEnums.h</key>

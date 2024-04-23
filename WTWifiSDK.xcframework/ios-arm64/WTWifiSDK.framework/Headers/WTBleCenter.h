@@ -37,6 +37,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// The string format is: AA5502…, which means each HEX value is represented by two bytes without spaces.
 - (void)onPostPassthroughInverterData:(nonnull NSString *)emsHex status:(WTBLEStatus)status;
 
+/// Callback for received business instructions
+/// emsHex: Transparent Data (Converting Inverter Data Packets to Hexadecimal Strings)
+/// Note: The 'emsHex' data contains the original data packets of the corresponding manufacturer's inverter communication protocol.
+/// The string format is: AA5502…, which means each HEX value is represented by two bytes without spaces.
+- (void)onDidReceiveCustomData:(NSString *)emsHex status:(WTBLEStatus)status;
+
+/// Failure to send business command device reception
+- (void)onDidReceiveError:(NSInteger)errCode;
+
 /// "Unexpected disconnection event callback for connected device."
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;
 
@@ -90,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadInverterCode;
 
 /// Get system sn.
-- (void)getBleSN;
+- (void)getInvSN;
 
 /// Inverter transparent data
 /// emsHex: Transparent Data (Converting Inverter Data Packets to Hexadecimal Strings)
