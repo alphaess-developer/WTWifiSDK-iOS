@@ -53,22 +53,21 @@
     [[WTBleCenter sharedInstance] stopScan];
 }
 
-- (void)connectBtnTap:(NSString *)password {
-    [[WTBleCenter sharedInstance] connect:password];
+- (void)connectBtnTap {
+    [[WTBleCenter sharedInstance] connect:@"DDC48771-FF62-C002-E6EC-BBF6C0BDCBBA"];
 }
 
 - (void)disconnectBtnTap {
     [[WTBleCenter sharedInstance] disconnect];
 }
 
-- (void)authBtn:(NSString *)password {
-    [[WTBleCenter sharedInstance] auth:password];
-   
+- (void)authBtnTap {
+    [[WTBleCenter sharedInstance] auth:@"12345678"];
 }
 
 
-- (void) configNetworkWith:(NSString *) account password:(NSString *)password {
-    [[WTBleCenter sharedInstance] configure:account password:password];
+- (void)configNetworkTap {
+    [[WTBleCenter sharedInstance] configure:@"AlphaESS" password:@"AlphaESS"];
 }
 
 
@@ -79,11 +78,19 @@
 #pragma mark - delegates
 
 - (void)onDidReceiveDeviceResponseStatus:(WTBLEStatus)status {
-    
+    NSLog(@"onDidReceiveDeviceResponseStatus: %ld", status);
 }
 
 - (void)onDidReceiveCustomData:(NSDictionary *)result status:(WTBLEStatus)status {
     NSLog(@"onDidReceiveCustomData: %@", result);
+}
+
+- (void)onDidReceiveError:(NSInteger)errCode {
+    
+}
+
+- (void)onPostConfigureParams:(WTBLEStatus)status {
+    NSLog(@"onPostConfigureParams: %ld", status);
 }
 
 #pragma mark - lazy initila
@@ -126,7 +133,7 @@
         _connectBtn.layer.cornerRadius = 5;
         _connectBtn.layer.borderWidth = 0.5;
         [_connectBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_connectBtn addTarget:self action:@selector(connectBtnTap:) forControlEvents:UIControlEventTouchUpInside];
+        [_connectBtn addTarget:self action:@selector(connectBtnTap) forControlEvents:UIControlEventTouchUpInside];
     }
     return _connectBtn;
 }
@@ -154,7 +161,7 @@
         _authBtn.layer.cornerRadius = 5;
         _authBtn.layer.borderWidth = 0.5;
         [_authBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_authBtn addTarget:self action:@selector(authBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [_authBtn addTarget:self action:@selector(authBtnTap) forControlEvents:UIControlEventTouchUpInside];
     }
     return _authBtn;
 }
@@ -168,7 +175,7 @@
         _configNetworkBtn.layer.cornerRadius = 5;
         _configNetworkBtn.layer.borderWidth = 0.5;
         [_configNetworkBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_configNetworkBtn addTarget:self action:@selector(authBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [_configNetworkBtn addTarget:self action:@selector(configNetworkTap) forControlEvents:UIControlEventTouchUpInside];
     }
     return _configNetworkBtn;
 }
