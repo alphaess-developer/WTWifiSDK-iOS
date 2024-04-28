@@ -69,6 +69,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param failure Callback error info.
 - (void)loadAutoCheckInfoWithItalianSafety:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
 
+/// Load safety information returned by the energy storage management system.
+/// @param success Callback safety info.
+/// @param failure Callback error info.
+- (void)loadSafetyInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
 /// Update the related configuration parameters in the energy storage device.
 /// @param data EMS configurations.
 /// @param success Callback success when update success.

@@ -18,6 +18,7 @@
 @property (nonatomic , strong) UIButton *runningExtendBtn;
 @property (nonatomic , strong) UIButton *selfCheckBtn;
 @property (nonatomic , strong) UIButton *italianSafetySelfCheckBtn;
+@property (nonatomic , strong) UIButton *safetyInfoBtn;
 @property (nonatomic , strong) UIScrollView *scrollView;
 @property (nonatomic , strong) UILabel *label;
 @end
@@ -37,6 +38,7 @@
     [self.view addSubview:self.runningExtendBtn];
     [self.view addSubview:self.selfCheckBtn];
     [self.view addSubview:self.italianSafetySelfCheckBtn];
+    [self.view addSubview:self.safetyInfoBtn];
     [self.view addSubview:self.scrollView];
 }
 
@@ -126,12 +128,22 @@
     }];
 }
 
+- (void)safetyInfoBtnTap {
+    [[WTWifiCenter sharedInstance] loadSafetyInfo:^(NSDictionary * _Nullable result) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *labelText = [[NSString alloc] initWithFormat:@"已获取到EMS响应安规信息数据：\n %@", result];
+            [self resizeLabelWith:labelText];
+        });
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"安规信息获取失败");
+    }];
+}
 
 #pragma mark - lazy initila
 
 - (UIScrollView *)scrollView {
     if (_scrollView == nil) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(10, 250, UIScreen.mainScreen.bounds.size.width - 20, UIScreen.mainScreen.bounds.size.height - 300)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(10, 300, UIScreen.mainScreen.bounds.size.width - 20, UIScreen.mainScreen.bounds.size.height - 300)];
         [_scrollView addSubview:self.label];
     }
     return _scrollView;
@@ -235,6 +247,21 @@
         [_italianSafetySelfCheckBtn addTarget:self action:@selector(italianSafetySelfCheckBtnTap) forControlEvents:UIControlEventTouchUpInside];
     }
     return _italianSafetySelfCheckBtn;
+}
+
+- (UIButton *)safetyInfoBtn {
+    if (_safetyInfoBtn == nil) {
+        _safetyInfoBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 250, 150, 40)];
+        [_safetyInfoBtn setTitle:@"EMS安规自检信息" forState:UIControlStateNormal];
+        [_safetyInfoBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        [_safetyInfoBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_safetyInfoBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _safetyInfoBtn.layer.cornerRadius = 5;
+        _safetyInfoBtn.layer.borderWidth = 0.5;
+        [_safetyInfoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_safetyInfoBtn addTarget:self action:@selector(safetyInfoBtnTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _safetyInfoBtn;
 }
 
 @end

@@ -20,6 +20,14 @@ typedef NS_ENUM(NSUInteger, WTBLEStatus) {
     WTBleStatusException,
 };
 
+typedef NS_ENUM(NSUInteger, WTBLEOpMode) {
+    WTBLEOpModeNull = 0,
+    WTBLEOpModeSta,
+    WTBLEOpModeSoftAP,
+    WTBLEOpModeStaSoftAP,
+};
+
+
 
 @interface WTEnums : NSObject
 

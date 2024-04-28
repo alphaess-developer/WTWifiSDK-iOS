@@ -25,7 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// After sending business instructions, the device responds to the callback
 /// For example: After sending the network configuration command, the network configuration result is called back (to determine whether the network configuration is successful)
-- (void)onDidReceiveDeviceResponseStatus:(WTBLEStatus)status;
+/// staConnectionStatus: When currently in Station mode(WTBLEOpModeSta), 0 means there is Wi-Fi connection, otherwise there is no Wi-Fi connection
+- (void)onDidReceiveDeviceResponseOpMode:(WTBLEOpMode)mode staConnectionStatus:(NSInteger)staConnectionStatus  status:(WTBLEStatus)status;
 
 /// Callback for scanning surrounding WiFi
 - (void)onDeviceScanResponse:(NSArray<NSDictionary *> *)scanResults
