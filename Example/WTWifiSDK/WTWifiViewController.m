@@ -20,6 +20,7 @@
 @property (nonatomic , strong) UIButton *loadConfigBtn;
 @property (nonatomic , strong) UIButton *updateEMSBtn;
 @property (nonatomic , strong) UIButton *updateEMSExtendBtn;
+@property (nonatomic , strong) UIButton *sendSpecialCmdBtn;
 @property (nonatomic , strong) UITableView *tableview;
 @property (nonatomic , strong) NSArray *ssids;
 
@@ -41,6 +42,7 @@
     [self.view addSubview:self.loadConfigBtn];
     [self.view addSubview:self.updateEMSBtn];
     [self.view addSubview:self.updateEMSExtendBtn];
+    [self.view addSubview:self.sendSpecialCmdBtn];
     [self.view addSubview:self.tableview];
 
 }
@@ -186,6 +188,15 @@
     }];
 }
 
+- (void)sendSpecialCommandTap{
+
+    [[WTWifiCenter sharedInstance] sendSpecialCommand:@"APPConnectEnd" parameter1:@"1" parameter2:nil parameter3:nil description:nil  success:^(bool result) {
+        NSLog(@"特殊指令“APPConnectEnd”响应成功");
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"特殊指令“APPConnectEnd”响应失败");
+    }];
+}
+
 #pragma mark - lazy initila
 
 - (UILabel *)snLabel {
@@ -270,9 +281,23 @@
     return _updateEMSExtendBtn;
 }
 
+- (UIButton *)sendSpecialCmdBtn {
+    if (_sendSpecialCmdBtn == nil) {
+        _sendSpecialCmdBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 200, 40)];
+        [_sendSpecialCmdBtn setTitle:@"向EMS发送特殊指令" forState:UIControlStateNormal];
+        [_sendSpecialCmdBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_sendSpecialCmdBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _sendSpecialCmdBtn.layer.cornerRadius = 5;
+        _sendSpecialCmdBtn.layer.borderWidth = 0.5;
+        [_sendSpecialCmdBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_sendSpecialCmdBtn addTarget:self action:@selector(sendSpecialCommandTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _sendSpecialCmdBtn;
+}
+
 - (UITableView *)tableview {
     if (_tableview == nil) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 400, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 450)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 450, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 500)];
         _tableview.tableFooterView = [UIView new];
         _tableview.delegate = self;
         _tableview.dataSource = self;
