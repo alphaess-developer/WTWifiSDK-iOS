@@ -94,6 +94,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// [parameter3] Command parameter 3
 /// [description] Command description
 - (void)sendSpecialCommand:(NSString *)cmd parameter1:(NSString *)param1 parameter2:(NSString * _Nullable)param2 parameter3:(NSString * _Nullable)param3 description: (NSString * _Nullable)desc success:(void (^)(bool result))success failure: (void (^)(NSError * _Nullable error)) failure;
+
+/// Load tcp link status
+- (void)loadTcpLinkStatus:(void (^)(bool result))status failure: (void (^)(NSError * _Nullable error)) failure;
 @end
 
 NS_ASSUME_NONNULL_END

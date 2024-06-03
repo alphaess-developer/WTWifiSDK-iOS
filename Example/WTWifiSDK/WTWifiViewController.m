@@ -21,6 +21,7 @@
 @property (nonatomic , strong) UIButton *updateEMSBtn;
 @property (nonatomic , strong) UIButton *updateEMSExtendBtn;
 @property (nonatomic , strong) UIButton *sendSpecialCmdBtn;
+@property (nonatomic , strong) UIButton *loadTcpLinkStatusBtn;
 @property (nonatomic , strong) UITableView *tableview;
 @property (nonatomic , strong) NSArray *ssids;
 
@@ -43,6 +44,7 @@
     [self.view addSubview:self.updateEMSBtn];
     [self.view addSubview:self.updateEMSExtendBtn];
     [self.view addSubview:self.sendSpecialCmdBtn];
+    [self.view addSubview:self.loadTcpLinkStatusBtn];
     [self.view addSubview:self.tableview];
 
 }
@@ -170,7 +172,11 @@
     // 启用柴油机
     update.Generator = true;
     [[WTWifiCenter sharedInstance] updateEMSConfiguration:update success:^(bool result) {
-        NSLog(@"配置成功");
+        if (result) {
+            NSLog(@"配置成功");
+        } else {
+            NSLog(@"配置失败");
+        }
     } failure:^(NSError * _Nullable error) {
         NSLog(@"配置失败");
     }];
@@ -182,7 +188,11 @@
     update.OnGridPower = @"1022";
     update.NNShortDetect = @"0";
     [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
-        NSLog(@"扩展参数配置成功");
+        if (result) {
+            NSLog(@"扩展参数配置成功");
+        } else {
+            NSLog(@"扩展参数配置失败");
+        }
     } failure:^(NSError * _Nullable error) {
         NSLog(@"扩展参数配置失败");
     }];
@@ -191,9 +201,26 @@
 - (void)sendSpecialCommandTap{
 
     [[WTWifiCenter sharedInstance] sendSpecialCommand:@"APPConnectEnd" parameter1:@"1" parameter2:nil parameter3:nil description:nil  success:^(bool result) {
-        NSLog(@"特殊指令“APPConnectEnd”响应成功");
+        if (result) {
+            NSLog(@"特殊指令“APPConnectEnd”响应成功");
+        } else {
+            NSLog(@"特殊指令“APPConnectEnd”响应失败");
+        }
     } failure:^(NSError * _Nullable error) {
         NSLog(@"特殊指令“APPConnectEnd”响应失败");
+    }];
+}
+
+- (void)loadTcpLinkStatusTap{
+
+    [[WTWifiCenter sharedInstance] loadTcpLinkStatus:^(bool result) {
+        if (result) {
+            NSLog(@"设备和服务器建立链接成功");
+        } else {
+            NSLog(@"设备和服务器建立链接失败");
+        }
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"设备和服务器建立链接失败");
     }];
 }
 
@@ -295,9 +322,23 @@
     return _sendSpecialCmdBtn;
 }
 
+- (UIButton *)loadTcpLinkStatusBtn {
+    if (_loadTcpLinkStatusBtn == nil) {
+        _loadTcpLinkStatusBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 450, 200, 40)];
+        [_loadTcpLinkStatusBtn setTitle:@"检测设备和云链接状态" forState:UIControlStateNormal];
+        [_loadTcpLinkStatusBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_loadTcpLinkStatusBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _loadTcpLinkStatusBtn.layer.cornerRadius = 5;
+        _loadTcpLinkStatusBtn.layer.borderWidth = 0.5;
+        [_loadTcpLinkStatusBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_loadTcpLinkStatusBtn addTarget:self action:@selector(loadTcpLinkStatusTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loadTcpLinkStatusBtn;
+}
+
 - (UITableView *)tableview {
     if (_tableview == nil) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 450, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 500)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 500, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 500)];
         _tableview.tableFooterView = [UIView new];
         _tableview.delegate = self;
         _tableview.dataSource = self;
