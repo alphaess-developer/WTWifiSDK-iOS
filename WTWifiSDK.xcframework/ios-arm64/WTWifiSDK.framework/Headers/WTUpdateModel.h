@@ -141,6 +141,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * Parallel_EN;
 @property (nonatomic , copy) NSString              * Parallel_Selection;
 @property (nonatomic , copy) NSString              * Parallel_Mode;
+@property (nonatomic , copy) NSString              * UPSReserveEN;
+@property (nonatomic , copy) NSString              * Load_cut_out_en;
+@property (nonatomic , copy) NSString              * Cutoff_Soc;
+@property (nonatomic , copy) NSString              * Wakeup_Soc;
 
 @end
 
