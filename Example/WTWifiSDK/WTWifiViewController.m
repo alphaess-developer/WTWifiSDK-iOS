@@ -187,6 +187,7 @@
     update.BalconyMode = @"1";
     update.OnGridPower = @"1022";
     update.NNShortDetect = @"0";
+    update.TIMEChaDis1 = [NSArray arrayWithObjects:@1,@15,@30,@1,@45,@60,@70,@1,@60,@10, nil];
     [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
         if (result) {
             NSLog(@"扩展参数配置成功");
