@@ -184,10 +184,38 @@
 
 - (void) updateEMSExtendConfigurationTap{
     WTUpdateExtendModel *update = [[WTUpdateExtendModel alloc] init];
-    update.BalconyMode = @"1";
+    
+    update.NNShortDetect = @"0";
     update.OnGridPower = @"1022";
     update.NNShortDetect = @"0";
-    update.TIMEChaDis1 = [NSArray arrayWithObjects:@1,@15,@30,@1,@45,@60,@70,@1,@60,@10, nil];
+    update.TIMEChaDisEN = @"7";
+    update.TIMEChaDis1 = [NSArray arrayWithObjects:@3,@29,@31,@1,@46,@68,@89, nil];
+    update.Channel1 = @"1";
+    update.ControlMode1 = @"3";
+    update.Date1 = @"0";
+    update.ChargeSOC1 = @"10";
+    update.ChargeMode1 = @"0";
+    update.UPS1 = @"1";
+    update.Duration1 = @"16";
+    update.Pause1 = @"17";
+    update.FeedMode1 = @"2";
+    update.FeedValue1 = @"16";
+//    update.SGEnable1 = @"1";
+    update.DryTime1 = [NSArray arrayWithObjects:@15,@30,@60,@90, nil];
+    update.Channel2 = @"1";
+    update.ControlMode2 = @"3";
+    update.ChargeMode2 = @"0";
+    update.Date2 = @"0";
+    update.ChargeSOC2 = @"10";
+    update.UPS2 = @"1";
+    update.Delay2 = @"50";
+    update.Duration2 = @"51";
+    update.Pause2 = @"52";
+    update.FeedMode2 = @"2";
+    update.FeedValue2 = @"16";
+    update.SGEnable2 = @"1";
+    update.DryTime2 = [NSArray arrayWithObjects:@15,@30,@30,@45, nil];
+    
     [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
         if (result) {
             NSLog(@"扩展参数配置成功");

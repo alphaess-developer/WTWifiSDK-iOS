@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BD7E3EA78C4CEC84DD0E05D /* Pods_WTWifiSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB768E119F83B9251150C894 /* Pods_WTWifiSDK_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -16,12 +15,12 @@
 		6003F59E195388D20070C39A /* WTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* WTAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* WTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* WTViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		7B5B870DE70AD904018D5428 /* Pods_WTWifiSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B25E70716CD4613AFF5D35D /* Pods_WTWifiSDK_Tests.framework */; };
 		8605A58728C061D400AC1ECA /* WTWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605A58628C061D400AC1ECA /* WTWifiViewController.m */; };
 		8686748528ACB3500097B955 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8686748428ACB3500097B955 /* NetworkExtension.framework */; };
 		8686748828ACC5960097B955 /* WTSSIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686748728ACC5960097B955 /* WTSSIDCell.m */; };
@@ -29,7 +28,7 @@
 		868F68FE2BD0F1E9004745EE /* WTBleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868F68FD2BD0F1E9004745EE /* WTBleViewController.m */; };
 		86AB450228B797260035D807 /* WTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AB450128B797260035D807 /* WTNavigationController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		D3881E9BFA6CEF01F3662103 /* Pods_WTWifiSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67903F9E014A005381F1F883 /* Pods_WTWifiSDK_Example.framework */; };
+		C4716281742AA1E181B42CD2 /* Pods_WTWifiSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0605C8888B8175500970A391 /* Pods_WTWifiSDK_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0437F5E686F8395BFA8D49FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0605C8888B8175500970A391 /* Pods_WTWifiSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B25E70716CD4613AFF5D35D /* Pods_WTWifiSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D6EFF607BA90F81DDCF706 /* Pods-WTWifiSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		373626A05C0638730F4C5647 /* Pods-WTWifiSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		381B4343B482A5EA79C343EE /* WTWifiSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WTWifiSDK.podspec; path = ../WTWifiSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -62,12 +63,10 @@
 		6003F5A6195388D20070C39A /* WTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* WTWifiSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTWifiSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		67903F9E014A005381F1F883 /* Pods_WTWifiSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8605A58528C061D400AC1ECA /* WTWifiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTWifiViewController.h; sourceTree = "<group>"; };
 		8605A58628C061D400AC1ECA /* WTWifiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTWifiViewController.m; sourceTree = "<group>"; };
@@ -86,7 +85,6 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		980DE0E602758EFF070D1DD7 /* Pods-WTWifiSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C02D48B7ABE1FC142497E8B2 /* Pods-WTWifiSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CB768E119F83B9251150C894 /* Pods_WTWifiSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				8686748528ACB3500097B955 /* NetworkExtension.framework in Frameworks */,
-				D3881E9BFA6CEF01F3662103 /* Pods_WTWifiSDK_Example.framework in Frameworks */,
+				C4716281742AA1E181B42CD2 /* Pods_WTWifiSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,10 +104,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				2BD7E3EA78C4CEC84DD0E05D /* Pods_WTWifiSDK_Tests.framework in Frameworks */,
+				7B5B870DE70AD904018D5428 /* Pods_WTWifiSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +155,8 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				67903F9E014A005381F1F883 /* Pods_WTWifiSDK_Example.framework */,
-				CB768E119F83B9251150C894 /* Pods_WTWifiSDK_Tests.framework */,
+				0605C8888B8175500970A391 /* Pods_WTWifiSDK_Example.framework */,
+				1B25E70716CD4613AFF5D35D /* Pods_WTWifiSDK_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,7 +238,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				794BFDE7C231E5013C142454 /* [CP] Embed Pods Frameworks */,
+				C07C608EF54D3E4EB2099621 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,7 +351,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		794BFDE7C231E5013C142454 /* [CP] Embed Pods Frameworks */ = {
+		C07C608EF54D3E4EB2099621 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,11 +359,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/WTWifiSDK/WTWifiSDK.framework/WTWifiSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WTWifiSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 980DE0E602758EFF070D1DD7 /* Pods-WTWifiSDK_Example.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WTWifiSDK_Example.entitlements;
 				DEVELOPMENT_TEAM = LLVYVEDKV4;
@@ -547,7 +546,9 @@
 				GCC_PREFIX_HEADER = "WTWifiSDK/WTWifiSDK-Prefix.pch";
 				INFOPLIST_FILE = "WTWifiSDK/WTWifiSDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = mh_execute;
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Alpha-ESS.JYProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -560,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36D6EFF607BA90F81DDCF706 /* Pods-WTWifiSDK_Example.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WTWifiSDK_Example.entitlements;
 				DEVELOPMENT_TEAM = LLVYVEDKV4;
@@ -567,7 +569,9 @@
 				GCC_PREFIX_HEADER = "WTWifiSDK/WTWifiSDK-Prefix.pch";
 				INFOPLIST_FILE = "WTWifiSDK/WTWifiSDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = mh_execute;
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Alpha-ESS.JYProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,14 +1,17 @@
 PODS:
   - JSONModel (1.8.0)
-  - WTWifiSDK (2.3.0):
+  - Protobuf (3.27.2)
+  - WTWifiSDK (2.3.5):
     - JSONModel
 
 DEPENDENCIES:
+  - Protobuf
   - WTWifiSDK (from `../`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - JSONModel
+    - Protobuf
 
 EXTERNAL SOURCES:
   WTWifiSDK:
@@ -16,8 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
-  WTWifiSDK: 922659f8544dba1087c3273a9c7986c5cc305b0a
+  Protobuf: fb2c13674723f76ff6eede14f78847a776455fa2
+  WTWifiSDK: 387d88fbb97ef98d567dabf1aed252d13d85e38c
 
-PODFILE CHECKSUM: 92b9d4c2b992091338bc86fdc929ef86a15daaff
+PODFILE CHECKSUM: 1d396566c42cd6c571b6efb09a77c8cabac40242
 
 COCOAPODS: 1.15.2
