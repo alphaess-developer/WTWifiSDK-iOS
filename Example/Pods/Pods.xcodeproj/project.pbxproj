@@ -9,12 +9,13 @@
 /* Begin PBXAggregateTarget section */
 		3A6E38C49BB2ED6899D8608BA13F84E9 /* WTWifiSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9737E346E0C293BD675EB3E73745D1E9 /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */;
+			buildConfigurationList = FD571D0A7F6EF24E9B59973ABA87B06D /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */;
 			buildPhases = (
-				6FF72F5FCD4B3E4B8B6679AF4C7948CC /* [CP] Copy XCFrameworks */,
+				A5358B566C9E07FC633D5A52EAD510CA /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				C40A91E1E51DAB1B2062B5A70A3888F0 /* PBXTargetDependency */,
+				B480A1B5D0F8DEADB66CC42DF03C3A5F /* PBXTargetDependency */,
+				011FC0F0B432C68E32B4D7EA41468980 /* PBXTargetDependency */,
 			);
 			name = WTWifiSDK;
 		};
@@ -127,13 +128,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1711D0EF62EEE2065447F3856CFEC3B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
-			remoteInfo = JSONModel;
-		};
 		33D07BBAD6FD1F19F6C4DF27500D9523 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -162,12 +156,26 @@
 			remoteGlobalIDString = 331902F14E62290AA86FB37CAAC6ABB0;
 			remoteInfo = "Protobuf-Protobuf_Privacy";
 		};
+		92DD63F6B1E433203AD16B3743F54B9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 470FE31978DC918618A329D8B55C85FF;
+			remoteInfo = Protobuf;
+		};
 		A5D2D0FE7FA97F6C49D82E16C85436DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A6E38C49BB2ED6899D8608BA13F84E9;
 			remoteInfo = WTWifiSDK;
+		};
+		FAAAB320D584D8AD6FF88235F3FBFBDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
+			remoteInfo = JSONModel;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -901,7 +909,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6FF72F5FCD4B3E4B8B6679AF4C7948CC /* [CP] Copy XCFrameworks */ = {
+		A5358B566C9E07FC633D5A52EAD510CA /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -996,6 +1004,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		011FC0F0B432C68E32B4D7EA41468980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Protobuf;
+			target = 470FE31978DC918618A329D8B55C85FF /* Protobuf */;
+			targetProxy = 92DD63F6B1E433203AD16B3743F54B9F /* PBXContainerItemProxy */;
+		};
 		131871AFD1CA9C5F7623CC19A1D09FC8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONModel;
@@ -1020,11 +1034,11 @@
 			target = 35B61133EF99FA71CFD1410B23B465EA /* Pods-WTWifiSDK_Example */;
 			targetProxy = 3513F645B73018CAF7D16428311E634C /* PBXContainerItemProxy */;
 		};
-		C40A91E1E51DAB1B2062B5A70A3888F0 /* PBXTargetDependency */ = {
+		B480A1B5D0F8DEADB66CC42DF03C3A5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONModel;
 			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
-			targetProxy = 1711D0EF62EEE2065447F3856CFEC3B0 /* PBXContainerItemProxy */;
+			targetProxy = FAAAB320D584D8AD6FF88235F3FBFBDA /* PBXContainerItemProxy */;
 		};
 		C86115D1E732C1AD66C1CD306BDB8D1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1035,7 +1049,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2B2B5FF86CD4F5A834FF2E72B00D2057 /* Debug */ = {
+		197EFE1B083BBE1C3E830952AA64EF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E85A234E45CDC67ADF58F3EB351E5B3F /* WTWifiSDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26D2FC698555E145E86234F0BEAE20E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BB14169BFCA0787A50757818D5CABA0 /* WTWifiSDK.debug.xcconfig */;
 			buildSettings = {
@@ -1195,22 +1225,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8655D0BA5DF396F3621CD73C94EB5B36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E85A234E45CDC67ADF58F3EB351E5B3F /* WTWifiSDK.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1524,15 +1538,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9737E346E0C293BD675EB3E73745D1E9 /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2B2B5FF86CD4F5A834FF2E72B00D2057 /* Debug */,
-				8655D0BA5DF396F3621CD73C94EB5B36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BD9F6ADBB83BCA766DCC10FEC359436A /* Build configuration list for PBXNativeTarget "Pods-WTWifiSDK_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1556,6 +1561,15 @@
 			buildConfigurations = (
 				4805EED450DDB84E3FB7E0F452DF4B2C /* Debug */,
 				5418089C260953D8510D57C4D5AF9A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD571D0A7F6EF24E9B59973ABA87B06D /* Build configuration list for PBXAggregateTarget "WTWifiSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26D2FC698555E145E86234F0BEAE20E4 /* Debug */,
+				197EFE1B083BBE1C3E830952AA64EF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadInverterCode;
 
 /// Get system sn.
-- (void)getInvSN;
+- (void)getInvSN __attribute__((deprecated));
 
 /// Inverter transparent data
 /// emsHex: Transparent Data (Converting Inverter Data Packets to Hexadecimal Strings)

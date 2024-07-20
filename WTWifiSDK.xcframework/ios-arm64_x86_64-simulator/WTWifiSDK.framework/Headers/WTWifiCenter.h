@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Load battery and meter auto check information returned by the energy storage management system.
 /// @param success Callback safety info.
 /// @param failure Callback error info.
-- (void)loadAutoCheckInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure;
+- (void)loadAutoCheckInfo:(void (^)(NSDictionary * _Nullable result))success failure: (void (^)(NSError * _Nullable error)) failure __attribute__((deprecated));
 
 /// Load italian safety auto check information returned by the energy storage management system.
 /// @param success Callback running info.
