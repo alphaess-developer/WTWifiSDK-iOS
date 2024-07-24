@@ -1,7 +1,7 @@
 PODS:
   - JSONModel (1.8.0)
   - Protobuf (3.27.2)
-  - WTWifiSDK (3.0.0):
+  - WTWifiSDK (3.0.1):
     - JSONModel
     - Protobuf
 
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Protobuf: fb2c13674723f76ff6eede14f78847a776455fa2
-  WTWifiSDK: 28bc01384f9b744fd1636dd21d97ce8a024e7a4b
+  WTWifiSDK: f8914a22af6df9353dfc469a52bae3599704b2b2
 
 PODFILE CHECKSUM: 1d396566c42cd6c571b6efb09a77c8cabac40242
 
