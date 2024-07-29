@@ -4,7 +4,7 @@ platform :ios, '11.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'WTWifiSDK_Example' do
-  
+
   pod 'Protobuf'
   pod 'WTWifiSDK', :path => '../'
 #    pod 'WTWifiSDK', '~> 1.0.5'

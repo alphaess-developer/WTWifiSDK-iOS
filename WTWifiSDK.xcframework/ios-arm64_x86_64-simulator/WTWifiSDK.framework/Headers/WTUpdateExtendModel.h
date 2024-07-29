@@ -71,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * Pause1;
 @property (nonatomic , copy) NSString              * FeedMode1;
 @property (nonatomic , copy) NSString              * FeedValue1;
+@property (nonatomic , copy) NSString              * SGEnable1;
 @property (nonatomic , copy) NSArray              * DryTime1;
 @property (nonatomic , copy) NSString              * Channel2;
 @property (nonatomic , copy) NSString              * ControlMode2;

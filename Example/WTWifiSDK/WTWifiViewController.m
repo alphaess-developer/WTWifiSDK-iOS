@@ -160,17 +160,19 @@
 
 - (void) updateEMSConfigurationTap{
     WTUpdateModel *update = [[WTUpdateModel alloc] init];
-    update.ACDC = @"2";
-    update.CTRate = @"1";
-    update.GridMeterCTE = @"0";
-    update.Meter_CT_Select = @"2";
-    update.OnGridCap = @"5000";
-    update.ReliefMode = @"1";
-    update.SafetyType = @"25";
-    update.SelfUseOrEconomic = @"0";
-    update.VPPMode = @"1";
-    // 启用柴油机
-    update.Generator = true;
+//    update.ACDC = @"3";
+//    update.CTRate = @"1";
+//    update.GridMeterCTE = @"0";
+//    update.Meter_CT_Select = @"2";
+//    update.OnGridCap = @"5000";
+//    update.ReliefMode = @"1";
+//    update.SafetyType = @"25";
+//    update.SelfUseOrEconomic = @"0";
+//    update.VPPMode = @"1";
+//    // 启用柴油机
+//    update.Generator = true;
+    update.ModbusAddress = @"30";
+    update.ModbusBaudrate = @"2";
     [[WTWifiCenter sharedInstance] updateEMSConfiguration:update success:^(bool result) {
         if (result) {
             NSLog(@"配置成功");

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F3FC22B0ADDC439109AF01 /* Pods_WTWifiSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792D3824D826CC5EE3241ECA /* Pods_WTWifiSDK_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -17,10 +18,7 @@
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		7B5B870DE70AD904018D5428 /* Pods_WTWifiSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B25E70716CD4613AFF5D35D /* Pods_WTWifiSDK_Tests.framework */; };
 		8605A58728C061D400AC1ECA /* WTWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605A58628C061D400AC1ECA /* WTWifiViewController.m */; };
 		8686748528ACB3500097B955 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8686748428ACB3500097B955 /* NetworkExtension.framework */; };
 		8686748828ACC5960097B955 /* WTSSIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8686748728ACC5960097B955 /* WTSSIDCell.m */; };
@@ -28,7 +26,7 @@
 		868F68FE2BD0F1E9004745EE /* WTBleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868F68FD2BD0F1E9004745EE /* WTBleViewController.m */; };
 		86AB450228B797260035D807 /* WTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AB450128B797260035D807 /* WTNavigationController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		C4716281742AA1E181B42CD2 /* Pods_WTWifiSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0605C8888B8175500970A391 /* Pods_WTWifiSDK_Example.framework */; };
+		984396E866776C8497A73C2F /* Pods_WTWifiSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F6712FBBDFC142A28792F3 /* Pods_WTWifiSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		0437F5E686F8395BFA8D49FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		0605C8888B8175500970A391 /* Pods_WTWifiSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B25E70716CD4613AFF5D35D /* Pods_WTWifiSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D6EFF607BA90F81DDCF706 /* Pods-WTWifiSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		373626A05C0638730F4C5647 /* Pods-WTWifiSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		381B4343B482A5EA79C343EE /* WTWifiSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WTWifiSDK.podspec; path = ../WTWifiSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -63,11 +59,8 @@
 		6003F5A6195388D20070C39A /* WTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* WTWifiSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTWifiSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		792D3824D826CC5EE3241ECA /* Pods_WTWifiSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8605A58528C061D400AC1ECA /* WTWifiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTWifiViewController.h; sourceTree = "<group>"; };
 		8605A58628C061D400AC1ECA /* WTWifiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTWifiViewController.m; sourceTree = "<group>"; };
 		8686748128ACB17F0097B955 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -83,6 +76,7 @@
 		86AB450128B797260035D807 /* WTNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTNavigationController.m; sourceTree = "<group>"; };
 		86C5997128B3467A00F4B566 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91F6712FBBDFC142A28792F3 /* Pods_WTWifiSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980DE0E602758EFF070D1DD7 /* Pods-WTWifiSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Example/Pods-WTWifiSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C02D48B7ABE1FC142497E8B2 /* Pods-WTWifiSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTWifiSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-WTWifiSDK_Tests/Pods-WTWifiSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +90,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				8686748528ACB3500097B955 /* NetworkExtension.framework in Frameworks */,
-				C4716281742AA1E181B42CD2 /* Pods_WTWifiSDK_Example.framework in Frameworks */,
+				04F3FC22B0ADDC439109AF01 /* Pods_WTWifiSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +100,7 @@
 			files = (
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				7B5B870DE70AD904018D5428 /* Pods_WTWifiSDK_Tests.framework in Frameworks */,
+				984396E866776C8497A73C2F /* Pods_WTWifiSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +124,6 @@
 				8686748328ACB1B80097B955 /* WTWifiSDK_Example.entitlements */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for WTWifiSDK */,
-				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				3B90796FB330E4E9443586C9 /* Pods */,
@@ -155,8 +148,8 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				0605C8888B8175500970A391 /* Pods_WTWifiSDK_Example.framework */,
-				1B25E70716CD4613AFF5D35D /* Pods_WTWifiSDK_Tests.framework */,
+				792D3824D826CC5EE3241ECA /* Pods_WTWifiSDK_Example.framework */,
+				91F6712FBBDFC142A28792F3 /* Pods_WTWifiSDK_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,25 +187,6 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* WTWifiSDK-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -322,7 +296,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +408,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6003F597195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
