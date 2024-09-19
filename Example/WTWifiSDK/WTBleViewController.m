@@ -54,7 +54,7 @@
 }
 
 - (void)connectBtnTap {
-    [[WTBleCenter sharedInstance] connect:@"DDC48771-FF62-C002-E6EC-BBF6C0BDCBBA"];
+    [[WTBleCenter sharedInstance] connect:@"A2B2698B-CE7F-F0A4-BC45-954A3D8FCD63"];
 }
 
 - (void)disconnectBtnTap {
@@ -67,12 +67,13 @@
 
 
 - (void)configNetworkTap {
-    [[WTBleCenter sharedInstance] configure:@"AlphaESS" password:@"AlphaESS"];
+    [[WTBleCenter sharedInstance] configure:@"AlphaESS" password:@"AlphaESS123"];
 }
 
 
 - (void)loadSystemSN {
-    [[WTBleCenter sharedInstance] getInvSN];
+//    [[WTBleCenter sharedInstance] getInvSN];
+    [[WTBleCenter sharedInstance] configure:@"AlphaESS" password:@"AlphaESS1231"];
 }
 
 #pragma mark - delegates
@@ -86,11 +87,44 @@
 }
 
 - (void)onDidReceiveError:(NSInteger)errCode {
-    
+    NSLog(@"onDidReceiveError: %ld", (long)errCode);
 }
 
 - (void)onPostConfigureParams:(WTBLEStatus)status {
     NSLog(@"onPostConfigureParams: %ld", status);
+}
+
+- (void)onDidReceiveDeviceResponseOpMode:(WTBLEOpMode)mode staConnectionStatus:(NSInteger)staConnectionStatus status:(WTBLEStatus)status {
+    
+    NSLog(@"当前的模式为：%lu，staConnectionStatus： %ld", (unsigned long)mode, staConnectionStatus);
+    
+    // 当前为 Station 模式时，0 表示有 Wi-Fi 连接，否则没有 WiFi 连接
+    if (mode == WTBLEOpModeSta ) {
+        NSLog(@"是否有WIFI连接： %d", staConnectionStatus == 0);
+    }
+}
+
+- (void)onConnectStatusUpdated:(WTBLEStatus)status {
+    NSLog(@"onConnectStatusUpdated");
+}
+- (void)onPostCommandResult:(NSDictionary *)result status:(WTBLEStatus)status {
+    NSLog(@"onPostCommandResult: %@, status: %ld", result, status);
+}
+
+- (void)onDeviceScanResponse:(NSArray<NSDictionary *> *)scanResults status:(WTBLEStatus)status {
+    NSLog(@"onDeviceScanResponse");
+}
+
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central {
+    NSLog(@"centralManagerDidUpdateState");
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"centralManager: didDisconnectPeripheral: error: %@", error);
+}
+
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"centralManager: didFailToConnectPeripheral");
 }
 
 #pragma mark - lazy initila
