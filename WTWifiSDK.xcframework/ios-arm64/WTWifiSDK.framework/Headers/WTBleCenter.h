@@ -56,6 +56,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Callback for changes in device connection status.
 - (void)centralManagerDidUpdateState:(nonnull CBCentralManager *)central;
 
+/// sign认证密码错误，断开连接监听方法
+- (void)centralManager:(CBCentralManager *)central didDisconnectWithSignPwdErrorPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;
+
 @end
 
 
