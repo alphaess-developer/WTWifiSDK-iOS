@@ -10,7 +10,7 @@
 		</data>
 		<key>Frameworks/ThingBluetooth.framework/ThingBluetooth</key>
 		<data>
-		hFvsuROSJKhGF3P7SRcyWO+e524=
+		61OZ8IOGKBG7CQ+Am0smvrZUBxM=
 		</data>
 		<key>Frameworks/ThingBluetooth.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Frameworks/ThingMachRegister.framework/ThingMachRegister</key>
 		<data>
-		TrB3XVh8vUrgFjzUKsb0e1NmAfE=
+		bCh1fQl/+T9VeRqmaMEzNPo4IeA=
 		</data>
 		<key>Frameworks/ThingMachRegister.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Frameworks/ThingMbedtls.framework/ThingMbedtls</key>
 		<data>
-		xhdeHs1ufasmJ0GJiTDaOK9pvjI=
+		tdf++gR7VSXWP9EoZ44LtpK/J+c=
 		</data>
 		<key>Frameworks/ThingMbedtls.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/ThingOpenSSLSDK.framework/ThingOpenSSLSDK</key>
 		<data>
-		CkxUif3mTXj9l1otAG6xrS6KdZU=
+		89DWpXqNzCNyARMdH6797MwwPSE=
 		</data>
 		<key>Frameworks/ThingOpenSSLSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Frameworks/ThingSmartActivatorCoreKit.framework/ThingSmartActivatorCoreKit</key>
 		<data>
-		iQepHx7ZzuiKO312NI9hltagvYk=
+		5EueYG6dl5QSm/oE5Sw+OpsrMEY=
 		</data>
 		<key>Frameworks/ThingSmartActivatorCoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/ThingSmartActivatorKit.framework/ThingSmartActivatorKit</key>
 		<data>
-		ofMaG2euqBH/s08mJ9Mf+KfxrzQ=
+		ukMMu59TSLdL8VfhNJs0eFc0afU=
 		</data>
 		<key>Frameworks/ThingSmartActivatorKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Frameworks/ThingSmartBLECoreKit.framework/ThingSmartBLECoreKit</key>
 		<data>
-		+6SY1G76O1tlFE+xRhyL//AuInw=
+		wfY/AA4drxzTarmFoQlVdBBGlLY=
 		</data>
 		<key>Frameworks/ThingSmartBLECoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/ThingSmartBLEKit.framework/ThingSmartBLEKit</key>
 		<data>
-		1VEn0s6fjfdSlVaan5VhFj7ufJY=
+		zJ3YpX5i2Q3tjzaxmJt7bKsyt7A=
 		</data>
 		<key>Frameworks/ThingSmartBLEKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Frameworks/ThingSmartBLEMeshKit.framework/ThingSmartBLEMeshKit</key>
 		<data>
-		+O4ERD+buTwlG0edj2fbdAV0gJg=
+		rQeBIuuFAVZrIinCDoZPf04QCPw=
 		</data>
 		<key>Frameworks/ThingSmartBLEMeshKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Frameworks/ThingSmartBaseKit.framework/ThingSmartBaseKit</key>
 		<data>
-		Idqkv7bJjTJ5BJJlHaHf9dakul4=
+		2eVcvUyCQ+wOwGPW818c/7TYtRw=
 		</data>
 		<key>Frameworks/ThingSmartBaseKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Frameworks/ThingSmartBeaconKit.framework/ThingSmartBeaconKit</key>
 		<data>
-		XSwvMWIXs6TM311WK/J2l6K5vqw=
+		G7c01Pdv0Xs5bHXFpLmoEbNd4h4=
 		</data>
 		<key>Frameworks/ThingSmartBeaconKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Frameworks/ThingSmartCryption.framework/ThingSmartCryption</key>
 		<data>
-		fev9xpcGWmVkvwVqHQyfXXkSIvg=
+		uR0BbYk1n9gat7huJc7VxwH8mTA=
 		</data>
 		<key>Frameworks/ThingSmartCryption.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Frameworks/ThingSmartDeviceCoreKit.framework/ThingSmartDeviceCoreKit</key>
 		<data>
-		BVHV/752Q1RVWOaEUzR1syJB5jA=
+		j4LB2cM37Kf6FFg10JeQCcIT7c4=
 		</data>
 		<key>Frameworks/ThingSmartDeviceCoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Frameworks/ThingSmartDeviceKit.framework/ThingSmartDeviceKit</key>
 		<data>
-		FcnQqTXb6pHeDKWauoumnZtjYrc=
+		FcOfJAajw4ecEEtUZpraKiknsbk=
 		</data>
 		<key>Frameworks/ThingSmartDeviceKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>Frameworks/ThingSmartFeedbackKit.framework/ThingSmartFeedbackKit</key>
 		<data>
-		iVL8p5pXTF8A+x4qw0SPKsZCIwQ=
+		kl7DJygHSA6FlJ0c/ooJTYQ5qNg=
 		</data>
 		<key>Frameworks/ThingSmartFeedbackKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Frameworks/ThingSmartHomeKit.framework/ThingSmartHomeKit</key>
 		<data>
-		H0HQ8ohDdaDHs6S71FihsEjCgNY=
+		uPb9CDN787Vf48okb8DtqKtOr6s=
 		</data>
 		<key>Frameworks/ThingSmartHomeKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Frameworks/ThingSmartMQTTChannelKit.framework/ThingSmartMQTTChannelKit</key>
 		<data>
-		UkTa1DexfWDvxVdoxFXiel2bBfk=
+		nFIhs423bvhifFiZcCQLWJd+pZ8=
 		</data>
 		<key>Frameworks/ThingSmartMQTTChannelKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>Frameworks/ThingSmartMessageKit.framework/ThingSmartMessageKit</key>
 		<data>
-		7HkdgMFfwXiH3PINyVH/H4oXvqU=
+		bZDfvsipWDe7xn294B2oTy3e2S4=
 		</data>
 		<key>Frameworks/ThingSmartMessageKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>Frameworks/ThingSmartNetworkKit.framework/ThingSmartNetworkKit</key>
 		<data>
-		Lur77GiZEc6oxOBcYwjaRby3v9Q=
+		CtSnKkZ3uPZqagiMJj5Jx9M8gLA=
 		</data>
 		<key>Frameworks/ThingSmartNetworkKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -270,7 +270,7 @@
 		</data>
 		<key>Frameworks/ThingSmartPairingCoreKit.framework/ThingSmartPairingCoreKit</key>
 		<data>
-		8LYl2xv+AAeiK5Vy0gib1a4OM8M=
+		d2cZABLB/hLLDQI1I2kj29XBHUY=
 		</data>
 		<key>Frameworks/ThingSmartPairingCoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>Frameworks/ThingSmartSceneCoreKit.framework/ThingSmartSceneCoreKit</key>
 		<data>
-		Mn8l1nKb9Tsn5iVYtPEG3+Q/Q4g=
+		TKyCJxlk9K3hqsM2upfg7w9RKs0=
 		</data>
 		<key>Frameworks/ThingSmartSceneCoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Frameworks/ThingSmartSceneKit.framework/ThingSmartSceneKit</key>
 		<data>
-		86+X0dipKUAhuYWL+9iyHiUjzCI=
+		ivcxBBEcC3AluAynlsoFMvf7kwk=
 		</data>
 		<key>Frameworks/ThingSmartSceneKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Frameworks/ThingSmartShareKit.framework/ThingSmartShareKit</key>
 		<data>
-		5fKFfyq6q2FU8orIJj69K2ZmsOs=
+		s+3n83RWjtFslZhwCkqCmE6rpGc=
 		</data>
 		<key>Frameworks/ThingSmartShareKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -318,7 +318,7 @@
 		</data>
 		<key>Frameworks/ThingSmartSocketChannelKit.framework/ThingSmartSocketChannelKit</key>
 		<data>
-		lccWDQSRhxmBQQ+ku9YEx9fRN1g=
+		YxHai70NTIfJwy+lySCKBuFh7iY=
 		</data>
 		<key>Frameworks/ThingSmartSocketChannelKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -330,7 +330,7 @@
 		</data>
 		<key>Frameworks/ThingSmartTimerKit.framework/ThingSmartTimerKit</key>
 		<data>
-		ul07Gb8pJz5L0KdZzGoRYsbpEqQ=
+		CdwdmmcCQyQdEh58vnXqgYBn+RU=
 		</data>
 		<key>Frameworks/ThingSmartTimerKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -364,7 +364,7 @@
 		</data>
 		<key>Frameworks/ThingSmartUtil.framework/ThingSmartUtil</key>
 		<data>
-		3cnEFIicZD8ekcdH+llNoA5Fiko=
+		yKMAo/VvyYYoW0V0mis1LIPDvW4=
 		</data>
 		<key>Frameworks/ThingSmartUtil.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -380,7 +380,11 @@
 		</data>
 		<key>Headers/WTTYBle.h</key>
 		<data>
-		UmJ0EdSkyk6aw+S+U/UVC5spIZo=
+		bH+T/IeDJxbX15AXp8tk8saNeN0=
+		</data>
+		<key>Headers/WTTuYa.h</key>
+		<data>
+		oLQWnpmJ1RNKEAkZhuuaLeqHUNk=
 		</data>
 		<key>Headers/WTUpdateExtendModel.h</key>
 		<data>
@@ -392,7 +396,7 @@
 		</data>
 		<key>Headers/WTWifiCenter.h</key>
 		<data>
-		A7srF2aNsSM0+aYQRFSwi5NrEVo=
+		BeP1xnZQjQCjiJLYqhoUnWRsB6c=
 		</data>
 		<key>Headers/WTWifiModel.h</key>
 		<data>
@@ -401,6 +405,14 @@
 		<key>Info.plist</key>
 		<data>
 		9eWfDJ7kHTSjZeUJ46SuaARrBiM=
+		</data>
+		<key>ThingSmartCryption.bundle/README.md</key>
+		<data>
+		M4jiSIK2qNISwUb5kzLe7PzSLSw=
+		</data>
+		<key>ThingSmartCryption.bundle/t_s.bmp</key>
+		<data>
+		W9rseSdBLlj73ifxz1UjNRcqRFU=
 		</data>
 		<key>ThingSmartUtil.bundle/Base.lproj/Localizable.strings</key>
 		<dict>
@@ -440,6 +452,10 @@
 		<data>
 		u58xszAnqXsMgPM8XG6Ov34XznE=
 		</data>
+		<key>t_cdc.tcfg</key>
+		<data>
+		LLWYVMn65Ni1zKuGRLXoLju26UY=
+		</data>
 		<key>thingdomain_v1.thingcfg</key>
 		<data>
 		ZVEAnbTOhaY1OQZf2UAPE5Zp/aE=
@@ -458,7 +474,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BtzsGTbWFQTyfEyUaJG+M0KmXbvduL2dbLgbl7cZnM0=
+			HDDbltsxBv3+HNh9zWxi4XTOhY8R6DOJ8slLRwD5NMg=
 			</data>
 		</dict>
 		<key>Frameworks/ThingBluetooth.framework/_CodeSignature/CodeResources</key>
@@ -479,7 +495,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lrWhKkoplQJGRyffRfZe4uYxLbI/crTtwvTXAGutSP4=
+			qPkccCpvCf1KZuqdFGJTNc2z6sTl48U9qWAjhoEqoGQ=
 			</data>
 		</dict>
 		<key>Frameworks/ThingMachRegister.framework/_CodeSignature/CodeResources</key>
@@ -500,7 +516,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gYCCx6mFQo4zbuk8YK1m+umcGIDJiHd7uJcg2Snpg5g=
+			thDJjqzA29nTqTGQuyYFHRZh/K16QfnybX3OtuDTqdE=
 			</data>
 		</dict>
 		<key>Frameworks/ThingMbedtls.framework/_CodeSignature/CodeResources</key>
@@ -521,7 +537,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vmBrL4yxNP6Eiccv7ASuqi2NGqWJjDg7EkI8OnkO8NU=
+			AugmtzhQ8iylCSAloGkaF+TkBOfkrGa/X7+5w16XmcQ=
 			</data>
 		</dict>
 		<key>Frameworks/ThingOpenSSLSDK.framework/_CodeSignature/CodeResources</key>
@@ -542,7 +558,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M1GyFjL8DCAhEvAASo5Exjeekz0EBDY+4kjwrj7UF/Q=
+			bGyXwHxbef0TYaOGJwbvjhNvAeyiIOTExwPMx3uWRhU=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartActivatorCoreKit.framework/_CodeSignature/CodeResources</key>
@@ -563,7 +579,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OwxFktLeSxgzn7mwW6/bXjaiFnc3DjWZa4ZBglN98F8=
+			2DKjvosU2NStuWkvckydRqlTuAT4lMsUU0AKiovWLFw=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartActivatorKit.framework/_CodeSignature/CodeResources</key>
@@ -584,7 +600,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tv0UAi6Itr4Ci0r8UndrhsLTROEBxcS4GuVPszxp7Mg=
+			jdbatpb4Ygx3oUb1iJMN2yiGKMSrmf3IJemhW4pPbMg=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartBLECoreKit.framework/_CodeSignature/CodeResources</key>
@@ -605,7 +621,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I6WdiL610tYkXWF6YV5MUTQIGhDGRs6jm7ZgZIPph0U=
+			HMn2POqDX67aGRv63i9wDKa1MSW/jwcCSHE/B1ym3SU=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartBLEKit.framework/_CodeSignature/CodeResources</key>
@@ -626,7 +642,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IKMX3uZxN6JDXcrc8+DuBHXKI5UOyRsoUoQbW1WgweI=
+			W6K8mX2FmcJNWPMj8cGZFiXbuL27D8a+67t8Y8rqbcc=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartBLEMeshKit.framework/_CodeSignature/CodeResources</key>
@@ -647,7 +663,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2YR6keuouaLZoGYDP1/MNVphjQ/JtgCa2cIgaxq+ECg=
+			pIEwN7vzglsR5OOQpToLb3Axv6eIjq/HkKR3p/XpSXI=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartBaseKit.framework/_CodeSignature/CodeResources</key>
@@ -668,7 +684,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W1JM6adScBIROhtWJ4Umqkg4h/i1fJhIivhwnfzuYMw=
+			BDmafCjEaZ955DZSz2yk3W1UnbKV4Sxbjub5nbiwn3M=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartBeaconKit.framework/_CodeSignature/CodeResources</key>
@@ -710,7 +726,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8iSG8lEgQ5DdDsUYyM9kvo8ohmSDiLbhaZZCY71Rf9g=
+			u5+YEP/+cnCeDz2Fng3CBL5TXJoNsm91orWSOHJ/6s8=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartCryption.framework/_CodeSignature/CodeResources</key>
@@ -731,7 +747,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xn5EeCqcdoNopSEA7trxbXJmFJ/dIr8QwOAHXY4CYog=
+			QK/0xiXGD1pHJIgA4h0TWwtjtJRiriUD3dAXMkgnH+Y=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartDeviceCoreKit.framework/_CodeSignature/CodeResources</key>
@@ -752,7 +768,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SjyU/chW3hxbkmZhoboyB8kocvEwtty/r10f5ranUBg=
+			AKvTIz7IHdyZ8vA6k+RElkil6qicL4E9/Qcs6sj1/Eo=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartDeviceKit.framework/_CodeSignature/CodeResources</key>
@@ -773,7 +789,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Mmy2BLG4lkS9gBk4VUg+DBtfJ4ZiGxdZZER17iaCuw=
+			/gd7oRl9NYnQGXl2nXJ6efANj4pcEULSiRUUY7We9F8=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartFeedbackKit.framework/_CodeSignature/CodeResources</key>
@@ -794,7 +810,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RDCctRhkhjnVOgWQXrQRNkxBq+eDglnouyU5W9CSyj8=
+			ZVse44gdapQ9Tefl8b0UMhwsv30lNR0j258RPBmX8hw=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartHomeKit.framework/_CodeSignature/CodeResources</key>
@@ -815,7 +831,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/vrYK2VYhE+h4M2p/hsBMlhbo0d4Wv/MhZWclMjUS2k=
+			PdeCbzExjU5JZ1+NGsHWzGjYf2ytMffK1oS2AxkStTs=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartMQTTChannelKit.framework/_CodeSignature/CodeResources</key>
@@ -836,7 +852,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sp6L//S68eoGIgbUb/8r/hcCXrT4Xn9CCWm4RmTEuWE=
+			mKXtYN8sDRpWrnbA0e0lN4AzWBlCfU2Dl8pf4clUHP4=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartMessageKit.framework/_CodeSignature/CodeResources</key>
@@ -892,7 +908,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Lw7RxIwrSJ9k9UaNVjidajz9A2L7c7lBLujG0k+Dcc=
+			TEva6pxYBKPk9alHAoSHIhdED1048MEgiDnRHJfD1Io=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartNetworkKit.framework/_CodeSignature/CodeResources</key>
@@ -913,7 +929,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PSGVPllhuFJMimq36Zu1gNH4GRB8GOWKo0z4lIVq3yY=
+			U2gCRC+BkoFE1JqaaZmBJt+4iwqympNzIX2vJINCIUY=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartPairingCoreKit.framework/_CodeSignature/CodeResources</key>
@@ -934,7 +950,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BY9ENtzjLQl99kCQMbvE3WqgTNUJoaJKorGXeK3vdSI=
+			13cuovzOb09ztetv0Kdt7skHdqZqKtYXgT3J5QxjKrs=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartSceneCoreKit.framework/_CodeSignature/CodeResources</key>
@@ -955,7 +971,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5jqL1DcVOlxDtltq0Y8QNr2Lj+UwsuLxkJMdO1IkOOY=
+			GfLlt9DNfODPJp94JjZsX/CocUWy0qfuyzpZh5G8Z4g=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartSceneKit.framework/_CodeSignature/CodeResources</key>
@@ -976,7 +992,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WqlG5nj95T/wrgrra13ln0nytAbTP1MmsKIbs1lnTHg=
+			MiiHYJJ65TeEPex37FPGIXzypv5uu+BnLqGXicPvN9E=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartShareKit.framework/_CodeSignature/CodeResources</key>
@@ -997,7 +1013,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VfPUAivDO7xjOHNHLbPghKtOEqD1qA6lV6P31m3yCK8=
+			XGrcZbHBx5YqS0ny7eftNIYKMDp+r8jpJAVuR2Cdzfg=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartSocketChannelKit.framework/_CodeSignature/CodeResources</key>
@@ -1018,7 +1034,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XmXvp5JvMYeWS2jqfg41dJVLfbul7lTe6s+zkBo9s+g=
+			tZhdNhFuqHd6OG/eQjwiSVTF1pK0FUCazsLV7LqNxxk=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartTimerKit.framework/_CodeSignature/CodeResources</key>
@@ -1064,7 +1080,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkhTzqT7HH9Yj4VNrno4yZvesGfVk7JlphPZ9r1vuiM=
+			0ZNeV7q4sn0AZubR+lPbgbiIFrPwKMOCYXByleM13YA=
 			</data>
 		</dict>
 		<key>Frameworks/ThingSmartUtil.framework/_CodeSignature/CodeResources</key>
@@ -1092,7 +1108,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/15dUX5ZBdtY5OBmnLLC68ksnfOM1D2F3s+cVl8WAo=
+			4dzciHBtSsZTzBoajQnEQBw96Mn0TZNu/ooP29zwVcE=
+			</data>
+		</dict>
+		<key>Headers/WTTuYa.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3aWinVoY14WzNZ2sGXKyYdS16d9bccCcAtA5zzSkO0k=
 			</data>
 		</dict>
 		<key>Headers/WTUpdateExtendModel.h</key>
@@ -1113,7 +1136,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BUMGP5dKcGtf9fwppROcOAMq/VDuGLhJzAjN7yHYkOo=
+			Pd+6ivImlwirdwQ+VIkiqlPWkVU2IfIgDR0JAyV59bw=
 			</data>
 		</dict>
 		<key>Headers/WTWifiModel.h</key>
@@ -1121,6 +1144,20 @@
 			<key>hash2</key>
 			<data>
 			giS8oA57gyNPZ/FFA2SGCDY52Dy01gdTQt9AfYI6ikU=
+			</data>
+		</dict>
+		<key>ThingSmartCryption.bundle/README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tOGQAY1jwY8PZ3CZB7/o7j5Okn5O2R1EUcyWArZBQSE=
+			</data>
+		</dict>
+		<key>ThingSmartCryption.bundle/t_s.bmp</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RqZiqM+KvoErMaS2phK1FnlnWhxB03Onz3aeqj9XcdU=
 			</data>
 		</dict>
 		<key>ThingSmartUtil.bundle/Base.lproj/Localizable.strings</key>
@@ -1174,6 +1211,13 @@
 			<key>hash2</key>
 			<data>
 			ips31L3eODIMu0dnlXbIRAfHnkKfaBTHpW3trLb2TZE=
+			</data>
+		</dict>
+		<key>t_cdc.tcfg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BsbruLT/peGruM/LyKfY+63lBZhx1/p925JJ86FLQkc=
 			</data>
 		</dict>
 		<key>thingdomain_v1.thingcfg</key>
