@@ -27,11 +27,6 @@ typedef NS_ENUM(NSUInteger, WTBLEOpMode) {
     WTBLEOpModeStaSoftAP,
 };
 
-typedef NS_ENUM(NSUInteger, WTBLEDeviceType) {
-    WTBLEElinter = 0,
-    WTBLETuYa,
-};
-
 
 
 @interface WTEnums : NSObject

@@ -17,9 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// The Wifi SDK instance initial method.
 + (instancetype)sharedInstance;
 
-/// is elinter
-+ (void)setIsElinter:(BOOL)isElinter;
-
 /// Get device serial number from ap.
 /// @param success  Callback the device sn.
 /// @param failure  Callback when device sn load error.
@@ -100,21 +97,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Load tcp link status
 - (void)loadTcpLinkStatus:(void (^)(bool result))status failure: (void (^)(NSError * _Nullable error)) failure;
-
-/// tuya get wifi list
-- (void)fetchTYWifiListWithTimeout:(NSTimeInterval)timeout success:(void (^)(NSArray * _Nullable list))success failure: (void (^)(NSError * _Nullable error)) failure;
-
-/// tuya configwifi
-- (void)resumeAPPlusWithSSID:(NSString *)ssid
-                    password:(NSString *)password
-                       token:(NSString *)token
-                     timeout:(NSTimeInterval)timeout
-                     success:(void (^)(NSDictionary * _Nullable dict))success failure: (void (^)(NSError * _Nullable error)) failure;
-/// tuya reset config wifi
-- (int)tyResumeConfigWiFiWithSSID:(NSString *)ssid
-                         password:(NSString *)password error:(NSError**)error;
-/// tuya stop config wifi
-- (void)tyStopConfigWiFi;
 @end
 
 NS_ASSUME_NONNULL_END

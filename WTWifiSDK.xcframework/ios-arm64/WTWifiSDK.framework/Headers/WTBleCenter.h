@@ -147,6 +147,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// password: Wi-Fi password
 - (void)configure:(NSString *)ssid password:(NSString *)password;
 
+/// 获取配置路由信息
+- (void)fetchConfigurationInfo;
+
 /// Device scans surrounding Wi-Fi
 - (void)aroundSsidsScan;
 
