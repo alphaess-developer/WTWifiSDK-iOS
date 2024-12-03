@@ -54,7 +54,7 @@
 }
 
 - (void)connectBtnTap {
-    [[WTBleCenter sharedInstance] connect:@"15F108C7-8E14-0C80-2890-3B368FD3AB2F"];
+    [[WTBleCenter sharedInstance] connect:@"6844F501-7DFE-860A-CAA1-C00E54433376"];
 }
 
 - (void)disconnectBtnTap {

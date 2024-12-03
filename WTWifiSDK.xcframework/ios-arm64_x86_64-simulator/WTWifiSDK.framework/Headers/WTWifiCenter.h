@@ -25,7 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// Get WiFi SSID list from WiFi collector device
 /// @param success Callback WiFi SSID list, the list is an array of NSString.
 /// @param failure Callback when load WiFi SSID list error.
-- (void)fetchWifiList:(void (^)(NSArray * _Nullable list))success failure: (void (^)(NSError * _Nullable error)) failure;
+- (void)fetchWifiList:(void (^)(NSArray * _Nullable list))success failure: (void (^)(NSError * _Nullable error)) failure __attribute__((deprecated("use fetchWifiInfoList")));
+
+/// Get WiFi SSID list from WiFi collector device
+/// @param success Callback WiFi SSID list, the list is an array of NSString.
+/// @param failure Callback when load WiFi SSID list error.
+- (void)fetchWifiInfoList:(void (^)(NSArray * _Nullable list))success failure: (void (^)(NSError * _Nullable error)) failure;
 
 /// Use the nearby wifi name and password to configure the collector so that it can access the Internet.
 /// @param account Name of nearby Wifi that can access internet.
