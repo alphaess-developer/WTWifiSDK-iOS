@@ -157,6 +157,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// The device status will be received in the didReceiveDeviceStatusResponse callback
 - (void)fetchDeviceStatus;
 
+/// Get ELink P1 Meter Data
+- (void)requestP1MeterData;
+
+/// Scan all ELink devices on the current local network, such as data collectors, meters, smart sockets, and more.
+- (void)scanELDeviceByLocalNet;
+
+/// Get the device info of the data collector
+- (void)getMeterDeviceInfo;
 
 @end
 

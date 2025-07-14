@@ -54,7 +54,9 @@
 }
 
 - (void)connectBtnTap {
-    [[WTBleCenter sharedInstance] connect:@"6844F501-7DFE-860A-CAA1-C00E54433376"];
+    // Name：EBP-B08F25600001-211 UUID：8B9F9DF8-557A-4C63-A116-F80227B82879
+    // Name：EBP-B08F25600002-211 UUID：35661C5C-843A-33B5-319A-88844705035A
+    [[WTBleCenter sharedInstance] connect:@"C732AEED-4968-6789-DCF1-6877AA162790"];
 }
 
 - (void)disconnectBtnTap {
@@ -62,7 +64,9 @@
 }
 
 - (void)authBtnTap {
-    [[WTBleCenter sharedInstance] auth:@"12345678"];
+    // Name：EBP-B08F25600001-211 PWD：8FN49CQE
+    // Name：EBP-B08F25600002-211 PWD：QJSLMLNT
+    [[WTBleCenter sharedInstance] auth:@"CDKSPRVL"];
 }
 
 

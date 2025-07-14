@@ -86,6 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , copy) NSString              * FeedValue2;
 @property (nonatomic , copy) NSString              * SGEnable2;
 @property (nonatomic , copy) NSArray              * DryTime2;
+@property (nonatomic, copy) NSNumber              * PhaseNegation;
 
 @end
 
