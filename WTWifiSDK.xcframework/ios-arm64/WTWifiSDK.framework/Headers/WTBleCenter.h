@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// sign认证密码错误，断开连接监听方法
 - (void)centralManager:(CBCentralManager *)central didDisconnectWithSignPwdErrorPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;
 
+/// 协商加密的返回结果代理
+- (void)onDidNegotiateSecurity:(WTBLEStatus)status;
+
 @end
 
 
@@ -83,6 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Disconnect device.
 - (void)disconnect;
 
+- (void)negotiateSecurity;
 
 /// Clear connection cache.
 - (void)close;
@@ -90,6 +94,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Bluetooth password verification, must be called immediately after successful connection [bleConnectDevice].
 /// password：The Bluetooth password of the device.
 - (void)auth:(NSString *)password;
+
+/// password is wifi connect password
+- (void)auth;
 
 /// Mesh network configuration
 /// ssid: wifi name
@@ -166,6 +173,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// Get the device info of the data collector
 - (void)getMeterDeviceInfo;
 
+/**
+ * @brief Sends a new SoftAP password to the ESP32 device using the Blufi protocol.
+ *
+ * This method packages the new SoftAP password as custom data (with subtype 0x05 as the first byte,
+ * followed by the UTF-8 password bytes) and sends it to the connected ESP32 via the Blufi channel.
+ * On the ESP32 side, this should be handled in the custom data callback, where the SoftAP config
+ * must be updated by stopping Wi-Fi, setting the new config, and restarting Wi-Fi.
+ *
+ * @param apPassword The new SoftAP Wi-Fi password. Must be an ASCII string with a length between 8 and 63 characters.
+ *
+ * @note Make sure that the Blufi session is established (e.g., security has been negotiated)
+ * before calling this method. Otherwise, the send operation will fail.
+ */
+- (void)updateApPassword:(NSString *)apPassword;
 @end
 
 NS_ASSUME_NONNULL_END

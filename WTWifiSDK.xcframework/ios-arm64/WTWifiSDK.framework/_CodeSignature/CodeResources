@@ -4,17 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		+Cub5KKYFfDANz0byfrta1PaHHU=
-		</data>
 		<key>Headers/WTBleCenter.h</key>
 		<data>
-		mxGYYOlGnR+vanIoQ16b5a7LHDA=
+		iTLNPQkmHuE6itsZ3YNVVq0ftqA=
 		</data>
 		<key>Headers/WTEnums.h</key>
 		<data>
-		54PxNITiTPQnq8PI9kmkC8gk9u8=
+		iDZf50awUtda4k7lfOuaz/ySSys=
 		</data>
 		<key>Headers/WTUpdateExtendModel.h</key>
 		<data>
@@ -26,7 +22,7 @@
 		</data>
 		<key>Headers/WTWifiCenter.h</key>
 		<data>
-		OoT0gdiDcywK5urGAXi5dfjYQv4=
+		+ohBHIBmhQXptACMXOiKGJlaoT8=
 		</data>
 		<key>Headers/WTWifiModel.h</key>
 		<data>
@@ -34,11 +30,11 @@
 		</data>
 		<key>Headers/WTWifiSDK.h</key>
 		<data>
-		KBY+0OEOIejsb6hg2gWhRD1bnTw=
+		MU9lFdYfBH09KUv3/OQLz7mGj2E=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OCFsWZi3i5x17H1w+6bEW9717JA=
+		Cl0BmDNu+t+tNfZ+NI/pRWjRAg4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,14 +47,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ju0Y55IWcPRRXY++eA7JXXEikxk5SMgF5SZwFiyr0Zk=
+			NxOIXUdKQ4pYkBWqM/Poh24xbeE3iwTHJzPDSelowWk=
 			</data>
 		</dict>
 		<key>Headers/WTEnums.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2YthaupRo9HHh/VWL5lcRl6Ed4x/XvlmFIeDmcz3Epk=
+			vnEg1FZZGnhndr771+IG+iXsfVvcdBYGDdLDdtGsnGM=
 			</data>
 		</dict>
 		<key>Headers/WTUpdateExtendModel.h</key>
@@ -79,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qs5NHTcptYDHwQzEOqvK+UD3HErRV72scqv0mw3jkxI=
+			FOT/ELoLChYr/ndbLfU7qGnrUENyf+DPBPh2lJUZa8U=
 			</data>
 		</dict>
 		<key>Headers/WTWifiModel.h</key>
@@ -93,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jfr9NMUfHOO+OLGK8seE/N6knpyTWtgCSniZNH9PE1o=
+			XkceYMrf/unu8/199LLq/Tn3Ika1TVC+ho0WZf5QV74=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

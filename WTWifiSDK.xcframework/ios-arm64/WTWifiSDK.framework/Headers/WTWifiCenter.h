@@ -14,6 +14,42 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WTWifiCenter : NSObject
 
+#pragma mark - iOS API
+/// Registers and fetches the nearby Wi-Fi list on iOS.
+///
+/// This method scans for available Wi-Fi networks, filters out duplicate SSIDs,
+/// and keeps the network with the strongest signal for each SSID.
+/// The signal strength is converted from a 0.0~1.0 scale to an approximate -100~0 dBm value.
+/// Finally, the filtered list is stored in `WTConstants` for further use.
+- (void)registerIOSfetchWifiList;
+
+/// Connects to a specified Wi-Fi network using the given SSID and password.
+///
+/// @param result A callback block that returns a string indicating the connection result:
+///               - @"success": The device successfully connected to the specified Wi-Fi.
+///               - @"failed": The connection attempt failed.
+///
+/// @discussion
+/// This method uses `NEHotspotConfigurationManager` to create and apply a hotspot configuration for the specified SSID.
+/// If a password is provided, the connection uses WPA/WPA2 security; if no password is provided, it attempts to connect to an open network.
+/// The method verifies the active Wi-Fi SSID to confirm whether the connection was successful.
+///
+/// @note This API is available on iOS 11.0 and later only. The user must grant permission for the connection attempt,
+/// and the device may prompt the user to join the network.
+- (void)connectSsidWithResult:(void (^)(NSString * _Nonnull result))result;
+
+/// Removes a previously applied silent Wi-Fi configuration for the specified SSID.
+///
+/// @param result A callback block that returns a string indicating the result.
+///               Returns "success" if the removal is successful,
+///               or "failed" if the iOS version does not support this feature.
+///
+/// @discussion
+/// This method uses NEHotspotConfigurationManager to remove a Wi-Fi configuration
+/// that was previously added using NEHotspotConfiguration. This API is only available
+/// on iOS 11.0 and later. On earlier versions, the operation is not supported.
+- (void)removeConnectSsidWithResult:(void (^)(NSString * _Nonnull result))result;
+#pragma mark - Elinker API
 /// The Wifi SDK instance initial method.
 + (instancetype)sharedInstance;
 

@@ -28,6 +28,14 @@ typedef NS_ENUM(NSUInteger, WTBLEOpMode) {
 };
 
 
+typedef NS_ENUM(NSUInteger, WTWIFIType) {
+    WTWIFITypeUnknown = 0,    ///< Not matched
+    WTWIFITypeEtouchOld,      ///< old Etouch device
+    WTWIFITypeEtouch18031,     ///< ETOUCH_SN_SUFFIX
+    WTWIFITypeSelf,           ///< SELF_SN_SUFFIX
+};
+
+
 
 @interface WTEnums : NSObject
 
