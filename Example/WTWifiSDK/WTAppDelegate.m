@@ -9,12 +9,14 @@
 #import "WTAppDelegate.h"
 #import "WTViewController.h"
 #import "WTNavigationController.h"
+#import <WTWifiSDK/WTWifiSDK.h>
 
 @implementation WTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    [WTWifiSDK setLoggingEnabled:NO];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     WTViewController *home = [[WTViewController alloc] init];
     home.view.backgroundColor = [UIColor whiteColor];
