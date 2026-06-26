@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/WTBleCenter.h</key>
 		<data>
-		iTLNPQkmHuE6itsZ3YNVVq0ftqA=
+		BC7S0knzckdA6lWyl5wzkWJg2s0=
 		</data>
 		<key>Headers/WTEnums.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Headers/WTWifiSDK.h</key>
 		<data>
-		MU9lFdYfBH09KUv3/OQLz7mGj2E=
+		B7JzdN3MqCLUHmdgsFJh9hHfR9k=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ULi55cWFl9tJHBUtpMWfwVtiI+8=
+		dxjlkjrBBYTSRxIWwRHN1YSO2Qc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NxOIXUdKQ4pYkBWqM/Poh24xbeE3iwTHJzPDSelowWk=
+			3xxHatgfwT0Dr3iEi9vNuSwcZh9TyqxxLlolBgZ5uBQ=
 			</data>
 		</dict>
 		<key>Headers/WTEnums.h</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XkceYMrf/unu8/199LLq/Tn3Ika1TVC+ho0WZf5QV74=
+			rewmtn2FpvhbNfBsLXss8F+u80+J6zKipQ78gHGUpUI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

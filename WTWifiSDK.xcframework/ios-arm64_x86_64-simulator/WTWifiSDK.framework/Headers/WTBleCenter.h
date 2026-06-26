@@ -170,6 +170,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// Scan all ELink devices on the current local network, such as data collectors, meters, smart sockets, and more.
 - (void)scanELDeviceByLocalNet;
 
+/// Bind/unbind meters.
+/// gridMeter / pvMeter: each is a dict like @{@"devbind":@"y", @"sn":@"xxx", @"circuit no":@(1)}.
+/// devbind: y-bind, n-unbind, na-keep. Pass nil to skip that meter.
+- (void)devBindWithGridMeter:(NSDictionary *)gridMeter pvMeter:(NSDictionary *)pvMeter;
+
 /// Get the device info of the data collector
 - (void)getMeterDeviceInfo;
 

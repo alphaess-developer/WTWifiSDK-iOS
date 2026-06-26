@@ -37,6 +37,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getSn;
 
 /**
+ * 根据 SN 或带后缀的 SSID 计算 8 位 hex 密钥。
+ *
+ * @param input SN 或带后缀的 SSID（内部会先剥除已知后缀）。
+ * @return 计算得到的 8 位 hex 密码字符串；输入过短时返回 nil。
+ *
+ * @discussion
+ * 该方法转调内部工具类的密码生成逻辑，作为对外的纯计算接口，
+ * 不依赖 initSsid: 的调用状态，可直接传入任意 SN 即时计算。
+ */
++ (nullable NSString *)generatePwd:(NSString *)input;
+
+/**
  * Retrieves the currently stored Wi-Fi password.
  *
  * @return The last stored Wi-Fi password string.
