@@ -18,6 +18,7 @@
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6499EBC52F3C0028002DD45F /* LocalNetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499EBC42F3C0028002DD45F /* LocalNetworkChecker.swift */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		8605A58728C061D400AC1ECA /* WTWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8605A58628C061D400AC1ECA /* WTWifiViewController.m */; };
 		8686748528ACB3500097B955 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8686748428ACB3500097B955 /* NetworkExtension.framework */; };
@@ -59,6 +60,8 @@
 		6003F5A6195388D20070C39A /* WTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* WTWifiSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTWifiSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6499EBC42F3C0028002DD45F /* LocalNetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkChecker.swift; sourceTree = "<group>"; };
+		6499EBC62F3C0029002DD45F /* WTWifiSDK_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WTWifiSDK_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		792D3824D826CC5EE3241ECA /* Pods_WTWifiSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTWifiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8605A58528C061D400AC1ECA /* WTWifiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTWifiViewController.h; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 		6003F593195388D20070C39A /* Example for WTWifiSDK */ = {
 			isa = PBXGroup;
 			children = (
+				6499EBC42F3C0028002DD45F /* LocalNetworkChecker.swift */,
 				6003F59C195388D20070C39A /* WTAppDelegate.h */,
 				6003F59D195388D20070C39A /* WTAppDelegate.m */,
 				86AB450028B797260035D807 /* WTNavigationController.h */,
@@ -175,6 +179,7 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				6499EBC62F3C0029002DD45F /* WTWifiSDK_Example-Bridging-Header.h */,
 			);
 			name = "Example for WTWifiSDK";
 			path = WTWifiSDK;
@@ -254,6 +259,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = LLVYVEDKV4;
+						LastSwiftMigration = 2620;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -375,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6499EBC52F3C0028002DD45F /* LocalNetworkChecker.swift in Sources */,
 				86AB450228B797260035D807 /* WTNavigationController.m in Sources */,
 				6003F59E195388D20070C39A /* WTAppDelegate.m in Sources */,
 				8686748828ACC5960097B955 /* WTSSIDCell.m in Sources */,
@@ -504,6 +511,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WTWifiSDK_Example.entitlements;
 				DEVELOPMENT_TEAM = LLVYVEDKV4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -515,6 +523,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Alpha-ESS.JYProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WTWifiSDK/WTWifiSDK_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -527,6 +537,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WTWifiSDK_Example.entitlements;
 				DEVELOPMENT_TEAM = LLVYVEDKV4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -538,6 +549,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Alpha-ESS.JYProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WTWifiSDK/WTWifiSDK_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

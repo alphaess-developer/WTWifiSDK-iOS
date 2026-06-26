@@ -9,7 +9,8 @@
 #import "WTViewController.h"
 #import "WTWifiViewController.h"
 #import "WTBleViewController.h"
-
+#import <WTWifiSDK/WTWifiSDK.h>
+#import "WTWifiSDK/WTWifiCenter.h"
 @interface WTViewController ()
 
 @property (nonatomic , strong) UIButton *startWifiBtn;
@@ -26,6 +27,11 @@
     self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.startWifiBtn];
     [self.view addSubview:self.startBleBtn];
+    
+    [[WTWifiCenter sharedInstance] registerIOSfetchWifiList];
+    
+    // ssid
+    [WTWifiSDK initSsid:@"XXXXXXXXXXX"];
 
 }
 

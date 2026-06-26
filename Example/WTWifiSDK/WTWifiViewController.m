@@ -11,8 +11,21 @@
 #import "WTWifiSDK/WTWifiCenter.h"
 #import "WTSSIDCell.h"
 #import "WTEMSInfoController.h"
+#import "WTWifiSDK/WTWifiSDK.h"
+#import "CoreLocation/CLLocationManager.H"
+#import "WTWifiSDK_Example-Swift.h"
+#import <NetworkExtension/NetworkExtension.h>
 
 @interface WTWifiViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic , strong) UIButton *fetchPhoneWifiListButton;
+@property (nonatomic , strong) UIButton *ssidButton;
+@property (nonatomic , strong) UIButton *getPasswordButton;
+@property (nonatomic , strong) UIButton *realSnButton;
+@property (nonatomic , strong) UIButton *connectSsidButton;
+@property (nonatomic , strong) UIButton *removeConnectSsidButton;
+@property (nonatomic , strong) UIButton *resetPasswordBtn;
+@property (nonatomic , strong) UIButton *getSsidTypeBtn;
 
 @property (nonatomic , strong) UILabel *snLabel;
 @property (nonatomic , strong) UIButton *button;
@@ -25,18 +38,27 @@
 @property (nonatomic , strong) UITableView *tableview;
 @property (nonatomic , strong) NSArray *ssids;
 
+@property (nonatomic , copy) NSString *realSn;
+@property (nonatomic , copy) NSString *passWord;
 @end
 
 @implementation WTWifiViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"WIFI配置";
+    self.navigationItem.title = @"WIFI Config";
     self.view.backgroundColor = UIColor.whiteColor;
-   
+    
+    [self.view addSubview:self.fetchPhoneWifiListButton];
+    [self.view addSubview:self.ssidButton];
+    [self.view addSubview:self.getPasswordButton];
+    [self.view addSubview:self.realSnButton];
+    [self.view addSubview:self.connectSsidButton];
+    [self.view addSubview:self.removeConnectSsidButton];
+    [self.view addSubview:self.resetPasswordBtn];
+    [self.view addSubview:self.getSsidTypeBtn];
+
     [self.view addSubview:self.snLabel];
     [self.view addSubview:self.button];
     [self.view addSubview:self.loadSnBtn];
@@ -46,9 +68,25 @@
     [self.view addSubview:self.sendSpecialCmdBtn];
     [self.view addSubview:self.loadTcpLinkStatusBtn];
     [self.view addSubview:self.tableview];
+    
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    [locationManager requestWhenInUseAuthorization];
+    
+    
+//    // Request local network permission
+//    if (@available(iOS 13.0, *)) {
+//        [LocalNetworkAuthBridge requestAuthorization:^(BOOL granted) {
+//            if (granted) {
+//                NSLog(@"✅ Local network permission granted");
+//            } else {
+//                NSLog(@"❌ Local network permission denied");
+//            }
+//        }];
+//    } else {
+//        // Fallback on earlier versions
+//    }
 
 }
-
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
     if (@available(iOS 13.0, *)) {
@@ -58,19 +96,84 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+}
+
 #pragma mark - Actions
 
+- (void)fetchPhoneWifiListTap {
+    
+    NSArray *ARRAY = [WTWifiSDK getSsidArray];
+    NSLog(@"ASDAD = %@",ARRAY);
+//    [[WTWifiCenter sharedInstance] fetchWifiListByMobile:^(NSArray * _Nullable list) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.ssids = list;
+//            [self.tableview reloadData];
+//        });
+//    }];
+}
+
+/// ALG001023120031AW
+/// ALD001022038888
+/// ALG001023120031EL
+/// AL7011115010001EL
+/// AL0001020011135
+/// ALD072025080001AW
+- (void)initSsidTap {
+    [WTWifiSDK initSsid:@"ALG001023120031EL"];
+//    [WTWifiSDK updatePassword:@"12345678"];
+
+}
+
+- (void)connectSsidTap {
+    [[WTWifiCenter sharedInstance] connectSsidWithResult:^(NSString * _Nonnull result) {
+        NSLog(@"connect result: %@",result);
+    }];
+}
+
+- (void)removeConnectSsidTap {
+    [[WTWifiCenter sharedInstance] removeConnectSsidWithResult:^(NSString * _Nonnull result) {
+        NSLog(@"disconnect result: %@",result);
+    }];
+}
+
+- (void)getPasswordTap {
+   NSString *passW = [WTWifiSDK getPassword];
+    self.passWord = passW;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.snLabel setText:[NSString stringWithFormat:@"current pwd: %@", passW]];
+    });
+}
+
+- (void)getSnTap {
+    NSString *realSn = [WTWifiSDK getSn];
+    self.realSn = realSn;
+     dispatch_async(dispatch_get_main_queue(), ^{
+         [self.snLabel setText:[NSString stringWithFormat:@"current SN: %@", realSn]];
+     });
+}
+
+- (void)getSsidTypeTap{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.snLabel setText:[NSString stringWithFormat:@"ssid type is %lu. 0: error, 1: old, 2: 18031, 3: self", (unsigned long)[WTWifiSDK getSsidType]]];
+    });
+}
+
+- (void)resetPasswordTap{
+    [WTWifiSDK resetDefaultPassword];
+}
 
 - (void) loadSnTap{
     [[WTWifiCenter sharedInstance] fetchSystemSN:^(NSString * _Nullable ssid) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.snLabel setText:[NSString stringWithFormat:@"当前SN为：%@", ssid]];
+            [self.snLabel setText:[NSString stringWithFormat:@"current SN: %@", ssid]];
         });
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"查询SN失败");
+        NSLog(@"search SN failed");
     }];
 }
-
 
 - (void) buttonTap{
     [[WTWifiCenter sharedInstance] fetchWifiList:^(NSArray * _Nullable list) {
@@ -79,41 +182,13 @@
             [self.tableview reloadData];
         });
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"查询WIFI列表失败");
+        NSLog(@"search WIFI list failed");
     }];
 }
 
 - (void)loadWifiConfiguration {
-    [[WTWifiCenter sharedInstance] loadWifiConfiguration:^(NSDictionary * _Nullable result) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"已检测到历史配置";
-            NSString *message = [[NSString alloc] initWithFormat:@"所配置SSID：%@，\n密码：%@，\n 连接状态：%@", result[@"ssid"],  result[@"password"], result[@"state"] ? @"已连接" : @"未连接"];
-            NSString *okActionTitle = @"跳过配网";
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *ok = [UIAlertAction actionWithTitle:okActionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                WTEMSInfoController *controller = [[WTEMSInfoController alloc] init];
-                [self.navigationController pushViewController:controller animated:YES];
-            }];
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"继续配网" style:UIAlertActionStyleDefault handler:nil];
-            [alert addAction:cancel];
-            [alert addAction:ok];
-            [self presentViewController:alert animated:YES completion:nil];
-        });
-    } failure:^(NSError * _Nullable error) {
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"获取配置失败";
-            NSString *message = @"请重试或重新进行配网操作";
-            NSString *okActionTitle = @"确定";
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *ok = [UIAlertAction actionWithTitle:okActionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                
-            }];
-            
-            [alert addAction:ok];
-            [self presentViewController:alert animated:YES completion:nil];
-        });
-    }];
+    WTEMSInfoController *controller = [[WTEMSInfoController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)configurationWifiWith:(NSString *)account password:(NSString *)password {
@@ -121,9 +196,9 @@
         
         if (result) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *title = @"恭喜配网成功!";
+                NSString *title = @"Wi-Fi configuration succeeded!";
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: nil preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     WTEMSInfoController *controller = [[WTEMSInfoController alloc] init];
                     [self.navigationController pushViewController:controller animated:YES];
                 }];
@@ -132,10 +207,10 @@
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *title =  @"配网失败，请重试";
-                NSString *message = @"请确认密码是否正确或是否连接硬件热点";
+                NSString *title =  @"Wi-Fi configuration failed. Please try again.";
+                NSString *message = @"Please confirm the password is correct or that you are connected to the device hotspot.";
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                    
                 }];
                 [alert addAction:ok];
@@ -144,10 +219,10 @@
         }
     } failure:^(NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title =  @"配网失败，请重试";
-            NSString *message = @"请确认密码是否正确或是否连接硬件热点";
+            NSString *title =  @"Wi-Fi configuration failed. Please try again.";
+            NSString *message = @"Please confirm the password is correct or that you are connected to the device hotspot.";
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message: message preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                
             }];
             [alert addAction:ok];
@@ -156,7 +231,6 @@
     }];
    
 }
-
 
 - (void) updateEMSConfigurationTap{
     WTUpdateModel *update = [[WTUpdateModel alloc] init];
@@ -169,18 +243,18 @@
 //    update.SafetyType = @"25";
 //    update.SelfUseOrEconomic = @"0";
 //    update.VPPMode = @"1";
-//    // 启用柴油机
+//    // Enable generator
 //    update.Generator = true;
     update.ModbusAddress = @"30";
     update.ModbusBaudrate = @"2";
     [[WTWifiCenter sharedInstance] updateEMSConfiguration:update success:^(bool result) {
         if (result) {
-            NSLog(@"配置成功");
+            NSLog(@"Configuration succeeded");
         } else {
-            NSLog(@"配置失败");
+            NSLog(@"Configuration failed");
         }
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"配置失败");
+        NSLog(@"Configuration failed");
     }];
 }
 
@@ -220,12 +294,12 @@
     
     [[WTWifiCenter sharedInstance] updateEMSConfigurationByExtendProtocol:update success:^(bool result) {
         if (result) {
-            NSLog(@"扩展参数配置成功");
+            NSLog(@"Extended parameters updated successfully");
         } else {
-            NSLog(@"扩展参数配置失败");
+            NSLog(@"Failed to update extended parameters");
         }
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"扩展参数配置失败");
+        NSLog(@"Failed to update extended parameters");
     }];
 }
 
@@ -233,12 +307,12 @@
 
     [[WTWifiCenter sharedInstance] sendSpecialCommand:@"APPConnectEnd" parameter1:@"1" parameter2:nil parameter3:nil description:nil  success:^(bool result) {
         if (result) {
-            NSLog(@"特殊指令“APPConnectEnd”响应成功");
+            NSLog(@"Special command \"APPConnectEnd\" responded successfully");
         } else {
-            NSLog(@"特殊指令“APPConnectEnd”响应失败");
+            NSLog(@"Special command \"APPConnectEnd\" response failed");
         }
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"特殊指令“APPConnectEnd”响应失败");
+        NSLog(@"Special command \"APPConnectEnd\" response failed");
     }];
 }
 
@@ -246,32 +320,142 @@
 
     [[WTWifiCenter sharedInstance] loadTcpLinkStatus:^(bool result) {
         if (result) {
-            NSLog(@"设备和服务器建立链接成功");
+            NSLog(@"Device successfully connected to the server");
         } else {
-            NSLog(@"设备和服务器建立链接失败");
+            NSLog(@"Device failed to connect to the server");
         }
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"设备和服务器建立链接失败");
+        NSLog(@"Device failed to connect to the server");
     }];
 }
 
 #pragma mark - lazy initila
 
-- (UILabel *)snLabel {
-    if (_snLabel == nil) {
-        _snLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, UIScreen.mainScreen.bounds.size.width - 20,30)];
-        [_snLabel setTextColor:UIColor.blackColor];
-        [_snLabel setFont:[UIFont systemFontOfSize:15]];
-        [_snLabel setNumberOfLines:0];
-        [_snLabel setTextAlignment:NSTextAlignmentCenter];
+// Common layout parameters
+CGFloat leftColumnX = 30;
+CGFloat rightColumnX = 230; // = 30 + 200;
+CGFloat startY = 140;
+CGFloat buttonWidth = 180;
+CGFloat buttonHeight = 40;
+CGFloat verticalSpacing = 20;
+#pragma mark - Left column buttons (vertical)
+
+- (UIButton *)fetchPhoneWifiListButton {
+    if (_fetchPhoneWifiListButton == nil) {
+        _fetchPhoneWifiListButton = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 0, buttonWidth, buttonHeight)];
+        [_fetchPhoneWifiListButton setTitle:@"Get Wi-Fi list from phone" forState:UIControlStateNormal];
+        [_fetchPhoneWifiListButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        _fetchPhoneWifiListButton.layer.cornerRadius = 5;
+        _fetchPhoneWifiListButton.layer.borderWidth = 0.5;
+        _fetchPhoneWifiListButton.layer.borderColor = UIColor.grayColor.CGColor;
+        [_fetchPhoneWifiListButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_fetchPhoneWifiListButton addTarget:self action:@selector(fetchPhoneWifiListTap) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _snLabel;
+    return _fetchPhoneWifiListButton;
+}
+
+- (UIButton *)ssidButton {
+    if (_ssidButton == nil) {
+        _ssidButton = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 1, buttonWidth, buttonHeight)];
+        [_ssidButton setTitle:@"Pass SSID into SDK" forState:UIControlStateNormal];
+        [_ssidButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        _ssidButton.layer.cornerRadius = 5;
+        _ssidButton.layer.borderWidth = 0.5;
+        _ssidButton.layer.borderColor = UIColor.grayColor.CGColor;
+        [_ssidButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_ssidButton addTarget:self action:@selector(initSsidTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _ssidButton;
+}
+
+- (UIButton *)connectSsidButton {
+    if (_connectSsidButton == nil) {
+        _connectSsidButton = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 2, buttonWidth, buttonHeight)];
+        [_connectSsidButton setTitle:@"Connect to specified SSID" forState:UIControlStateNormal];
+        [_connectSsidButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        _connectSsidButton.layer.cornerRadius = 5;
+        _connectSsidButton.layer.borderWidth = 0.5;
+        _connectSsidButton.layer.borderColor = UIColor.grayColor.CGColor;
+        [_connectSsidButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_connectSsidButton addTarget:self action:@selector(connectSsidTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _connectSsidButton;
+}
+
+- (UIButton *)removeConnectSsidButton {
+    if (_removeConnectSsidButton == nil) {
+        _removeConnectSsidButton = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 3, buttonWidth, buttonHeight)];
+        [_removeConnectSsidButton setTitle:@"Remove connected SSID" forState:UIControlStateNormal];
+        [_removeConnectSsidButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        _removeConnectSsidButton.layer.cornerRadius = 5;
+        _removeConnectSsidButton.layer.borderWidth = 0.5;
+        _removeConnectSsidButton.layer.borderColor = UIColor.grayColor.CGColor;
+        [_removeConnectSsidButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_removeConnectSsidButton addTarget:self action:@selector(removeConnectSsidTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _removeConnectSsidButton;
+}
+
+- (UIButton *)getPasswordButton {
+    if (_getPasswordButton == nil) {
+        _getPasswordButton = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 4, buttonWidth, buttonHeight)];
+        [_getPasswordButton setTitle:@"Get password" forState:UIControlStateNormal];
+        [_getPasswordButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        _getPasswordButton.layer.cornerRadius = 5;
+        _getPasswordButton.layer.borderWidth = 0.5;
+        _getPasswordButton.layer.borderColor = UIColor.grayColor.CGColor;
+        [_getPasswordButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_getPasswordButton addTarget:self action:@selector(getPasswordTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _getPasswordButton;
+}
+
+- (UIButton *)realSnButton {
+    if (_realSnButton == nil) {
+        _realSnButton = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 5, buttonWidth, buttonHeight)];
+        [_realSnButton setTitle:@"Get real SN" forState:UIControlStateNormal];
+        [_realSnButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        _realSnButton.layer.cornerRadius = 5;
+        _realSnButton.layer.borderWidth = 0.5;
+        _realSnButton.layer.borderColor = UIColor.grayColor.CGColor;
+        [_realSnButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_realSnButton addTarget:self action:@selector(getSnTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _realSnButton;
+}
+
+- (UIButton *)getSsidTypeBtn {
+    if (_getSsidTypeBtn == nil) {
+        _getSsidTypeBtn = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 6, buttonWidth, buttonHeight)];
+        [_getSsidTypeBtn setTitle:@"Get SSID type" forState:UIControlStateNormal];
+        [_getSsidTypeBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_getSsidTypeBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _getSsidTypeBtn.layer.cornerRadius = 5;
+        _getSsidTypeBtn.layer.borderWidth = 0.5;
+        [_getSsidTypeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_getSsidTypeBtn addTarget:self action:@selector(getSsidTypeTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _getSsidTypeBtn;
+}
+
+- (UIButton *)resetPasswordBtn {
+    if (_resetPasswordBtn == nil) {
+        _resetPasswordBtn = [[UIButton alloc] initWithFrame:CGRectMake(leftColumnX, startY + (buttonHeight + verticalSpacing) * 7, buttonWidth, buttonHeight)];
+        [_resetPasswordBtn setTitle:@"Reset password to default" forState:UIControlStateNormal];
+        [_resetPasswordBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
+        [[_resetPasswordBtn layer] setBorderColor:UIColor.grayColor.CGColor];
+        _resetPasswordBtn.layer.cornerRadius = 5;
+        _resetPasswordBtn.layer.borderWidth = 0.5;
+        [_resetPasswordBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_resetPasswordBtn addTarget:self action:@selector(resetPasswordTap) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _resetPasswordBtn;
 }
 
 - (UIButton *)loadSnBtn {
     if (_loadSnBtn == nil) {
-        _loadSnBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 150, 200, 40)];
-        [_loadSnBtn setTitle:@"查询设备SN" forState:UIControlStateNormal];
+        _loadSnBtn = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 0, buttonWidth, buttonHeight)];
+        [_loadSnBtn setTitle:@"Query device SN" forState:UIControlStateNormal];
         [_loadSnBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_loadSnBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _loadSnBtn.layer.cornerRadius = 5;
@@ -282,11 +466,10 @@
     return _loadSnBtn;
 }
 
-
 - (UIButton *)button {
     if (_button == nil) {
-        _button = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 200, 40)];
-        [_button setTitle:@"查询WIFI列表" forState:UIControlStateNormal];
+        _button = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 1, buttonWidth, buttonHeight)];
+        [_button setTitle:@"Query Wi-Fi list" forState:UIControlStateNormal];
         [_button setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_button layer] setBorderColor:UIColor.grayColor.CGColor];
         _button.layer.cornerRadius = 5;
@@ -299,8 +482,8 @@
 
 - (UIButton *)loadConfigBtn {
     if (_loadConfigBtn == nil) {
-        _loadConfigBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 200, 40)];
-        [_loadConfigBtn setTitle:@"查询已配网信息" forState:UIControlStateNormal];
+        _loadConfigBtn = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 2, buttonWidth, buttonHeight)];
+        [_loadConfigBtn setTitle:@"Query configured network info" forState:UIControlStateNormal];
         [_loadConfigBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_loadConfigBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _loadConfigBtn.layer.cornerRadius = 5;
@@ -313,8 +496,8 @@
 
 - (UIButton *)updateEMSBtn {
     if (_updateEMSBtn == nil) {
-        _updateEMSBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 200, 40)];
-        [_updateEMSBtn setTitle:@"更新EMS参数" forState:UIControlStateNormal];
+        _updateEMSBtn = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 3, buttonWidth, buttonHeight)];
+        [_updateEMSBtn setTitle:@"Update EMS parameters" forState:UIControlStateNormal];
         [_updateEMSBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_updateEMSBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _updateEMSBtn.layer.cornerRadius = 5;
@@ -327,8 +510,8 @@
 
 - (UIButton *)updateEMSExtendBtn {
     if (_updateEMSExtendBtn == nil) {
-        _updateEMSExtendBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 200, 40)];
-        [_updateEMSExtendBtn setTitle:@"更新EMS扩展参数" forState:UIControlStateNormal];
+        _updateEMSExtendBtn = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 4, buttonWidth, buttonHeight)];
+        [_updateEMSExtendBtn setTitle:@"Update EMS extended parameters" forState:UIControlStateNormal];
         [_updateEMSExtendBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_updateEMSExtendBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _updateEMSExtendBtn.layer.cornerRadius = 5;
@@ -341,8 +524,8 @@
 
 - (UIButton *)sendSpecialCmdBtn {
     if (_sendSpecialCmdBtn == nil) {
-        _sendSpecialCmdBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 200, 40)];
-        [_sendSpecialCmdBtn setTitle:@"向EMS发送特殊指令" forState:UIControlStateNormal];
+        _sendSpecialCmdBtn = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 5, buttonWidth, buttonHeight)];
+        [_sendSpecialCmdBtn setTitle:@"Send special command to EMS" forState:UIControlStateNormal];
         [_sendSpecialCmdBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_sendSpecialCmdBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _sendSpecialCmdBtn.layer.cornerRadius = 5;
@@ -355,8 +538,8 @@
 
 - (UIButton *)loadTcpLinkStatusBtn {
     if (_loadTcpLinkStatusBtn == nil) {
-        _loadTcpLinkStatusBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 450, 200, 40)];
-        [_loadTcpLinkStatusBtn setTitle:@"检测设备和云链接状态" forState:UIControlStateNormal];
+        _loadTcpLinkStatusBtn = [[UIButton alloc] initWithFrame:CGRectMake(rightColumnX, startY + (buttonHeight + verticalSpacing) * 6, buttonWidth, buttonHeight)];
+        [_loadTcpLinkStatusBtn setTitle:@"Check device-cloud link status" forState:UIControlStateNormal];
         [_loadTcpLinkStatusBtn setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
         [[_loadTcpLinkStatusBtn layer] setBorderColor:UIColor.grayColor.CGColor];
         _loadTcpLinkStatusBtn.layer.cornerRadius = 5;
@@ -367,9 +550,20 @@
     return _loadTcpLinkStatusBtn;
 }
 
+- (UILabel *)snLabel {
+    if (_snLabel == nil) {
+        _snLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, UIScreen.mainScreen.bounds.size.width - 20,30)];
+        [_snLabel setTextColor:UIColor.blackColor];
+        [_snLabel setFont:[UIFont systemFontOfSize:15]];
+        [_snLabel setNumberOfLines:0];
+        [_snLabel setTextAlignment:NSTextAlignmentCenter];
+    }
+    return _snLabel;
+}
+
 - (UITableView *)tableview {
     if (_tableview == nil) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 500, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 500)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(30, 600, UIScreen.mainScreen.bounds.size.width - 60, UIScreen.mainScreen.bounds.size.height - 500)];
         _tableview.tableFooterView = [UIView new];
         _tableview.delegate = self;
         _tableview.dataSource = self;
@@ -377,7 +571,6 @@
     }
     return _tableview;
 }
-
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 
@@ -393,19 +586,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *ssid = self.ssids[indexPath.row];
-    NSString *message = [[NSString alloc] initWithFormat:@"要进行配网，请先输入%@的密码", ssid];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"配置网络" message: message preferredStyle:UIAlertControllerStyleAlert];
+    NSString *message = [[NSString alloc] initWithFormat:@"To configure Wi-Fi, please enter the password for %@", ssid];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network Configuration" message: message preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        [textField setPlaceholder:@"请输入WIFI密码"];
+        [textField setPlaceholder:@"Please enter Wi-Fi password"];
     }];
     
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSString *pwd = alert.textFields.firstObject.text;
         if (pwd.length > 0) {
             [self configurationWifiWith:ssid password:pwd];
         }
     }];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil];
     
     [alert addAction:cancel];
     [alert addAction:ok];
